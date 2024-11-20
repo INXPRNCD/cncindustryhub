@@ -1,0 +1,289 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' },
+  { title: 'CNC in der Landwirtschaft und Energieerzeugung', href: '/industrieanwendungen/agriculture' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#vergleich", title: "Vergleich" },
+  { href: "#landwirtschaft", title: "Landwirtschaft" },
+  { href: "#energieerzeugung", title: "Energieerzeugung" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" },
+  { href: "#zukunftsperspektiven", title: "Zukunftsperspektiven" }
+];
+---
+
+<Layout 
+  title="CNC in der Landwirtschaft und Energieerzeugung: Effizienz und Präzision neu definiert"
+  description="Erfahren Sie, wie CNC-Technologie die Landwirtschaft und Energieerzeugung revolutioniert – von Traktorkomponenten bis zu Turbinenblättern."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC in der Landwirtschaft und Energieerzeugung: Effizienz und Präzision neu definiert
+          </h1>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die CNC-Technologie (Computerized Numerical Control) hat die Fertigungsprozesse in der Landwirtschaft und Energieerzeugung revolutioniert. 
+            Sie bietet Präzision, Effizienz und Nachhaltigkeit, die in traditionellen Fertigungsverfahren kaum erreichbar sind. 
+            Von Traktorkomponenten bis hin zu Turbinenblättern – CNC-Systeme haben neue Maßstäbe gesetzt.
+          </p>
+        </section>
+
+        <!-- Vergleich -->
+        <section id="vergleich" class="mb-12">
+          <h2>Vergleich: CNC vs. traditionelle Methoden</h2>
+          <p>
+            Im Vergleich zu traditionellen Fertigungsmethoden bietet CNC präzisere Bearbeitungen, schnellere Produktionszeiten und eine drastische Reduktion von Materialverlusten. 
+            Besonders bei der Verarbeitung komplexer und großer Bauteile zeigt CNC ihre Stärke.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Merkmal</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CNC-Technologie</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Traditionelle Methoden</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Präzision</td>
+                  <td class="px-6 py-4">±0,01 mm</td>
+                  <td class="px-6 py-4">±0,1 mm</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Produktionsgeschwindigkeit</td>
+                  <td class="px-6 py-4">Schneller durch Automatisierung</td>
+                  <td class="px-6 py-4">Langsamer, oft manuell</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Materialverluste</td>
+                  <td class="px-6 py-4">Bis zu 40 % weniger</td>
+                  <td class="px-6 py-4">Höher</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Landwirtschaft -->
+        <section id="landwirtschaft" class="mb-12">
+          <h2>CNC in der Landwirtschaft</h2>
+          <p>
+            In der modernen Landwirtschaft ist CNC unverzichtbar geworden. Sie ermöglicht die Herstellung langlebiger, präziser Komponenten für Landmaschinen, die unter extremen Bedingungen zuverlässig arbeiten müssen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Traktoren:</strong>
+                  <p class="text-gray-600">Fertigung von Getriebeteilen, Achsen und Hydrauliksystemen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Erntemaschinen:</strong>
+                  <p class="text-gray-600">Präzise Herstellung von Schneidwerken und Förderbändern.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Bodenbearbeitung:</strong>
+                  <p class="text-gray-600">Fräsen und Bohren von Pflugteilen und Sämaschinen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Energieerzeugung -->
+        <section id="energieerzeugung" class="mb-12">
+          <h2>CNC in der Energieerzeugung</h2>
+          <p>
+            Die Energiebranche benötigt hochpräzise Komponenten, um maximale Effizienz und Haltbarkeit sicherzustellen. 
+            CNC ermöglicht die Bearbeitung anspruchsvoller Materialien, die extremen Bedingungen standhalten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Windkraft:</strong>
+                  <p class="text-gray-600">Herstellung von Turbinenblättern, Rotorwellen und Getrieben.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Solarenergie:</strong>
+                  <p class="text-gray-600">Präzise Bearbeitung von Aluminiumrahmen und Montagestrukturen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Wasserkraft:</strong>
+                  <p class="text-gray-600">Produktion von Turbinen, Ventilen und Gehäusen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Effizienz</h2>
+          <p>
+            CNC-Systeme tragen erheblich zur Nachhaltigkeit bei, indem sie Materialverluste minimieren und den Energieverbrauch senken. 
+            Durch präzise Steuerung und Echtzeitüberwachung wird die Ressourcennutzung optimiert.
+          </p>
+
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0">„Durch CNC konnte der Materialabfall in der Landwirtschaft und Energieerzeugung um bis zu 40 % reduziert werden." – Branchenstudie 2023</p>
+          </blockquote>
+        </section>
+
+        <!-- Zukunftsperspektiven -->
+        <section id="zukunftsperspektiven" class="mb-12">
+          <h2>Zukunftsperspektiven</h2>
+          <p>
+            Die Kombination von CNC mit Technologien wie KI und IoT wird die Landwirtschaft und Energieerzeugung weiter transformieren. 
+            Intelligente Maschinen können autonom Prozesse überwachen, vorausschauend handeln und Fertigungsprozesse weiter optimieren.
+          </p>
+          <p>
+            Ein vielversprechender Ansatz ist die hybride Fertigung, bei der CNC und 3D-Druck kombiniert werden, um maßgeschneiderte Lösungen für komplexe Projekte zu schaffen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/materialien/metalle" class="text-blue-600 hover:text-blue-800">
+                  CNC-Bearbeitung von Metallen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

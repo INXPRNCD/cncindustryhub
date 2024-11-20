@@ -1,0 +1,379 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Materialbearbeitung', href: '/materialbearbeitung' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#metalle", title: "Metalle" },
+  { href: "#kunststoffe", title: "Kunststoffe" },
+  { href: "#verbundwerkstoffe", title: "Verbundwerkstoffe" },
+  { href: "#exotische-materialien", title: "Exotische Materialien" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="CNC-Materialbearbeitung: Metalle, Kunststoffe und Nachhaltigkeit"
+  description="Erfahren Sie alles über die CNC-Materialbearbeitung: Präzise Bearbeitung von Metallen, Kunststoffen, Verbundwerkstoffen und exotischen Materialien mit nachhaltigen Fertigungsmethoden."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Materialbearbeitung: Präzision, Effizienz und Nachhaltigkeit
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie die Vielfalt der CNC-Materialbearbeitung, von hochpräzisen Metallbearbeitungen bis hin zur nachhaltigen Verarbeitung exotischer Materialien. 
+            Optimierte Prozesse und innovative Technologien sorgen für beste Ergebnisse bei jedem Werkstoff.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in die CNC-Materialbearbeitung</h2>
+          <p>
+            Die CNC-Technologie revolutioniert die Fertigung durch präzise und effiziente Materialbearbeitung. 
+            Unterschiedliche Werkstoffe – von Metallen bis zu exotischen Materialien – erfordern spezifische Bearbeitungsstrategien, die sowohl die Materialeigenschaften als auch die Nachhaltigkeit berücksichtigen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Materialwissenschaft:</strong>
+                  <p class="text-gray-600">Verständnis für die Eigenschaften von Werkstoffen wie Aluminium, Titan und Keramik.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Optimierte Prozesse:</strong>
+                  <p class="text-gray-600">Anpassung von Schnittgeschwindigkeiten und Werkzeugen für maximale Effizienz.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltigkeit:</strong>
+                  <p class="text-gray-600">Abfallreduzierung und ressourcenschonende Fertigungsmethoden.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Metalle -->
+        <section id="metalle" class="mb-12">
+          <h2>Bearbeitung von Metallen: Aluminium, Stahl, Titan</h2>
+          <p>
+            Metalle wie Aluminium, Stahl und Titan sind die Basis vieler industrieller Anwendungen. 
+            Ihre spezifischen Eigenschaften verlangen nach maßgeschneiderten CNC-Bearbeitungsverfahren.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metall</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eigenschaften</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bearbeitungsanforderungen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4"><strong>Aluminium</strong></td>
+                  <td class="px-6 py-4">Leicht, korrosionsbeständig, wärmeleitend</td>
+                  <td class="px-6 py-4">Schnelle Schnittgeschwindigkeiten, scharfe Werkzeuge</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4"><strong>Stahl</strong></td>
+                  <td class="px-6 py-4">Hohe Festigkeit, zäh</td>
+                  <td class="px-6 py-4">Hitzebeständige Fräser, kontrollierte Drehzahlen</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4"><strong>Titan</strong></td>
+                  <td class="px-6 py-4">Korrosionsbeständig, biokompatibel</td>
+                  <td class="px-6 py-4">Niedrige Vorschübe, effektive Kühlmittelversorgung</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            <strong>Anwendungen:</strong> Luftfahrt (Titanbauteile), Automobilindustrie (Stahlkomponenten) und Elektronik (Aluminiumgehäuse).
+          </p>
+        </section>
+
+        <!-- Kunststoffe -->
+        <section id="kunststoffe" class="mb-12">
+          <h2>Verarbeitung von Kunststoffen: Eigenschaften und Anforderungen</h2>
+          <p>
+            Kunststoffe bieten durch ihre Leichtigkeit und Flexibilität vielseitige Einsatzmöglichkeiten. 
+            Die CNC-Bearbeitung erfordert jedoch spezielle Strategien, um Verformungen und Hitzeeinwirkung zu minimieren.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Herausforderungen:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Thermoplastische Materialien wie ABS oder Polycarbonat erweichen bei hohen Temperaturen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Spezielle Werkzeuge mit geringer Reibung sind notwendig, um Materialverformungen zu verhindern.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Anwendungen:</strong> Gehäusefertigung, Medizinprodukte und Verpackungskomponenten.
+          </p>
+        </section>
+
+        <!-- Verbundwerkstoffe -->
+        <section id="verbundwerkstoffe" class="mb-12">
+          <h2>Bearbeitung von Verbundwerkstoffen</h2>
+          <p>
+            Verbundwerkstoffe wie Kohlefaser und Glasfaser kombinieren Leichtigkeit und Stabilität. 
+            Diese Eigenschaften machen sie ideal für die Luftfahrt und den Automobilbau, erfordern jedoch abrasive-resistente Werkzeuge.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Bearbeitungsstrategien:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Einsatz diamantbeschichteter Fräser zur Vermeidung von Werkzeugverschleiß.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Optimierte Vorschübe zur Reduktion von Faserbrüchen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Vorteile:</strong> Leichte Komponenten mit hoher Festigkeit und geringem Energieverbrauch.
+          </p>
+        </section>
+
+        <!-- Exotische Materialien -->
+        <section id="exotische-materialien" class="mb-12">
+          <h2>CNC für exotische Materialien</h2>
+          <p>
+            Exotische Materialien wie Keramik, Kohlefaser und Glas werden in hochspezialisierten Branchen wie der Medizintechnik oder Luftfahrt eingesetzt. 
+            Ihre Bearbeitung erfordert höchste Präzision und spezialisierte CNC-Techniken.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Typische Anwendungen:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Keramik:</strong>
+                  <p class="text-gray-600">Präzisionsbearbeitung für chirurgische Instrumente.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kohlefaser:</strong>
+                  <p class="text-gray-600">Leichtbaukomponenten in Flugzeugen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Glas:</strong>
+                  <p class="text-gray-600">Optische Komponenten mit höchster Klarheit.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Abfallreduzierung</h2>
+          <p>
+            Nachhaltige CNC-Fertigung konzentriert sich auf Ressourcenschonung und Effizienzsteigerung. 
+            Fortschritte in der Bearbeitungstechnologie tragen zur Minimierung von Abfällen bei.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Strategien:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Recycling:</strong>
+                  <p class="text-gray-600">Wiederaufbereitung von Restmaterialien wie Spänen und Verbundstoffen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Energieeinsparungen:</strong>
+                  <p class="text-gray-600">Effiziente Maschinen und optimierte Prozesse reduzieren den Energieverbrauch.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Zukunft:</strong> Die Kombination von Automatisierung und Echtzeitüberwachung ermöglicht eine nachhaltigere Fertigung.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Materialbearbeitung verbindet Präzision mit Effizienz und Nachhaltigkeit. 
+            Fortschritte in Technologie und Strategie ermöglichen eine ressourcenschonende Bearbeitung unterschiedlichster Werkstoffe – von Metallen bis hin zu exotischen Materialien.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/materialbearbeitung/metalle" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte Informationen zur Metallbearbeitung
+                </a>
+              </li>
+              <li>
+                <a href="/materialbearbeitung/kunststoffe" class="text-blue-600 hover:text-blue-800">
+                  Mehr über Kunststoffbearbeitung
+                </a>
+              </li>
+              <li>
+                <a href="/materialbearbeitung/verbundwerkstoffe" class="text-blue-600 hover:text-blue-800">
+                  Bearbeitung von Verbundwerkstoffen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

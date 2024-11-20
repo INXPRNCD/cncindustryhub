@@ -1,0 +1,350 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' }
+];
+
+const navItems = [
+  { href: "#cnc-luftfahrt", title: "Luft- und Raumfahrt" },
+  { href: "#cnc-automobil", title: "Automobilindustrie" },
+  { href: "#cnc-medizintechnik", title: "Medizintechnik" },
+  { href: "#cnc-elektronik", title: "Elektronikfertigung" },
+  { href: "#weitere-anwendungen", title: "Weitere Anwendungen" }
+];
+---
+
+<Layout 
+  title="CNC-Industrieanwendungen: Präzision und Effizienz in allen Branchen"
+  description="Erfahren Sie, wie CNC-Technologie in Branchen wie Luftfahrt, Automobil, Medizintechnik, Elektronik, Bauwesen und mehr die Fertigung revolutioniert."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Industrieanwendungen: Präzision und Effizienz in allen Branchen
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Von der Luftfahrt bis zur Schmuckfertigung: CNC-Technologie transformiert Branchen durch Präzision, Wiederholbarkeit und Effizienz. Entdecken Sie die vielseitigen Einsatzmöglichkeiten moderner CNC-Systeme.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            CNC (Computerized Numerical Control) hat sich als unverzichtbare Technologie in vielen Branchen etabliert. 
+            Sie bietet hochpräzise Lösungen für Fertigungsprozesse und ermöglicht die Realisierung komplexer Projekte, die mit herkömmlichen Methoden kaum durchführbar wären. 
+            In diesem Artikel erfahren Sie, wie CNC in verschiedenen Industrien eingesetzt wird und welche Vorteile die Technologie bietet.
+          </p>
+        </section>
+
+        <!-- CNC in der Luft- und Raumfahrt -->
+        <section id="cnc-luftfahrt" class="mb-12">
+          <h2>CNC in der Luft- und Raumfahrt: Präzision für Flugzeugkomponenten</h2>
+          <p>
+            Die Luft- und Raumfahrtindustrie stellt höchste Anforderungen an Präzision und Zuverlässigkeit. CNC-Technologie ermöglicht die Fertigung von:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Turbinenschaufeln:</strong>
+                  <p class="text-gray-600">Optimale Aerodynamik und Materialeffizienz durch präzise Bearbeitung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Flugzeugstrukturen:</strong>
+                  <p class="text-gray-600">Leichtbauweise bei maximaler Stabilität, z. B. Flügelrahmen und Rumpfbauteile.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Prototypen:</strong>
+                  <p class="text-gray-600">Entwicklung und Test neuer Bauteile mit minimalen Abweichungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Durch CNC können Bauteile aus Aluminium, Titan und Verbundwerkstoffen mit höchsten Toleranzen gefertigt werden. Dies fördert die Sicherheit und Leistungsfähigkeit moderner Flugzeuge.
+          </p>
+          <p>
+            <a href="/industrieanwendungen/aerospace" class="text-blue-600 hover:text-blue-800">
+              Mehr über CNC in der Luft- und Raumfahrt
+            </a>
+          </p>
+        </section>
+
+        <!-- CNC in der Automobilindustrie -->
+        <section id="cnc-automobil" class="mb-12">
+          <h2>CNC in der Automobilindustrie: Effizienz in der Fahrzeugproduktion</h2>
+          <p>
+            Die Automobilindustrie nutzt CNC für die Massenproduktion und die Fertigung maßgeschneiderter Komponenten. Anwendungen umfassen:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Motorenfertigung:</strong>
+                  <p class="text-gray-600">Bearbeitung von Zylinderköpfen, Kolben und Kurbelwellen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Getriebeteile:</strong>
+                  <p class="text-gray-600">Präzise Zahnräder und Schaltmechanismen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Karosserieteile:</strong>
+                  <p class="text-gray-600">Herstellung von Werkzeugen für die Umformung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p>
+            CNC steigert die Produktionsgeschwindigkeit und sichert eine gleichbleibend hohe Qualität bei jedem Bauteil. Dies reduziert Kosten und verbessert die Effizienz in der Automobilproduktion.
+          </p>
+          <p>
+            <a href="/industrieanwendungen/automotive" class="text-blue-600 hover:text-blue-800">
+              Mehr über CNC in der Automobilindustrie
+            </a>
+          </p>
+        </section>
+
+        <!-- CNC für die Medizintechnik -->
+        <section id="cnc-medizintechnik" class="mb-12">
+          <h2>CNC für die Medizintechnik: Präzision für medizinische Geräte</h2>
+          <p>
+            Die Medizintechnik erfordert absolute Präzision und Zuverlässigkeit. CNC-Technologie ermöglicht die Fertigung von:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Chirurgischen Instrumenten:</strong>
+                  <p class="text-gray-600">Glatte Kanten und sterile Oberflächen für präzise Eingriffe.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Implantaten:</strong>
+                  <p class="text-gray-600">Maßgeschneiderte Hüft- und Knieprothesen sowie Zahnimplantate.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Prothesen:</strong>
+                  <p class="text-gray-600">Anpassbare Lösungen für individuelle Patientenbedürfnisse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Durch CNC wird eine hohe Reproduzierbarkeit gewährleistet, was besonders in der Herstellung medizinischer Geräte essenziell ist.
+          </p>
+          <p>
+            <a href="/industrieanwendungen/medical" class="text-blue-600 hover:text-blue-800">
+              Mehr über CNC in der Medizintechnik
+            </a>
+          </p>
+        </section>
+
+        <!-- CNC in der Elektronikfertigung -->
+        <section id="cnc-elektronik" class="mb-12">
+          <h2>CNC in der Elektronikfertigung: Präzision in Leiterplatten und Gehäusen</h2>
+          <p>
+            Die Elektronikfertigung setzt CNC ein, um hochpräzise Komponenten für moderne Geräte zu produzieren:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Leiterplatten:</strong>
+                  <p class="text-gray-600">Präzises Schneiden und Bohren für komplexe Schaltungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Gehäuse:</strong>
+                  <p class="text-gray-600">Passgenaue und robuste Designs für elektronische Geräte.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Miniaturkomponenten:</strong>
+                  <p class="text-gray-600">Fertigung kleinster Bauteile für tragbare Elektronik.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Mit CNC lassen sich selbst anspruchsvollste Designs mit hoher Präzision umsetzen.
+          </p>
+          <p>
+            <a href="/industrieanwendungen/electronics" class="text-blue-600 hover:text-blue-800">
+              Mehr über CNC in der Elektronikfertigung
+            </a>
+          </p>
+        </section>
+
+        <!-- Weitere Branchenanwendungen -->
+        <section id="weitere-anwendungen" class="mb-12">
+          <h2>Weitere Branchenanwendungen</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC im Bauwesen: Architektur neu gestalten</h3>
+              <p class="text-gray-600">
+                CNC-Technologie ermöglicht die Herstellung maßgeschneiderter Architekturkomponenten wie Fassaden, dekorativer Elemente und tragender Strukturen.
+              </p>
+              <p class="mt-4">
+                <a href="/industrieanwendungen/construction" class="text-blue-600 hover:text-blue-800">
+                  Mehr über CNC im Bauwesen
+                </a>
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC in der Schmuckindustrie</h3>
+              <p class="text-gray-600">
+                Für die Schmuckherstellung bietet CNC höchste Präzision bei der Gravur, dem Schneiden und der Herstellung individueller Designs.
+              </p>
+              <p class="mt-4">
+                <a href="/industrieanwendungen/jewelry" class="text-blue-600 hover:text-blue-800">
+                  Mehr über CNC in der Schmuckindustrie
+                </a>
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC in der Landwirtschaft und Energieerzeugung</h3>
+              <p class="text-gray-600">
+                CNC wird zur Herstellung von Traktorenteilen, Turbinen und weiteren energieeffizienten Komponenten verwendet.
+              </p>
+              <p class="mt-4">
+                <a href="/industrieanwendungen/agriculture" class="text-blue-600 hover:text-blue-800">
+                  Mehr über CNC in Landwirtschaft und Energie
+                </a>
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC in der Schifffahrt</h3>
+              <p class="text-gray-600">
+                Von Propellern bis zu strukturellen Schiffsteilen sorgt CNC für präzise Fertigung und lange Haltbarkeit.
+              </p>
+              <p class="mt-4">
+                <a href="/industrieanwendungen/maritime" class="text-blue-600 hover:text-blue-800">
+                  Mehr über CNC in der Schifffahrt
+                </a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

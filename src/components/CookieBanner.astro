@@ -1,0 +1,159 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<!-- Cookie Banner markup remains the same until the script -->
+
+<script>
+  // Use a self-executing function to avoid global scope pollution
+  (function() {
+    // Only initialize if not already done
+    if (typeof window.__cookieBannerInitialized === 'undefined') {
+      window.__cookieBannerInitialized = true;
+
+      const COOKIE_CONSENT_KEY = 'cnc-cookie-consent';
+      
+      // Helper function to safely query elements
+      const getElement = (id: string) => document.getElementById(id);
+      
+      // Get DOM elements
+      const elements = {
+        banner: getElement('cookie-banner'),
+        acceptAll: getElement('accept-all'),
+        acceptEssential: getElement('accept-essential'),
+        settings: getElement('cookie-settings'),
+        settingsModal: getElement('cookie-settings-modal'),
+        closeSettings: getElement('close-settings'),
+        savePreferences: getElement('save-preferences'),
+        analytics: getElement('analytics-cookies') as HTMLInputElement | null,
+        marketing: getElement('marketing-cookies') as HTMLInputElement | null
+      };
+
+      // Safe localStorage wrapper
+      const storage = {
+        get: () => {
+          try {
+            const data = localStorage.getItem(COOKIE_CONSENT_KEY);
+            return data ? JSON.parse(data) : null;
+          } catch {
+            return null;
+          }
+        },
+        set: (value: any) => {
+          try {
+            localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(value));
+            return true;
+          } catch {
+            return false;
+          }
+        }
+      };
+
+      // Banner visibility controls
+      const banner = {
+        show: () => {
+          requestAnimationFrame(() => {
+            elements.banner?.classList.remove('hidden', 'translate-y-full');
+          });
+        },
+        hide: () => {
+          elements.banner?.classList.add('translate-y-full');
+          setTimeout(() => {
+            elements.banner?.classList.add('hidden');
+          }, 300);
+        }
+      };
+
+      // Consent management
+      const consent = {
+        save: (preferences: { essential: boolean; analytics: boolean; marketing: boolean }) => {
+          const success = storage.set({
+            ...preferences,
+            timestamp: new Date().toISOString()
+          });
+
+          if (success) {
+            banner.hide();
+            
+            // Initialize services based on preferences
+            if (preferences.analytics) {
+              // Initialize analytics
+            }
+            if (preferences.marketing) {
+              // Initialize marketing
+            }
+          }
+        },
+        load: () => {
+          const saved = storage.get();
+          if (saved) {
+            if (elements.analytics) elements.analytics.checked = saved.analytics;
+            if (elements.marketing) elements.marketing.checked = saved.marketing;
+          }
+          return saved;
+        }
+      };
+
+      // Modal controls
+      const modal = {
+        show: () => elements.settingsModal?.classList.remove('hidden'),
+        hide: () => elements.settingsModal?.classList.add('hidden')
+      };
+
+      // Initialize banner
+      const init = () => {
+        const savedConsent = consent.load();
+        if (!savedConsent) {
+          banner.show();
+        }
+      };
+
+      // Event listeners
+      const addEventListeners = () => {
+        elements.acceptAll?.addEventListener('click', () => {
+          consent.save({ essential: true, analytics: true, marketing: true });
+        });
+
+        elements.acceptEssential?.addEventListener('click', () => {
+          consent.save({ essential: true, analytics: false, marketing: false });
+        });
+
+        elements.settings?.addEventListener('click', modal.show);
+        elements.closeSettings?.addEventListener('click', modal.hide);
+
+        elements.savePreferences?.addEventListener('click', () => {
+          consent.save({
+            essential: true,
+            analytics: elements.analytics?.checked || false,
+            marketing: elements.marketing?.checked || false
+          });
+          modal.hide();
+        });
+
+        // Close modal on outside click
+        elements.settingsModal?.addEventListener('click', (e) => {
+          if (e.target === elements.settingsModal) {
+            modal.hide();
+          }
+        });
+      };
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          init();
+          addEventListeners();
+        });
+      } else {
+        init();
+        addEventListeners();
+      }
+    }
+  })();
+</script>

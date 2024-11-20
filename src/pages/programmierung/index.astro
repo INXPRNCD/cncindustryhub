@@ -1,0 +1,370 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Programmierung', href: '/programmierung' }
+];
+
+const navItems = [
+  { href: "#grundlagen-cnc-programmierung", title: "Grundlagen" },
+  { href: "#cam-software", title: "CAM-Software" },
+  { href: "#fortgeschrittene-programmierung", title: "Fortgeschrittene Programmierung" },
+  { href: "#cnc-steuerungen", title: "CNC-Steuerungen" },
+  { href: "#echtzeitsteuerung", title: "Echtzeitsteuerung" }
+];
+---
+
+<Layout 
+  title="CNC-Programmierung: G-Code, CAM-Software und Echtzeitautomatisierung"
+  description="Erfahren Sie alles über CNC-Programmierung: G-Code, M-Code, CAM-Software, Echtzeitsteuerung und Automatisierung – optimiert für Präzision und Effizienz."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Programmierung: Grundlagen, Technologien und Echtzeitsteuerung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie die Welt der CNC-Programmierung – von G-Code-Basics bis hin zu innovativen Automatisierungslösungen. Optimieren Sie Ihre Fertigung mit modernsten Tools und Techniken.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Grundlagen der CNC-Programmierung -->
+        <section id="grundlagen-cnc-programmierung" class="mb-12">
+          <h2>Grundlagen der CNC-Programmierung: G-Code und M-Code</h2>
+          <p>
+            Die CNC-Programmierung basiert auf zwei essenziellen Code-Arten: <strong>G-Code</strong> (Geometriecode) und <strong>M-Code</strong> (Maschinencode). 
+            Beide sind entscheidend für die Steuerung von Bewegungen und Funktionen.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <caption class="sr-only">Unterschiede zwischen G-Code und M-Code</caption>
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Code-Typ</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Funktion</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Beispiele</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">G-Code</td>
+                  <td class="px-6 py-4">Bewegungssteuerung: Lineare und rotierende Bewegungen</td>
+                  <td class="px-6 py-4">G01 – Linearbewegung, G02 – Kreisbewegung</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">M-Code</td>
+                  <td class="px-6 py-4">Maschinenfunktionen: Kühlung, Spindelansteuerung</td>
+                  <td class="px-6 py-4">M03 – Spindel ein, M08 – Kühlmittel ein</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="text-xl font-bold mb-4">Beispiel eines einfachen CNC-Programms</h3>
+          <div class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
+            <pre class="text-sm">
+N10 G21 (Einheit: Millimeter)
+N20 G90 (Absolutkoordinaten)
+N30 M03 (Spindelstart)
+N40 G01 X50 Y50 F100 (Bewegung auf Position X50/Y50)
+N50 M30 (Programmende)
+            </pre>
+          </div>
+        </section>
+
+        <!-- CAM-Software -->
+        <section id="cam-software" class="mb-12">
+          <h2>CAM-Software und ihre Rolle in der CNC-Programmierung</h2>
+          <p>
+            CAM-Software (<strong>Computer-Aided Manufacturing</strong>) optimiert die CNC-Programmierung durch Automatisierung und Werkzeugwegplanung. 
+            Sie ermöglicht eine nahtlose Integration zwischen Design und Fertigung.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Werkzeugwegoptimierung:</strong>
+                  <p class="text-gray-600">Reduziert Bearbeitungszeit und Materialverlust.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Simulation:</strong>
+                  <p class="text-gray-600">Visualisiert Bearbeitungsprozesse, um Kollisionen zu vermeiden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Integration mit CAD:</strong>
+                  <p class="text-gray-600">Direkter Übergang von 3D-Modellen zu Werkzeugwegen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl font-bold mb-4">Beispiel: Vorteile in der Automobilindustrie</h3>
+          <p>
+            CAM-Software wird häufig für die präzise Fertigung von Getriebegehäusen und Motorblöcken genutzt. 
+            Simulationen helfen, Fehler in der Produktion zu vermeiden.
+          </p>
+        </section>
+
+        <!-- Fortgeschrittene G-Code-Programmierung -->
+        <section id="fortgeschrittene-programmierung" class="mb-12">
+          <h2>Fortgeschrittene G-Code-Programmierung</h2>
+          <p>
+            Mit fortgeschrittenen Programmiertechniken können komplexe CNC-Prozesse effizient gestaltet werden. Beispiele umfassen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Parametrische Programmierung:</strong>
+                  <p class="text-gray-600">Verwendung von Variablen für wiederverwendbare und flexible Programme.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Unterprogramme:</strong>
+                  <p class="text-gray-600">Modularer Aufbau für standardisierte Abläufe.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Bedingte Logik:</strong>
+                  <p class="text-gray-600">Anpassung der Bearbeitung an Echtzeitbedingungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Fallstudie:</strong> In der Medizintechnik ermöglicht parametrische Programmierung die Fertigung von Prothesen in verschiedenen Größen mit minimalem Aufwand.
+          </p>
+        </section>
+
+        <!-- CNC-Steuerungen -->
+        <section id="cnc-steuerungen" class="mb-12">
+          <h2>CNC-Steuerungen: Siemens, FANUC, Heidenhain</h2>
+          <p>
+            Moderne CNC-Steuerungssysteme bieten eine Vielzahl von Funktionen, die auf spezifische Anforderungen zugeschnitten sind.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <caption class="sr-only">Vergleich der CNC-Steuerungen</caption>
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">System</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vorteile</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Einsatzgebiete</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Siemens</td>
+                  <td class="px-6 py-4">Benutzerfreundlich, flexible Konfiguration</td>
+                  <td class="px-6 py-4">Luftfahrt, Werkzeugbau</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">FANUC</td>
+                  <td class="px-6 py-4">Robust, weltweit anerkannt</td>
+                  <td class="px-6 py-4">Automobilproduktion</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Heidenhain</td>
+                  <td class="px-6 py-4">Präzision, 5-Achsen-Kompatibilität</td>
+                  <td class="px-6 py-4">Medizintechnik</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Echtzeitsteuerung -->
+        <section id="echtzeitsteuerung" class="mb-12">
+          <h2>Echtzeitsteuerung und Automatisierung</h2>
+          <p>
+            Echtzeitsteuerung ist entscheidend für die Optimierung moderner CNC-Prozesse. Sie ermöglicht:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Temperaturüberwachung und Verschleißerkennung in Echtzeit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Automatische Anpassung der Bearbeitungsparameter durch Sensorik.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Integration von KI zur Fehlervermeidung und Prozessoptimierung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Beispiel:</strong> In der Luftfahrtindustrie hilft Echtzeitsteuerung, kritische Toleranzen bei Turbinenschaufeln einzuhalten.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Programmierung verbindet klassische Methoden wie G-Code mit modernen Technologien wie CAM-Software und Echtzeitsteuerung. 
+            Durch den Einsatz innovativer Steuerungssysteme und Automatisierung kann die Effizienz in der Fertigung erheblich gesteigert werden.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/programmierung/g-code" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte G-Code-Referenz
+                </a>
+              </li>
+              <li>
+                <a href="/programmierung/cam" class="text-blue-600 hover:text-blue-800">
+                  CAM-Software im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+
+pre {
+  background-color: #1a202c;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+</style>

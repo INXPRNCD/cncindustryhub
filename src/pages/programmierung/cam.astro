@@ -1,0 +1,309 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Programmierung', href: '/programmierung' },
+  { title: 'CAM-Software', href: '/programmierung/cam' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#grundlagen", title: "Grundlagen" },
+  { href: "#funktionen-vorteile", title: "Funktionen" },
+  { href: "#integration", title: "Integration" },
+  { href: "#branchenspezifische-anwendungen", title: "Anwendungen" },
+  { href: "#technologische-innovationen", title: "Innovationen" },
+  { href: "#wartung", title: "Wartung" }
+];
+---
+
+<Layout 
+  title="CAM-Software und ihre Rolle in der CNC-Programmierung"
+  description="Erfahren Sie alles über die Bedeutung von CAM-Software in der CNC-Programmierung. Entdecken Sie Funktionen, Vorteile und innovative Technologien für präzise Fertigungsprozesse."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CAM-Software und ihre Rolle in der CNC-Programmierung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            CAM-Software ist der Schlüssel zu präzisen und automatisierten CNC-Fertigungsprozessen. In diesem Artikel beleuchten wir die Grundlagen, Funktionen, Anwendungen und technologischen Innovationen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            CAM-Software (<strong>Computer-Aided Manufacturing</strong>) ist ein essenzielles Werkzeug in der modernen CNC-Fertigung. 
+            Sie bildet die Brücke zwischen dem Design in CAD-Systemen und der physischen Fertigung auf CNC-Maschinen. 
+            Ihre Fähigkeit, komplexe Werkzeugwege automatisch zu generieren und Bearbeitungsprozesse zu optimieren, macht sie zu einem unverzichtbaren Bestandteil vieler Branchen wie der Luftfahrt, der Automobilindustrie und der Medizintechnik.
+          </p>
+        </section>
+
+        <!-- Grundlagen -->
+        <section id="grundlagen" class="mb-12">
+          <h2>Grundlagen der CAM-Software</h2>
+          <p>
+            Die Hauptfunktion der CAM-Software liegt in der Generierung präziser CNC-Programme aus CAD-Daten. 
+            Sie übernimmt die <strong>Planung von Werkzeugwegen</strong>, optimiert Bearbeitungsparameter und bietet Simulationen zur Fehlervermeidung.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatisierte Werkzeugwegplanung:</strong>
+                  <p class="text-gray-600">Optimiert die Schnittbahnen und minimiert Materialabfall.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Simulation von Bearbeitungsprozessen:</strong>
+                  <p class="text-gray-600">Verhindert Kollisionen und optimiert die Werkzeugbewegungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Integration in CNC-Steuerungen:</strong>
+                  <p class="text-gray-600">Kompatibel mit Steuerungen wie Siemens, FANUC und Heidenhain.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Funktionen und Vorteile -->
+        <section id="funktionen-vorteile" class="mb-12">
+          <h2>Funktionen und Vorteile</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">1. Präzision und Effizienz</h3>
+              <p>
+                CAM-Software ermöglicht präzise Werkzeugwege und optimiert die Bearbeitungszeit. 
+                Dadurch wird die Qualität der gefertigten Teile verbessert und Produktionskosten werden gesenkt.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">2. Simulation und Fehlerreduktion</h3>
+              <p>
+                Durch realistische Simulationen können potenzielle Fehler erkannt und eliminiert werden, bevor die Fertigung beginnt. 
+                Dies reduziert Ausschuss und minimiert Produktionsausfälle.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">3. Vielseitigkeit und Kompatibilität</h3>
+              <p>
+                CAM-Software unterstützt eine Vielzahl von CNC-Maschinen und Steuerungen. 
+                Anpassungen an verschiedene Materialien und Bearbeitungsverfahren sind problemlos möglich.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Integration -->
+        <section id="integration" class="mb-12">
+          <h2>Integration in die CNC-Programmierung</h2>
+          <p>
+            Die Integration von CAM-Software in die CNC-Programmierung umfasst die automatische Generierung von G-Code und M-Code. 
+            Dieser Prozess wird durch CAD-Daten gesteuert und an spezifische Maschinenanforderungen angepasst. 
+            Echtzeit-Optimierungen durch CAM-Systeme ermöglichen zudem die Anpassung der Fertigungsparameter während des Betriebs.
+          </p>
+        </section>
+
+        <!-- Branchenspezifische Anwendungen -->
+        <section id="branchenspezifische-anwendungen" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Bearbeitung von Titan- und Aluminiumteilen für Flugzeugstrukturen und Turbinenschaufeln.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Präzisionsfertigung von Motorblöcken, Karosserieteilen und Getriebekomponenten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Herstellung biokompatibler Implantate und chirurgischer Instrumente.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technologische Innovationen -->
+        <section id="technologische-innovationen" class="mb-12">
+          <h2>Technologische Innovationen</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">1. KI und maschinelles Lernen</h3>
+              <p>
+                Moderne CAM-Systeme nutzen künstliche Intelligenz, um Bearbeitungsstrategien basierend auf historischen Daten zu optimieren. 
+                Maschinelles Lernen ermöglicht eine kontinuierliche Verbesserung der Fertigungsprozesse.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">2. Cloud-CAM-Systeme</h3>
+              <p>
+                Cloud-basierte Lösungen bieten kollaborative Fertigungsmöglichkeiten, bei denen Teams weltweit simultan an Projekten arbeiten können. 
+                Diese Technologie fördert Flexibilität und Skalierbarkeit.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Wartung -->
+        <section id="wartung" class="mb-12">
+          <h2>Wartung und Pflege der CAM-Software</h2>
+          <p>
+            Regelmäßige Updates und Schulungen der Mitarbeiter sind entscheidend, um die Effizienz der CAM-Software zu maximieren. 
+            Wartungsstrategien sollten die Maschinenkompatibilität gewährleisten und die Nutzung neuer Funktionen fördern.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CAM-Software revolutioniert die CNC-Fertigung durch ihre Fähigkeit, Prozesse zu automatisieren, Fehler zu minimieren und Präzision zu gewährleisten. 
+            Mit technologischen Fortschritten wie KI und Cloud-Lösungen wird sie auch in Zukunft eine Schlüsselrolle in der Fertigung spielen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/programmierung/grundlagen" class="text-blue-600 hover:text-blue-800">
+                  Grundlagen der CNC-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/programmierung/fortgeschritten" class="text-blue-600 hover:text-blue-800">
+                  Fortgeschrittene G-Code-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

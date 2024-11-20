@@ -1,0 +1,239 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' },
+  { title: 'CNC für die Medizintechnik', href: '/industrieanwendungen/medical' }
+];
+
+const navItems = [
+  { href: "#bedeutung", title: "Bedeutung" },
+  { href: "#materialbearbeitung", title: "Materialbearbeitung" },
+  { href: "#implantate", title: "Implantate" },
+  { href: "#chirurgische-werkzeuge", title: "Chirurgische Werkzeuge" },
+  { href: "#innovationen", title: "Innovationen" },
+  { href: "#anforderungen", title: "Anforderungen" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="CNC für die Medizintechnik: Präzision für medizinische Geräte"
+  description="Erfahren Sie, wie CNC-Technologie die Medizintechnik revolutioniert: Von der Herstellung von Implantaten bis zu chirurgischen Instrumenten mit höchster Präzision."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC für die Medizintechnik: Präzision für medizinische Geräte
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            In der Medizintechnik ist Präzision entscheidend, um sicherheitskritische Bauteile und Geräte herzustellen, die höchsten Standards genügen. 
+            CNC-Technologie ermöglicht die Bearbeitung komplexer Geometrien, die Verarbeitung biokompatibler Materialien und die Einhaltung strengster regulatorischer Anforderungen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Bedeutung -->
+        <section id="bedeutung" class="mb-12">
+          <h2>Die Bedeutung von CNC in der Medizintechnik</h2>
+          <p>
+            Die Fertigung in der Medizintechnik erfordert Präzision, Zuverlässigkeit und Biokompatibilität. 
+            CNC-Systeme bieten die Möglichkeit, komplexe Bauteile wie Implantate und chirurgische Instrumente mit höchster Genauigkeit herzustellen. 
+            Die Fähigkeit, wiederholbare Ergebnisse zu liefern und gleichzeitig Materialverluste zu minimieren, macht CNC zur bevorzugten Technologie für Hersteller medizinischer Geräte.
+          </p>
+        </section>
+
+        <!-- Materialbearbeitung -->
+        <section id="materialbearbeitung" class="mb-12">
+          <h2>Materialbearbeitung: Von Titan bis Hochleistungskunststoffen</h2>
+          <p>
+            In der Medizintechnik kommen verschiedene Materialien zum Einsatz, die spezifische Eigenschaften für unterschiedliche Anwendungen bieten:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Titan:</strong>
+                  <p class="text-gray-600">Dieses leichte, biokompatible und korrosionsbeständige Material wird häufig für Implantate wie Hüft- und Knieprothesen verwendet.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Edelstahl:</strong>
+                  <p class="text-gray-600">Korrosionsbeständig und hygienisch, ist Edelstahl die erste Wahl für chirurgische Instrumente wie Skalpelle und Zangen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hochleistungskunststoffe:</strong>
+                  <p class="text-gray-600">Kunststoffe wie PEEK werden für temporäre Anwendungen oder als Komponenten in Diagnostikgeräten eingesetzt.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            CNC ermöglicht eine präzise Bearbeitung dieser Materialien, was die Qualität und Sicherheit der Endprodukte erhöht.
+          </p>
+        </section>
+
+        <!-- Implantate -->
+        <section id="implantate" class="mb-12">
+          <h2>CNC-Fertigung von Implantaten</h2>
+          <p>
+            Implantate wie Dentalprothesen, Wirbelsäulenstabilisatoren und Hüftgelenke erfordern höchste Präzision und Biokompatibilität. 
+            CNC-Systeme ermöglichen die simultane Bearbeitung komplexer Geometrien mit minimalen Toleranzen. 
+            Dies ist besonders wichtig, um die Passgenauigkeit und Funktionalität der Implantate sicherzustellen.
+          </p>
+          <p>
+            Ein typisches Beispiel ist die Fertigung von Zahnimplantaten, bei der CAD/CAM-Software und 5-Achsen-CNC-Systeme verwendet werden, um individuelle Lösungen zu schaffen.
+          </p>
+        </section>
+
+        <!-- Chirurgische Werkzeuge -->
+        <section id="chirurgische-werkzeuge" class="mb-12">
+          <h2>Chirurgische Werkzeuge: Präzision und Ergonomie</h2>
+          <p>
+            Chirurgische Instrumente wie Bohrer, Skalpelle und Knochensägen profitieren von der Präzisionsfertigung durch CNC. 
+            Die Bearbeitung erfolgt mit engen Toleranzen, um die Funktionalität und Ergonomie der Werkzeuge zu gewährleisten. 
+            CNC ermöglicht außerdem die sterile Verarbeitung von Materialien, ein entscheidender Vorteil für die Medizintechnik.
+          </p>
+          <p>
+            Fortschrittliche Technologien wie Mikrobearbeitung unterstützen die Fertigung minimal-invasiver chirurgischer Werkzeuge.
+          </p>
+        </section>
+
+        <!-- Innovationen -->
+        <section id="innovationen" class="mb-12">
+          <h2>Technologische Innovationen: Mikrobearbeitung und Echtzeitüberwachung</h2>
+          <p>
+            CNC-Technologien haben sich weiterentwickelt, um den steigenden Anforderungen der Medizintechnik gerecht zu werden. 
+            Die simultane 5-Achsen-Bearbeitung ermöglicht die Herstellung komplexer Geometrien, während Mikrobearbeitungstechniken für präzise Details sorgen, wie sie bei Diagnostikgeräten erforderlich sind.
+          </p>
+          <p>
+            Echtzeitüberwachung und KI-gestützte Fertigungsprozesse gewährleisten eine gleichbleibend hohe Qualität und minimieren Produktionsfehler. 
+            Diese Technologien sind besonders wichtig für sicherheitskritische Bauteile.
+          </p>
+        </section>
+
+        <!-- Anforderungen -->
+        <section id="anforderungen" class="mb-12">
+          <h2>Branchenspezifische Anforderungen und regulatorische Vorgaben</h2>
+          <p>
+            Die Medizintechnik unterliegt strengen Vorschriften wie der ISO 13485 und den FDA-Richtlinien. 
+            CNC-Systeme unterstützen die Einhaltung dieser Anforderungen durch Rückverfolgbarkeit und Dokumentation jedes Produktionsschrittes. 
+            Dies ist entscheidend für die Sicherheit und Qualität der Endprodukte.
+          </p>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Ressourcenschonung</h2>
+          <p>
+            CNC-Technologien tragen zur Nachhaltigkeit in der Medizintechnik bei. 
+            Sie minimieren Materialverluste und optimieren den Energieverbrauch. 
+            Wiederaufbereitungsprozesse für medizinische Geräte, die durch CNC-Systeme unterstützt werden, reduzieren die Kosten und schonen Ressourcen.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit: CNC als Schlüsseltechnologie der Medizintechnik</h2>
+          <p>
+            CNC-Systeme sind unverzichtbar für die Fertigung moderner medizinischer Geräte und Instrumente. 
+            Sie bieten die Präzision, Zuverlässigkeit und Flexibilität, die in dieser Branche gefordert werden. 
+            Mit technologischen Innovationen wie Mikrobearbeitung und Echtzeitüberwachung wird CNC weiterhin eine zentrale Rolle in der Entwicklung der Medizintechnik spielen.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

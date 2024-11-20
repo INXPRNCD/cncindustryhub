@@ -1,0 +1,358 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Maschinentypen', href: '/maschinen' },
+  { title: 'Die richtige CNC-Maschine auswählen', href: '/maschinen/richtige-cnc-maschine' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#projektanforderungen", title: "Projektanforderungen" },
+  { href: "#maschinenvergleich", title: "Maschinenvergleich" },
+  { href: "#wirtschaftlichkeit", title: "Wirtschaftlichkeit" },
+  { href: "#technologie", title: "Technologie" },
+  { href: "#praxisbeispiele", title: "Praxisbeispiele" }
+];
+---
+
+<Layout 
+  title="Die richtige CNC-Maschine für spezifische Projekte auswählen"
+  description="Ein umfassender Leitfaden zur Auswahl der perfekten CNC-Maschine für spezifische Projekte, angepasst an Material, Präzision und Produktionsanforderungen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Die richtige CNC-Maschine für spezifische Projekte auswählen
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie, wie Sie die optimale CNC-Maschine auswählen, um Präzision, Effizienz und Kosteneffizienz in Ihren Fertigungsprozessen zu maximieren.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die Wahl der richtigen CNC-Maschine ist ein entscheidender Faktor für den Erfolg eines Fertigungsprojekts. 
+            Von der Materialbearbeitung über die Komplexität der Geometrie bis hin zur Kosteneffizienz – dieser Leitfaden deckt alle relevanten Kriterien ab, um Ihre Entscheidungen zu erleichtern.
+          </p>
+        </section>
+
+        <!-- Projektanforderungen -->
+        <section id="projektanforderungen" class="mb-12">
+          <h2>Projektanforderungen definieren</h2>
+          <p>
+            Die Grundlage für die Auswahl der passenden CNC-Maschine ist eine genaue Analyse Ihrer spezifischen Projektanforderungen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Material:</strong>
+                  <p class="text-gray-600">Berücksichtigen Sie, welche Materialien bearbeitet werden sollen (z. B. Metalle, Kunststoffe, Holz).</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Präzision:</strong>
+                  <p class="text-gray-600">Welche Toleranzen und Maßhaltigkeit sind notwendig?</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Produktionsvolumen:</strong>
+                  <p class="text-gray-600">Handelt es sich um Prototypen, Kleinserien oder Massenfertigung?</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Komplexität der Geometrie:</strong>
+                  <p class="text-gray-600">Sind Freiformflächen oder komplexe 3D-Strukturen erforderlich?</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Beispiel: Für Bauteile mit hohen Präzisionsanforderungen in der Luftfahrt sind 5-Achsen-CNC-Systeme ideal, während eine Drehmaschine für rotationssymmetrische Teile wie Achsen und Wellen optimal ist.
+          </p>
+        </section>
+
+        <!-- Maschinenvergleich -->
+        <section id="maschinenvergleich" class="mb-12">
+          <h2>Vergleich der Maschinenarten</h2>
+          <p>
+            Jede CNC-Maschine bietet einzigartige Stärken und ist auf spezifische Anforderungen ausgerichtet. 
+            Der folgende Vergleich erleichtert die Wahl:
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Maschinentyp</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vorteile</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typische Anwendungen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Fräsmaschinen</td>
+                  <td class="px-6 py-4">Präzise Bearbeitung komplexer Geometrien, vielseitig einsetzbar</td>
+                  <td class="px-6 py-4">Werkzeuge, Automobilteile, Prototypen</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Drehmaschinen</td>
+                  <td class="px-6 py-4">Effizient für rotationssymmetrische Teile, hohe Geschwindigkeit</td>
+                  <td class="px-6 py-4">Achsen, Bolzen, Wellen</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">5-Achsen-CNC-Systeme</td>
+                  <td class="px-6 py-4">Bearbeitung komplexer Freiformflächen mit hoher Präzision</td>
+                  <td class="px-6 py-4">Medizinische Implantate, Luftfahrtkomponenten</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Laser-CNC</td>
+                  <td class="px-6 py-4">Präzise Schnitte, keine mechanische Belastung</td>
+                  <td class="px-6 py-4">Gravuren, dünne Metall- und Kunststoffplatten</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Wasserstrahl-CNC</td>
+                  <td class="px-6 py-4">Keine thermische Belastung, geeignet für empfindliche Materialien</td>
+                  <td class="px-6 py-4">Glas, Aluminium, Edelstahl</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Wirtschaftlichkeit -->
+        <section id="wirtschaftlichkeit" class="mb-12">
+          <h2>Wirtschaftlichkeit und Budget</h2>
+          <p>
+            Die Auswahl der CNC-Maschine sollte nicht nur auf technischen Anforderungen basieren, sondern auch wirtschaftliche Aspekte berücksichtigen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Investitionskosten:</strong>
+                  <p class="text-gray-600">Neuanschaffung oder Leasing einer Maschine.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Betriebskosten:</strong>
+                  <p class="text-gray-600">Energieverbrauch, Wartung, Werkzeugverschleiß.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>ROI (Return on Investment):</strong>
+                  <p class="text-gray-600">Zeit, die benötigt wird, um die Investition zu amortisieren.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Beispiel: Wasserstrahlmaschinen haben höhere Betriebskosten, bieten aber erhebliche Vorteile bei der Präzision und Materialschonung.
+          </p>
+        </section>
+
+        <!-- Technologie -->
+        <section id="technologie" class="mb-12">
+          <h2>Technologische Anpassungen</h2>
+          <p>
+            Moderne CNC-Maschinen können durch technologische Ergänzungen optimal an spezifische Anforderungen angepasst werden:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CAD/CAM-Integration:</strong>
+                  <p class="text-gray-600">Vereinfachung von Design- und Fertigungsprozessen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT-Integration:</strong>
+                  <p class="text-gray-600">Echtzeitüberwachung und vorausschauende Wartung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>KI-gesteuerte Optimierungen:</strong>
+                  <p class="text-gray-600">Automatische Anpassung von Produktionsparametern für maximale Effizienz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Praxisbeispiele -->
+        <section id="praxisbeispiele" class="mb-12">
+          <h2>Praxisbeispiele und Empfehlungen</h2>
+          <p>
+            Fallstudien aus verschiedenen Branchen illustrieren die spezifischen Vorteile der jeweiligen Maschinen:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Drehmaschinen für Wellen und Bolzen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">5-Achsen-Systeme für komplexe Freiformflächen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Laser-CNC für präzise Schnitte bei Implantaten.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die Wahl der richtigen CNC-Maschine hängt von spezifischen Projektanforderungen, Budget und technologischen Prioritäten ab. 
+            Eine fundierte Analyse und ein Vergleich der Maschinenarten helfen dabei, langfristige Effizienz und Erfolg zu gewährleisten.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

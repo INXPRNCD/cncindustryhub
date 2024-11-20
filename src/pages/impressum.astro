@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Impressum', href: '/impressum' }
+];
+---
+
+<Layout 
+  title="Impressum | CNCIndustryHub"
+  description="Impressum und rechtliche Informationen von CNCIndustryHub - Transparente Angaben zu Verantwortlichkeiten und Kontaktmöglichkeiten."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Impressum
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Angaben gemäß gesetzlichen Informationspflichten
+        </p>
+
+        <section class="mb-12">
+          <h2>Verantwortlich für den Inhalt</h2>
+          <p>
+            <strong>Betreiber der Website:</strong><br>
+            Özden Erdinc<br>
+            Zürich<br>
+            Schweiz
+          </p>
+          <p>
+            <strong>Kontakt:</strong><br>
+            E-Mail: info@cncindustryhub.com
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>Haftungsausschluss</h2>
+          <h3 class="text-xl font-semibold mb-4">1. Inhalt der Website</h3>
+          <p>
+            Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-4 mt-8">2. Links auf externe Websites</h3>
+          <p>
+            Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-4 mt-8">3. Urheberrecht</h3>
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>Streitbeilegung</h2>
+          <p>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Wir sind jedoch nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>Technische Umsetzung</h2>
+          <p>
+            Diese Website wurde mit modernen Webtechnologien erstellt und wird regelmäßig aktualisiert, um bestmögliche Funktionalität und Sicherheit zu gewährleisten.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>Bildnachweise</h2>
+          <p>
+            Die auf dieser Website verwendeten Bilder und Grafiken sind urheberrechtlich geschützt. Die Bildrechte liegen, soweit nicht anders gekennzeichnet, bei CNCIndustryHub oder wurden von lizenzierten Bildagenturen erworben.
+          </p>
+        </section>
+
+        <footer class="mb-12">
+          <p>
+            Stand: 1. Januar 2024
+          </p>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

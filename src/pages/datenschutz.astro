@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Datenschutz', href: '/datenschutz' }
+];
+---
+
+<Layout 
+  title="Datenschutzerklärung | CNCIndustryHub"
+  description="Datenschutzerklärung von CNCIndustryHub gemäß revDSG und DSGVO - Informationen zur Verarbeitung Ihrer personenbezogenen Daten."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Datenschutzerklärung
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Stand: 1. Januar 2024
+        </p>
+
+        <section class="mb-12">
+          <h2>1. Einleitung und Verantwortliche Stelle</h2>
+          <p>
+            Wir freuen uns über Ihr Interesse an unserer Website. Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzerklärung informiert Sie über die Verarbeitung Ihrer personenbezogenen Daten auf unserer Website gemäß dem revidierten Schweizer Datenschutzgesetz (revDSG) und der EU-Datenschutz-Grundverordnung (DSGVO).
+          </p>
+          <p>
+            <strong>Verantwortliche Stelle:</strong><br>
+            Özden Erdinc<br>
+            Zürich, Schweiz<br>
+            E-Mail: datenschutz@cncindustryhub.com
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>2. Grundsätze der Datenverarbeitung</h2>
+          <p>
+            Wir verarbeiten Ihre personenbezogenen Daten nach den folgenden Grundsätzen:
+          </p>
+          <ul>
+            <li>Rechtmäßigkeit, Transparenz und Treu und Glauben</li>
+            <li>Zweckbindung</li>
+            <li>Datenminimierung</li>
+            <li>Richtigkeit</li>
+            <li>Speicherbegrenzung</li>
+            <li>Integrität und Vertraulichkeit</li>
+            <li>Rechenschaftspflicht</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2>3. Arten der verarbeiteten Daten</h2>
+          <p>
+            Wir verarbeiten folgende Kategorien personenbezogener Daten:
+          </p>
+          <ul>
+            <li>Nutzungsdaten (z.B. besuchte Webseiten, Zugriffszeiten)</li>
+            <li>Meta-/Kommunikationsdaten (z.B. Geräte-Informationen, IP-Adressen)</li>
+            <li>Analysedaten durch Google Analytics 4</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2>4. Google Analytics 4</h2>
+          <p>
+            Diese Website benutzt Google Analytics 4 (GA4), einen Webanalysedienst der Google Ireland Limited ("Google"). Google Analytics 4 verwendet sogenannte "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen.
+          </p>
+          <p>
+            Die durch GA4 erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen in unserem Auftrag benutzen, um:
+          </p>
+          <ul>
+            <li>Ihre Nutzung der Website auszuwerten</li>
+            <li>Reports über die Websiteaktivitäten zusammenzustellen</li>
+            <li>Weitere mit der Websitenutzung verbundene Dienstleistungen zu erbringen</li>
+          </ul>
+          <p>
+            Die im Rahmen von Google Analytics 4 von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern.
+          </p>
+          <p>
+            Die Nutzung von Google Analytics 4 erfolgt auf Grundlage unseres berechtigten Interesses an der Analyse des Nutzerverhaltens zur Optimierung unserer Website (Art. 6 Abs. 1 lit. f DSGVO; Art. 31 revDSG).
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>5. Rechtsgrundlagen der Datenverarbeitung</h2>
+          <p>
+            Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf Grundlage folgender Rechtsgrundlagen:
+          </p>
+          <ul>
+            <li>Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO; Art. 31 revDSG)</li>
+            <li>Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO)</li>
+            <li>Erfüllung rechtlicher Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO)</li>
+            <li>Wahrung berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO; Art. 31 revDSG)</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2>6. Datensicherheit</h2>
+          <p>
+            Wir treffen angemessene technische und organisatorische Sicherheitsmaßnahmen gemäß Art. 32 DSGVO und Art. 8 revDSG, um Ihre personenbezogenen Daten vor unbeabsichtigter oder unrechtmäßiger Zerstörung, Verlust, Veränderung sowie gegen unbefugte Offenlegung oder unbefugten Zugang zu schützen.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>7. Ihre Rechte</h2>
+          <p>
+            Nach dem revDSG und der DSGVO stehen Ihnen folgende Rechte zu:
+          </p>
+          <ul>
+            <li>Recht auf Auskunft (Art. 15 DSGVO; Art. 25 revDSG)</li>
+            <li>Recht auf Berichtigung (Art. 16 DSGVO; Art. 32 revDSG)</li>
+            <li>Recht auf Löschung (Art. 17 DSGVO; Art. 32 revDSG)</li>
+            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Widerspruchsrecht (Art. 21 DSGVO; Art. 31 revDSG)</li>
+          </ul>
+          <p>
+            Zur Ausübung Ihrer Rechte können Sie sich jederzeit an die oben genannte Kontaktadresse wenden.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>8. Aufbewahrungsdauer</h2>
+          <p>
+            Die von Google Analytics 4 erhobenen Daten werden standardmäßig für 14 Monate gespeichert. Nach Ablauf dieser Frist werden die Daten automatisch gelöscht. Alle anderen personenbezogenen Daten werden nur so lange gespeichert, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist oder dies gesetzlich vorgeschrieben ist.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>9. Widerspruch gegen Datenerfassung durch Google Analytics</h2>
+          <p>
+            Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie das unter folgendem Link verfügbare Browser-Plugin installieren: <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">https://tools.google.com/dlpage/gaoptout?hl=de</a>
+          </p>
+          <p>
+            Alternativ können Sie auch die Verwendung von Cookies in Ihrem Browser deaktivieren. Bitte beachten Sie, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>10. Änderungen der Datenschutzerklärung</h2>
+          <p>
+            Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf unter Beachtung der geltenden Datenschutzvorschriften anzupassen. Die jeweils aktuelle Version finden Sie stets auf dieser Seite.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2>11. Beschwerderecht</h2>
+          <p>
+            Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. In der Schweiz ist dies der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB).
+          </p>
+        </section>
+
+        <footer class="mb-12">
+          <p>
+            Bei Fragen zum Datenschutz können Sie sich jederzeit an uns wenden. Wir sind bestrebt, Ihre Anfragen zeitnah zu beantworten und Ihre Datenschutzrechte zu wahren.
+          </p>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

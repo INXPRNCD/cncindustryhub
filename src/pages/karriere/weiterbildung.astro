@@ -1,0 +1,335 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Ausbildung & Karriere', href: '/karriere' },
+  { title: 'Weiterbildung und Gehaltsvergleiche', href: '/karriere/weiterbildung' }
+];
+
+const navItems = [
+  { href: "#bedeutung", title: "Bedeutung" },
+  { href: "#gehaltsvergleiche", title: "Gehaltsvergleiche" },
+  { href: "#zusammenhang", title: "Weiterbildung & Gehalt" },
+  { href: "#zukunftsperspektiven", title: "Zukunftsperspektiven" }
+];
+---
+
+<Layout 
+  title="Weiterbildung und Gehaltsvergleiche in der CNC-Branche"
+  description="Erfahren Sie alles über Weiterbildungsmöglichkeiten und Gehaltsperspektiven in der CNC-Branche. Von technischen Schulungen bis zu branchenspezifischen Gehaltsanalysen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Weiterbildung und Gehaltsvergleiche in der CNC-Branche
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die CNC-Industrie befindet sich in einem technologischen Wandel, der Fachkräfte dazu zwingt, ihre Kompetenzen kontinuierlich zu erweitern. 
+            Gleichzeitig beeinflussen Weiterbildung und Spezialisierung maßgeblich die Gehaltsperspektiven und Karrierechancen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Bedeutung von Weiterbildung -->
+        <section id="bedeutung" class="mb-12">
+          <h2>Bedeutung von Weiterbildung in der CNC-Industrie</h2>
+          <p>
+            Technologische Innovationen wie Industrie 4.0, IoT und KI erhöhen die Anforderungen an CNC-Fachkräfte. 
+            Weiterbildung ist entscheidend, um die eigenen Fähigkeiten auf dem neuesten Stand zu halten und den steigenden Marktanforderungen gerecht zu werden.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Arten der Weiterbildung</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Technische Schulungen:</strong>
+                  <p class="text-gray-600">Praxisnahe Programme für G-Code, CAD/CAM-Software, Werkzeugtechnologie und Automatisierung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Digitale Lernmethoden:</strong>
+                  <p class="text-gray-600">AR/VR-gestützte Simulationen und Online-Kurse ermöglichen flexibles und praxisnahes Lernen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Soft Skills:</strong>
+                  <p class="text-gray-600">Kompetenzen wie Problemlösung, Kommunikation und Zeitmanagement, die in Führungspositionen entscheidend sind.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Besonders Programme von Herstellern wie Fanuc und Siemens bieten eine anerkannte Qualifizierung für CNC-Fachkräfte.
+          </p>
+        </section>
+
+        <!-- CNC-Gehaltsvergleiche -->
+        <section id="gehaltsvergleiche" class="mb-12">
+          <h2>CNC-Gehaltsvergleiche: Fakten und Trends</h2>
+          <p>
+            Die Gehälter in der CNC-Branche variieren je nach Erfahrung, Spezialisierung und Branche. 
+            Gut ausgebildete Fachkräfte mit Zusatzqualifikationen erzielen deutlich höhere Einkommen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Einflussfaktoren auf das Gehalt</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Erfahrung:</strong>
+                  <p class="text-gray-600">
+                    Anfänger: CHF 50'000–CHF 65'000 jährlich.<br>
+                    Experten: CHF 90'000–CHF 120'000 mit Spezialisierungen.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Spezialisierungen:</strong>
+                  <p class="text-gray-600">Programmierer, Automatisierungstechniker und Qualitätssicherungsexperten erzielen oft Spitzengehälter.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Region:</strong>
+                  <p class="text-gray-600">Ballungszentren wie Zürich und Genf bieten die höchsten Gehälter.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Branchenspezifische Gehaltsanalysen</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Durchschnittsgehälter zwischen CHF 80'000 und CHF 110'000, abhängig von Präzisionsanforderungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Gehälter von CHF 70'000 bis CHF 90'000, besonders für CNC-Programmierer.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Premiumgehälter von CHF 100'000 bis CHF 130'000, bedingt durch strenge Zertifizierungsanforderungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zusammenhang zwischen Weiterbildung und Gehalt -->
+        <section id="zusammenhang" class="mb-12">
+          <h2>Zusammenhang zwischen Weiterbildung und Gehalt</h2>
+          <p>
+            Weiterbildung ist der Schlüssel zur Gehaltssteigerung. 
+            Fachkräfte mit zusätzlichen Qualifikationen und Zertifikaten haben bessere Chancen, in Führungspositionen aufzusteigen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Der Wert von Zertifizierungen</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Technische Zertifikate:</strong>
+                  <p class="text-gray-600">Fanuc- und Siemens-Zertifikate steigern die Gehaltschancen um bis zu 20%.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Branchenspezifische Qualifikationen:</strong>
+                  <p class="text-gray-600">Zertifikate wie ISO 13485 (Medizintechnik) oder IATF 16949 (Automobilindustrie) sind oft entscheidend.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Technologie als Gehaltsfaktor</h3>
+            <p>
+              Kenntnisse in KI, Big Data und IoT werden zunehmend als entscheidender Faktor für Gehaltsverhandlungen angesehen. 
+              Fachkräfte, die diese Technologien beherrschen, sind für Unternehmen unverzichtbar.
+            </p>
+          </div>
+        </section>
+
+        <!-- Zukunftsperspektiven -->
+        <section id="zukunftsperspektiven" class="mb-12">
+          <h2>Zukunftsperspektiven: Weiterbildung und Gehaltsstrukturen</h2>
+          <p>
+            Mit der Integration von Industrie 4.0 und Industrie 5.0 verändern sich die Anforderungen an CNC-Fachkräfte. 
+            Weiterbildung bleibt eine zentrale Voraussetzung für den beruflichen Erfolg.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Trends in der Weiterbildung</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Personalisierte Lernpfade:</strong>
+                  <p class="text-gray-600">Maßgeschneiderte Programme bieten gezielte Kompetenzentwicklung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Technologiegestützte Schulungen:</strong>
+                  <p class="text-gray-600">Automatisierung, KI und hybride CNC-Systeme dominieren die zukünftigen Lerninhalte.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Zukünftige Gehaltsentwicklung</h3>
+            <p>
+              Mit der wachsenden Bedeutung spezialisierter Kenntnisse in Automatisierung und Digitalisierung werden die Gehälter in den kommenden Jahren weiter steigen. 
+              Förderprogramme und Subventionen können KMUs und Fachkräften helfen, diese Trends effektiv zu nutzen.
+            </p>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Weiterbildung ist der Schlüssel zu einer erfolgreichen Karriere in der CNC-Branche. 
+            Die Kombination aus technischer Qualifikation, Branchenspezialisierung und kontinuierlichem Lernen bietet nicht nur bessere Gehaltsaussichten, sondern sichert auch langfristige Wettbewerbsfähigkeit. 
+            Mit der richtigen Strategie können CNC-Fachkräfte die Herausforderungen der Zukunft meistern und ihre Karriereziele erreichen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/karriere/wege" class="text-blue-600 hover:text-blue-800">
+                  Karrierewege in der CNC-Industrie
+                </a>
+              </li>
+              <li>
+                <a href="/karriere/zertifikate" class="text-blue-600 hover:text-blue-800">
+                  Wichtige Zertifizierungen
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

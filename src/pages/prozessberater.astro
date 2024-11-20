@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Navigation/Breadcrumbs.astro';
+import CNCProzessberater from '../components/CNCProzessberater.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC Prozessberater', href: '/prozessberater' }
+];
+---
+
+<Layout 
+  title="CNC Prozessberater | Optimale Parameter für Ihre CNC-Bearbeitung"
+  description="Nutzen Sie unseren CNC Prozessberater für maßgeschneiderte Empfehlungen zu Schnittparametern, Werkzeugen und Bearbeitungsstrategien basierend auf Ihren spezifischen Anforderungen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          CNC Prozessberater
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Erhalten Sie maßgeschneiderte Empfehlungen für Ihre CNC-Bearbeitung. Wählen Sie Material, Toleranzen und gewünschte Oberflächenqualität für optimale Bearbeitungsparameter.
+        </p>
+      </header>
+
+      <CNCProzessberater />
+    </div>
+  </main>
+</Layout>

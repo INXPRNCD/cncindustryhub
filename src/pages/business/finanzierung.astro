@@ -1,0 +1,312 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Geschäftsstrategie & Investitionen', href: '/business' },
+  { title: 'ROI und Finanzierung', href: '/business/finanzierung' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#roi-analyse", title: "ROI-Analyse" },
+  { href: "#finanzierungsmodelle", title: "Finanzierungsmodelle" },
+  { href: "#branchen", title: "Branchen" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="ROI und Finanzierung von CNC: Maximieren Sie Ihre Investition"
+  description="Erfahren Sie, wie Sie durch ROI-Analysen und optimale Finanzierungsstrategien Ihre CNC-Investitionen maximieren können. Von Leasing bis zu Förderprogrammen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            ROI und Finanzierung von CNC: Maximieren Sie Ihre Investition
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die Wahl der richtigen CNC-Maschine ist eine strategische Entscheidung, die langfristige Auswirkungen auf die Wettbewerbsfähigkeit eines Unternehmens hat. 
+            Der Return on Investment (ROI) hilft dabei, die Rentabilität einer Investition zu bewerten, während flexible Finanzierungsmöglichkeiten wie Leasing oder 
+            staatliche Subventionen den Einstieg erleichtern.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- ROI-Analyse -->
+        <section id="roi-analyse" class="mb-12">
+          <h2>ROI-Analyse: Wie rentabel ist Ihre CNC-Investition?</h2>
+          <p>
+            Der ROI gibt an, wie viel Rendite eine CNC-Investition im Verhältnis zu ihren Kosten erwirtschaftet. 
+            Die Berechnung erfolgt nach der Formel:
+          </p>
+
+          <div class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6">
+            <pre class="text-sm">ROI = ((Einnahmen aus der Investition - Investitionskosten) / Investitionskosten) × 100%</pre>
+          </div>
+
+          <p>
+            Beispiel: Eine CNC-Maschine kostet 120.000 € und generiert innerhalb von zwei Jahren Einnahmen von 180.000 €. 
+            Der ROI beträgt: <strong>50%</strong>.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Faktoren, die den ROI beeinflussen:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Produktionsvolumen:</strong>
+                  <p class="text-gray-600">Höhere Stückzahlen reduzieren die Stückkosten und erhöhen den ROI.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fehlerreduktion:</strong>
+                  <p class="text-gray-600">Präzision und Automatisierung verringern Ausschuss und Nacharbeit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Lebenszykluskosten (LCC):</strong>
+                  <p class="text-gray-600">Wartung und Energieeffizienz haben einen direkten Einfluss auf die Gesamtrentabilität.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Finanzierungsmodelle -->
+        <section id="finanzierungsmodelle" class="mb-12">
+          <h2>Finanzierungsmodelle für CNC-Maschinen</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Leasing</h3>
+              <div class="space-y-4">
+                <div>
+                  <strong>Vorteile:</strong>
+                  <p class="text-gray-600">Minimale Anfangsinvestition, flexible Laufzeiten und einfache Budgetierung.</p>
+                </div>
+                <div>
+                  <strong>Nachteile:</strong>
+                  <p class="text-gray-600">Langfristig können die Gesamtkosten höher ausfallen als beim Kauf.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Mietkauf</h3>
+              <div class="space-y-4">
+                <div>
+                  <strong>Vorteile:</strong>
+                  <p class="text-gray-600">Die Maschine geht nach Vertragsende in den Besitz des Unternehmens über.</p>
+                </div>
+                <div>
+                  <strong>Nachteile:</strong>
+                  <p class="text-gray-600">Höhere monatliche Raten im Vergleich zu Leasing.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Förderprogramme</h3>
+              <p>
+                Viele Regierungen bieten Subventionen und Förderprogramme für KMUs an, die den Einstieg in CNC-Technologie erleichtern. 
+                Diese Programme senken die Anschaffungskosten erheblich, erfordern jedoch detaillierte Anträge und Nachweise.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Branchenspezifische Überlegungen -->
+        <section id="branchen" class="mb-12">
+          <h2>Branchenspezifische Überlegungen</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">
+                Die Automobilproduktion profitiert von CNC-Technologien durch hohe Produktionsvolumen und standardisierte Prozesse, 
+                die eine schnelle Amortisation der Investition ermöglichen.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">
+                In der Luftfahrtindustrie rechtfertigen die hohen Anforderungen an Präzision und Materialkosten die Investition in CNC-Maschinen. 
+                Der ROI basiert hier auf der Reduktion von Materialverschwendung und der Optimierung komplexer Bauteile.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">
+                CNC-Technologien sind in der Medizintechnik unverzichtbar, um strenge Hygienestandards und Zertifizierungsanforderungen zu erfüllen. 
+                Der ROI wird durch die Herstellung hochpräziser, biokompatibler Produkte maximiert.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukünftige Entwicklungen in ROI und Finanzierung</h2>
+          <p>
+            Die Zukunft der ROI-Analyse und Finanzierung liegt in der Integration von Technologien wie KI und Big Data. 
+            Echtzeitdaten ermöglichen präzisere ROI-Prognosen, während automatisierte Plattformen die Auswahl der optimalen Finanzierungslösung erleichtern.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Nachhaltige Finanzierung, wie grüne Investitionen, gewinnt an Bedeutung.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Unternehmen setzen zunehmend auf energieeffiziente und ressourcenschonende CNC-Maschinen.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit: ROI und Finanzierung als Schlüssel zum Erfolg</h2>
+          <p>
+            Eine gründliche ROI-Analyse und die Wahl der passenden Finanzierung sind essenziell, um CNC-Investitionen rentabel zu gestalten. 
+            Unternehmen, die moderne Technologien und Finanzierungslösungen nutzen, sichern sich nicht nur finanzielle Vorteile, sondern stärken auch ihre Marktposition für die Zukunft.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/business/roi" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte ROI-Berechnungen
+                </a>
+              </li>
+              <li>
+                <a href="/business/trends" class="text-blue-600 hover:text-blue-800">
+                  Aktuelle Markttrends
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+code {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+</style>

@@ -1,0 +1,346 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' },
+  { title: 'CNC in der Elektronikfertigung', href: '/industrieanwendungen/electronics' }
+];
+
+const navItems = [
+  { href: "#bedeutung", title: "Bedeutung" },
+  { href: "#herstellungsprozess", title: "Herstellungsprozess" },
+  { href: "#materialbearbeitung", title: "Materialbearbeitung" },
+  { href: "#innovationen", title: "Innovationen" },
+  { href: "#anwendungsbereiche", title: "Anwendungsbereiche" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="CNC in der Elektronikfertigung: Herstellung von Leiterplatten"
+  description="Entdecken Sie, wie CNC-Technologie die Herstellung von Leiterplatten revolutioniert – durch Präzision, Effizienz und Nachhaltigkeit, die den Anforderungen moderner Elektronik gerecht werden."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC in der Elektronikfertigung: Herstellung von Leiterplatten
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie, wie CNC-Technologie die Herstellung von Leiterplatten revolutioniert – durch Präzision, Effizienz und Nachhaltigkeit, die den Anforderungen moderner Elektronik gerecht werden.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Bedeutung -->
+        <section id="bedeutung" class="mb-12">
+          <h2>Bedeutung von CNC in der Elektronikfertigung</h2>
+          <p>
+            CNC-Technologie ist ein unverzichtbarer Bestandteil der modernen Elektronikfertigung. 
+            Sie ermöglicht die präzise Herstellung von Leiterplatten, die für die Miniaturisierung von Bauteilen und die steigenden Anforderungen an Effizienz und Zuverlässigkeit in der Elektronikindustrie unerlässlich sind. 
+            Insbesondere in Anwendungen wie IoT-Geräten und Hochfrequenzanwendungen bietet CNC entscheidende Vorteile.
+          </p>
+        </section>
+
+        <!-- Herstellungsprozess -->
+        <section id="herstellungsprozess" class="mb-12">
+          <h2>Herstellungsprozess von Leiterplatten</h2>
+          <p>
+            Die Herstellung von Leiterplatten durch CNC-Technologie umfasst mehrere Schritte, die höchste Präzision und Effizienz gewährleisten:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Bohren:</strong>
+                  <p class="text-gray-600">Erstellung von Durchkontaktierungen mit mikrometergenauer Präzision für elektrische Verbindungen zwischen den Schichten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fräsen:</strong>
+                  <p class="text-gray-600">Aussparung von Konturen und Anpassung der Form an spezifische Anforderungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Gravieren:</strong>
+                  <p class="text-gray-600">Feine Gravuren für Leiterbahnen und Kontakte, die eine präzise elektrische Verbindung gewährleisten.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Diese Prozesse garantieren eine gleichbleibend hohe Qualität und minimieren Fehler in der Produktion.</p>
+        </section>
+
+        <!-- Materialbearbeitung -->
+        <section id="materialbearbeitung" class="mb-12">
+          <h2>Materialbearbeitung in der Elektronikfertigung</h2>
+          <p>
+            Die CNC-Technologie bietet eine herausragende Materialbearbeitung für verschiedene Anwendungen in der Leiterplattenherstellung:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>FR-4:</strong>
+                  <p class="text-gray-600">Standardmaterial für Leiterplatten aufgrund seiner Isoliereigenschaften und Stabilität.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kupfer:</strong>
+                  <p class="text-gray-600">Perfekt für die Gravur von Leiterbahnen und Kontaktflächen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Aluminium:</strong>
+                  <p class="text-gray-600">Geeignet für Anwendungen, die eine hohe Wärmeleitfähigkeit erfordern, wie LED-Module.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Keramik:</strong>
+                  <p class="text-gray-600">Wird in Hochfrequenz- und Spezialanwendungen eingesetzt, z. B. für Telekommunikation und medizinische Geräte.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Durch die präzise Steuerung der CNC-Maschinen wird die Materialintegrität bewahrt und die thermische Belastung reduziert.
+          </p>
+        </section>
+
+        <!-- Innovationen -->
+        <section id="innovationen" class="mb-12">
+          <h2>Technologische Innovationen in der CNC-Fertigung</h2>
+          <p>
+            Fortschritte in der CNC-Technologie ermöglichen eine noch effizientere und präzisere Leiterplattenfertigung:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CAD/CAM-Integration:</strong>
+                  <p class="text-gray-600">Optimierte Designprozesse und präzise Werkzeugwege zur Minimierung von Fehlern.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Nutzung von Sensoren, um Abweichungen sofort zu erkennen und die Qualität zu gewährleisten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Mikrobearbeitung:</strong>
+                  <p class="text-gray-600">Essenziell für feine Strukturen, die in IoT- und Hochfrequenzanwendungen erforderlich sind.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Diese Technologien ermöglichen eine effiziente Serienproduktion und die Herstellung komplexer Multilayer-Leiterplatten.
+          </p>
+        </section>
+
+        <!-- Anwendungsbereiche -->
+        <section id="anwendungsbereiche" class="mb-12">
+          <h2>Anwendungsbereiche und Vorteile</h2>
+          <p>
+            CNC-Technologie wird in einer Vielzahl von Branchen eingesetzt, um Leiterplatten für unterschiedliche Anwendungen zu fertigen:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Konsumgüter</h3>
+              <p class="text-gray-600">Smartphones, Tablets und andere tragbare Geräte.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Telekommunikation</h3>
+              <p class="text-gray-600">Hochfrequenz-PCBs für 5G-Technologien und Antennensysteme.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizinische Geräte</h3>
+              <p class="text-gray-600">Diagnostiksysteme und Überwachungstechnologien.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">IoT-Geräte</h3>
+              <p class="text-gray-600">Miniaturisierte Leiterplatten für smarte Anwendungen.</p>
+            </div>
+          </div>
+
+          <p>
+            Die Flexibilität der CNC-Technologie ermöglicht es, sowohl Prototypen als auch Großserien mit hoher Präzision und Wirtschaftlichkeit herzustellen.
+          </p>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Effizienz in der Leiterplattenproduktion</h2>
+          <p>
+            Nachhaltigkeit ist ein entscheidender Faktor in der modernen Fertigung. CNC-Technologie trägt dazu bei, indem sie:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Materialabfall reduziert:</strong>
+                  <p class="text-gray-600">Präzise Bearbeitungsprozesse minimieren den Materialverbrauch.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Energie spart:</strong>
+                  <p class="text-gray-600">Effiziente Steuerungssysteme verringern den Energieverbrauch.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltige Materialien einsetzt:</strong>
+                  <p class="text-gray-600">Förderung von recycelbaren und umweltfreundlichen Werkstoffen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Dies trägt nicht nur zur Umweltfreundlichkeit bei, sondern optimiert auch die Produktionskosten.</p>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Technologie hat die Elektronikfertigung revolutioniert, insbesondere bei der Herstellung von Leiterplatten. 
+            Mit fortschrittlichen Technologien wie CAD/CAM-Integration und Echtzeitüberwachung sowie ihrer Fähigkeit, Präzision und Effizienz zu kombinieren, bleibt CNC eine Schlüsseltechnologie in der Elektronikproduktion. 
+            Ihre Nachhaltigkeit und Flexibilität machen sie zur ersten Wahl für moderne Fertigungsanforderungen.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

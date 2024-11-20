@@ -1,0 +1,347 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Technologie & Innovation', href: '/technologie' },
+  { title: 'Robotik und CNC', href: '/technologie/robotik' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#integration", title: "Integration" },
+  { href: "#vorteile", title: "Vorteile" },
+  { href: "#anwendungen", title: "Anwendungen" },
+  { href: "#herausforderungen", title: "Herausforderungen" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="Robotik und CNC in der Produktionsautomatisierung"
+  description="Entdecken Sie, wie Robotik und CNC-Technologie die Produktionsautomatisierung revolutionieren. Von Robotik-CNC-Integration bis zu Nachhaltigkeitsstrategien: Alle Details zur Industrie 4.0."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Robotik und CNC in der Produktionsautomatisierung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Wie Robotik und CNC-Technologie gemeinsam die Produktionsprozesse der Industrie 4.0 transformieren.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in Robotik und CNC-Automatisierung</h2>
+          <p>
+            Robotik und CNC-Technologie bilden zusammen die Grundlage für modernste Produktionsautomatisierung. 
+            Diese Synergie ist ein zentraler Bestandteil von Industrie 4.0 und ermöglicht eine effiziente, flexible 
+            und präzise Fertigung. Die enge Integration von Robotik in CNC-Prozesse fördert die Geschwindigkeit, 
+            Produktivität und Qualität der Fertigung.
+          </p>
+        </section>
+
+        <!-- Integration -->
+        <section id="integration" class="mb-12">
+          <h2>Integration von Robotik und CNC</h2>
+          <p>
+            Die Kombination aus Robotik und CNC-Technologie eröffnet neue Möglichkeiten für die Automatisierung. 
+            Roboter übernehmen Aufgaben wie das Be- und Entladen von Werkstücken, den Werkzeugwechsel und die Qualitätsprüfung, 
+            während CNC-Maschinen hochpräzise Bearbeitungen durchführen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Technologien für die Integration:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kollaborative Robotik (Cobots):</strong>
+                  <p class="text-gray-600">Roboter, die sicher mit Menschen zusammenarbeiten und gleichzeitig CNC-Prozesse unterstützen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitdatenübertragung:</strong>
+                  <p class="text-gray-600">Gewährleistet eine dynamische Prozessanpassung und Synchronisation zwischen Robotern und Maschinen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CAD/CAM-Integration:</strong>
+                  <p class="text-gray-600">Optimierung von Werkzeugwegen und Bearbeitungsstrategien durch datengetriebene Prozesse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Vorteile -->
+        <section id="vorteile" class="mb-12">
+          <h2>Vorteile der Automatisierung durch Robotik und CNC</h2>
+          <p>Die Automatisierung durch Robotik und CNC-Technologie bietet eine Vielzahl von Vorteilen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Effizienz:</strong>
+                  <p class="text-gray-600">24/7-Betrieb ohne menschliche Überwachung reduziert Stillstandzeiten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Präzision:</strong>
+                  <p class="text-gray-600">Wiederholbare Ergebnisse bei komplexen Bearbeitungsaufgaben.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Sicherheit:</strong>
+                  <p class="text-gray-600">Minimierung von Arbeitsrisiken durch die Reduktion manueller Eingriffe.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Flexibilität:</strong>
+                  <p class="text-gray-600">Anpassung an individuelle Produktionsanforderungen, von Prototypen bis hin zur Serienfertigung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Anwendungen -->
+        <section id="anwendungen" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          <p>Robotik und CNC-Technologie werden in verschiedenen Schlüsselindustrien erfolgreich eingesetzt:</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Automatisierte Fertigung von Karosserieteilen und Antriebssträngen mit höchster Präzision.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Bearbeitung komplexer Verbundwerkstoffe und Strukturen wie Tragflächen und Turbinenschaufeln.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Herstellung biokompatibler Implantate und chirurgischer Werkzeuge mit minimalen Toleranzen.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Herausforderungen -->
+        <section id="herausforderungen" class="mb-12">
+          <h2>Technologische Herausforderungen</h2>
+          <p>Die Implementierung von Robotik und CNC in der Automatisierung ist nicht ohne Herausforderungen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Synchronisation:</strong>
+                  <p class="text-gray-600">Sicherstellung der reibungslosen Kommunikation zwischen CNC-Steuerung und Robotern.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Programmieraufwand:</strong>
+                  <p class="text-gray-600">Komplexe Konfigurationen erfordern spezialisierte Kenntnisse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kosten:</strong>
+                  <p class="text-gray-600">Hohe Anfangsinvestitionen, jedoch mit signifikantem langfristigem ROI.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Zukunft der Automatisierung</h2>
+          <p>Nachhaltigkeit spielt eine immer wichtigere Rolle in der Automatisierung:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Ressourcenschonung:</strong>
+                  <p class="text-gray-600">Optimierung des Materialflusses und Reduktion von Abfall.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Energieeffizienz:</strong>
+                  <p class="text-gray-600">Automatisierte Prozesse reduzieren den Energieverbrauch erheblich.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Industrie 5.0:</strong>
+                  <p class="text-gray-600">Der nächste Schritt in der Fertigungstechnologie kombiniert KI, IoT und Robotik für maximale Effizienz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die Verbindung von Robotik und CNC ist ein zentraler Bestandteil der Industrie 4.0 und wird 
+            durch Innovationen wie KI und IoT weiter gestärkt. Diese Technologien ermöglichen nicht nur 
+            präzisere und effizientere Produktionsprozesse, sondern schaffen auch die Grundlage für eine 
+            nachhaltigere und intelligentere Fertigung.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/technologie/industrie40" class="text-blue-600 hover:text-blue-800">
+                  Industrie 4.0 und CNC
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/ki" class="text-blue-600 hover:text-blue-800">
+                  KI in der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/blockchain" class="text-blue-600 hover:text-blue-800">
+                  Blockchain in der CNC-Fertigung
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

@@ -1,0 +1,327 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' },
+  { title: 'CNC in der Schmuckindustrie', href: '/industrieanwendungen/jewelry' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#materialbearbeitung", title: "Materialbearbeitung" },
+  { href: "#technologische-vorteile", title: "Technologische Vorteile" },
+  { href: "#vergleich", title: "Vergleich" },
+  { href: "#praxisbeispiele", title: "Praxisbeispiele" },
+  { href: "#zukunftsperspektiven", title: "Zukunftsperspektiven" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="CNC in der Schmuckindustrie: Präzision trifft Innovation"
+  description="Erfahren Sie, wie CNC-Technologie die Schmuckindustrie revolutioniert: von präzisen Gravuren bis hin zur nachhaltigen Herstellung edler Designs."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC in der Schmuckindustrie: Präzision trifft Innovation
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Wie die CNC-Technologie filigrane Designs ermöglicht, traditionelle Fertigungsmethoden ergänzt und nachhaltige Produktion vorantreibt.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung: Die CNC-Revolution in der Schmuckindustrie</h2>
+          <p>
+            Die CNC-Technologie hat die Schmuckherstellung revolutioniert, indem sie Präzision und Effizienz in die Branche gebracht hat. 
+            Mit der Fähigkeit, filigrane Gravuren und komplexe Designs zu realisieren, ersetzt sie nicht nur traditionelle Methoden, sondern schafft auch völlig neue kreative Möglichkeiten.
+          </p>
+        </section>
+
+        <!-- Materialbearbeitung -->
+        <section id="materialbearbeitung" class="mb-12">
+          <h2>Materialbearbeitung: Edelmetalle und mehr</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Bearbeitung von Edelmetallen und Edelsteinen</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Gold und Silber:</strong>
+                  <p class="text-gray-600">CNC-Maschinen ermöglichen präzise Schnitte und Gravuren bei minimalem Materialverlust.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Platin und Palladium:</strong>
+                  <p class="text-gray-600">Perfekt für hochwertige Schmuckstücke dank exakter Fertigungstechnologien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Edelsteine:</strong>
+                  <p class="text-gray-600">Diamanten und andere Edelsteine können mit CNC präzise gefasst werden, ohne Schäden zu riskieren.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Alternative Materialien</h3>
+            <p>
+              Mit CNC können auch innovative Materialien wie Titan, Edelstahl und Verbundwerkstoffe für modernen Schmuck verarbeitet werden. 
+              Diese Materialien bieten Haltbarkeit und neue ästhetische Möglichkeiten.
+            </p>
+          </div>
+        </section>
+
+        <!-- Technologische Vorteile -->
+        <section id="technologische-vorteile" class="mb-12">
+          <h2>Technologische Vorteile der CNC-Technologie</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Integration von CAD/CAM-Software</h3>
+              <p>
+                Mit CAD/CAM-Software können maßgeschneiderte Designs erstellt werden, die CNC-Maschinen anschließend präzise umsetzen. 
+                Dies ermöglicht eine hohe Individualisierung und konstante Qualität.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">5-Achsen-CNC-Systeme</h3>
+              <p>
+                Komplexe Designs wie 3D-Strukturen, organische Formen oder symmetrische Gravuren werden durch die simultane Bearbeitung auf 5-Achsen-Maschinen ermöglicht.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Präzision und Effizienz</h3>
+              <p>
+                Die Automatisierung von CNC-Systemen sorgt für gleichbleibend hohe Qualität bei schneller Produktion – ideal für Serienfertigung und kundenspezifische Designs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vergleich -->
+        <section id="vergleich" class="mb-12">
+          <h2>Vergleich: CNC vs. traditionelle Fertigung</h2>
+          
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kriterium</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CNC-Fertigung</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Traditionelle Fertigung</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Präzision</td>
+                  <td class="px-6 py-4">Sehr hoch</td>
+                  <td class="px-6 py-4">Abhängig vom Handwerker</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Geschwindigkeit</td>
+                  <td class="px-6 py-4">Effizient bei Serienproduktion</td>
+                  <td class="px-6 py-4">Langsam, insbesondere bei Einzelstücken</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Kosten</td>
+                  <td class="px-6 py-4">Effizient bei hoher Stückzahl</td>
+                  <td class="px-6 py-4">Höhere Kosten pro Stück</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Kreativität</td>
+                  <td class="px-6 py-4">Flexibel mit CAD/CAM</td>
+                  <td class="px-6 py-4">Handwerklich vielseitig</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Praxisbeispiele -->
+        <section id="praxisbeispiele" class="mb-12">
+          <h2>Praxisbeispiele: Anwendungen der CNC-Technologie</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Kundenspezifische Designs</h3>
+              <p class="text-gray-600">
+                Von gravierten Ringen bis hin zu personalisierten Anhängern – CNC ermöglicht es, Schmuckstücke perfekt auf die Wünsche der Kunden abzustimmen.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Serienproduktion</h3>
+              <p class="text-gray-600">
+                Für Marken, die identische Designs in großen Stückzahlen herstellen, bietet CNC die ideale Lösung für Effizienz und Präzision.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Filigrane Gravuren</h3>
+              <p class="text-gray-600">
+                CNC kann feinste Muster und Gravuren realisieren, sei es für Luxusuhren oder kunstvoll verzierte Armbänder.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Zukunftsperspektiven -->
+        <section id="zukunftsperspektiven" class="mb-12">
+          <h2>Zukunftsperspektiven: CNC und innovative Technologien</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Hybride Fertigungsprozesse</h3>
+              <p>
+                Die Kombination aus CNC und 3D-Druck bietet neue Möglichkeiten für innovative Schmuckdesigns und nachhaltige Produktion.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Automatisierung und KI</h3>
+              <p>
+                Durch die Integration von KI und IoT können Designs optimiert und Fertigungsprozesse effizienter gestaltet werden. 
+                Echtzeitüberwachung sorgt für gleichbleibend hohe Qualität.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit in der Schmuckfertigung</h2>
+          <p>
+            CNC reduziert Materialverlust und ermöglicht die Wiederverwendung von Edelmetallen, wodurch die Schmuckindustrie nachhaltiger wird.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Technologie hat die Schmuckindustrie grundlegend verändert. Mit ihrer Präzision, Effizienz und Innovationskraft ermöglicht sie neue Designs und nachhaltige Produktionsmethoden. 
+            In Kombination mit Technologien wie 3D-Druck und KI wird sie auch in Zukunft eine treibende Kraft der Branche bleiben.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/materialien/edelmetalle" class="text-blue-600 hover:text-blue-800">
+                  CNC-Bearbeitung von Edelmetallen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

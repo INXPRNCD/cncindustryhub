@@ -1,0 +1,420 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Komponenten & Werkzeuge', href: '/komponenten' },
+  { title: 'Wichtige CNC-Komponenten', href: '/komponenten/grundlagen' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#achsen", title: "Achsen" },
+  { href: "#spindeln", title: "Spindeln" },
+  { href: "#motoren", title: "Motoren" },
+  { href: "#zusammenarbeit", title: "Zusammenarbeit" },
+  { href: "#wartung", title: "Wartung" },
+  { href: "#innovationen", title: "Innovationen" }
+];
+---
+
+<Layout 
+  title="Wichtige CNC-Komponenten: Achsen, Spindeln, Motoren erklärt"
+  description="Detaillierte Analyse der wichtigsten CNC-Komponenten: Achsen, Spindeln und Motoren. Erfahren Sie alles über ihre Funktionen, Vorteile und Anwendungen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Wichtige CNC-Komponenten: Achsen, Spindeln, Motoren erklärt
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie die essenziellen Bauteile moderner CNC-Maschinen und erfahren Sie, wie Achsen, Spindeln und Motoren für Präzision, Effizienz und technologische Innovation sorgen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            CNC-Maschinen sind die Eckpfeiler moderner Fertigungstechnologien. Die Präzision und Effizienz dieser Maschinen beruhen auf drei Hauptkomponenten: Achsen, Spindeln und Motoren. 
+            Diese Bauteile bilden die Grundlage für die Steuerung von Werkzeugen und Werkstücken, die Bearbeitung komplexer Geometrien und die Fertigung hochwertiger Produkte.
+          </p>
+        </section>
+
+        <!-- Achsen -->
+        <section id="achsen" class="mb-12">
+          <h2>Achsen in CNC-Maschinen</h2>
+          <p>
+            Die Achsen steuern die Bewegungen von Werkzeugen und Werkstücken. Sie sind in lineare und rotierende Achsen unterteilt:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Lineare Achsen (X, Y, Z):</strong>
+                  <p class="text-gray-600">Steuern präzise Bewegungen entlang gerader Bahnen und sind entscheidend für die Positionierung von Werkstücken.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Rotationsachsen (A, B, C):</strong>
+                  <p class="text-gray-600">Ermöglichen Drehbewegungen und sind essenziell für die Bearbeitung komplexer Freiformflächen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Die <strong>5-Achsen-Bearbeitung</strong> kombiniert lineare und rotierende Achsen und bietet maximale Flexibilität und Präzision. 
+            Dies macht sie ideal für Branchen wie Luftfahrt und Medizintechnik.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eigenschaft</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Lineare Achsen</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rotationsachsen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Bewegungstyp</td>
+                  <td class="px-6 py-4">Geradlinig</td>
+                  <td class="px-6 py-4">Drehend</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Hauptanwendung</td>
+                  <td class="px-6 py-4">Bohrungen, Fräsen</td>
+                  <td class="px-6 py-4">Bearbeitung komplexer Formen</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Flexibilität</td>
+                  <td class="px-6 py-4">Begrenzt</td>
+                  <td class="px-6 py-4">Hoch</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Spindeln -->
+        <section id="spindeln" class="mb-12">
+          <h2>Spindeln: Das Herz der Werkzeugbewegung</h2>
+          <p>
+            Spindeln sind entscheidend für die Materialbearbeitung, da sie die Werkzeuge antreiben. Es gibt verschiedene Arten von Spindeln:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hochgeschwindigkeitsspindeln:</strong>
+                  <p class="text-gray-600">Ideal für feine Arbeiten und weiche Materialien wie Kunststoffe und Holz.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Standardspindeln:</strong>
+                  <p class="text-gray-600">Robust und geeignet für harte Materialien wie Stahl und Titan.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Moderne Spindeln bieten Funktionen wie <strong>Echtzeitüberwachung</strong>, die Temperatur, Drehmoment und Vibrationen messen, um maximale Präzision zu gewährleisten.
+          </p>
+          <p>
+            <strong>Beispiel:</strong> In der Luftfahrt werden Hochgeschwindigkeitsspindeln für die Bearbeitung von Turbinenschaufeln verwendet, wo Präzision und Materialintegrität entscheidend sind.
+          </p>
+        </section>
+
+        <!-- Motoren -->
+        <section id="motoren" class="mb-12">
+          <h2>Motoren: Die treibende Kraft der CNC-Maschinen</h2>
+          <p>
+            Motoren steuern die Bewegung der Achsen und Spindeln. Es gibt zwei Haupttypen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Schrittmotoren:</strong>
+                  <p class="text-gray-600">Einfach und kostengünstig, ideal für Standardanwendungen mit moderater Präzision.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Servomotoren:</strong>
+                  <p class="text-gray-600">Hochpräzise und leistungsstark, geeignet für anspruchsvolle Fertigungsprozesse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Die Leistung eines Motors hängt von Parametern wie Drehmoment, Geschwindigkeit und Positioniergenauigkeit ab.</p>
+          <p>
+            <strong>Praxisbeispiel:</strong> In der Automobilindustrie werden Servomotoren verwendet, um komplexe Getriebekomponenten mit extrem engen Toleranzen zu fertigen.
+          </p>
+        </section>
+
+        <!-- Zusammenarbeit -->
+        <section id="zusammenarbeit" class="mb-12">
+          <h2>Zusammenarbeit der Komponenten</h2>
+          <p>
+            Die perfekte Synchronisation von Achsen, Spindeln und Motoren wird durch hochentwickelte CNC-Steuerungssysteme ermöglicht. Diese Zusammenarbeit sorgt für:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Maximale Präzision bei der Bearbeitung komplexer Geometrien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Effiziente Fertigung bei gleichbleibender Qualität.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Minimierung von Materialverlust und Energieverbrauch.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Durch die Integration von CAD/CAM-Software und Echtzeitüberwachung können Fertigungsprozesse weiter optimiert werden.
+          </p>
+        </section>
+
+        <!-- Wartung -->
+        <section id="wartung" class="mb-12">
+          <h2>Wartung und Lebensdauer</h2>
+          <p>
+            Die regelmäßige Wartung von CNC-Komponenten ist entscheidend für die Langlebigkeit und Effizienz der Maschine. Wichtige Maßnahmen umfassen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Kalibrierung der Achsen zur Gewährleistung der Positioniergenauigkeit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Schmierung der Spindeln zur Vermeidung von Überhitzung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Regelmäßige Überprüfung von Motoren auf Verschleiß und Leistung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0">„Gut gewartete CNC-Komponenten können die Lebensdauer einer Maschine um bis zu 40 % verlängern." – Branchenexperte</p>
+          </blockquote>
+        </section>
+
+        <!-- Innovationen -->
+        <section id="innovationen" class="mb-12">
+          <h2>Innovationen und Zukunftsperspektiven</h2>
+          <p>
+            Die Entwicklung moderner CNC-Komponenten konzentriert sich auf die Integration neuer Technologien:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Künstliche Intelligenz:</strong>
+                  <p class="text-gray-600">Selbstoptimierende Motoren und Spindeln.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT:</strong>
+                  <p class="text-gray-600">Echtzeitüberwachung und automatisierte Fehlerkorrektur.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hybridtechnologien:</strong>
+                  <p class="text-gray-600">Kombination von CNC und 3D-Druck für maximale Flexibilität.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Diese Innovationen versprechen eine noch effizientere und präzisere Fertigung für die Zukunft.</p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Achsen, Spindeln und Motoren sind das Fundament jeder CNC-Maschine. Ihre technologische Weiterentwicklung ermöglicht es, immer höhere Anforderungen in Präzision, Effizienz und Nachhaltigkeit zu erfüllen. 
+            Mit fortschreitender Innovation wird ihre Bedeutung in der Fertigungsindustrie weiter wachsen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/komponenten/wartung" class="text-blue-600 hover:text-blue-800">
+                  Wartung von CNC-Komponenten
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

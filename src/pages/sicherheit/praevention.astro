@@ -1,0 +1,390 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Sicherheit & Wartung', href: '/sicherheit' },
+  { title: 'Präventive Wartung', href: '/sicherheit/praevention' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#vorteile", title: "Vorteile" },
+  { href: "#probleme", title: "Probleme & Lösungen" },
+  { href: "#wartungsplan", title: "Wartungsplan" },
+  { href: "#technologie", title: "Technologie" },
+  { href: "#branchen", title: "Branchen" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="Präventive Wartung und häufige Probleme in der CNC-Fertigung"
+  description="Erfahren Sie, wie präventive Wartung Ausfallzeiten reduziert, die Lebensdauer von CNC-Maschinen verlängert und Produktionsqualität sichert."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Präventive Wartung und häufige Probleme in der CNC-Fertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie, wie präventive Wartung Ausfallzeiten reduziert, die Lebensdauer von CNC-Maschinen verlängert und Produktionsqualität sichert.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung: Warum präventive Wartung unverzichtbar ist</h2>
+          <p>
+            Präventive Wartung umfasst alle geplanten Maßnahmen, die dazu dienen, die Leistung und Zuverlässigkeit von CNC-Maschinen zu gewährleisten. 
+            Sie beugt Störungen vor, indem sie potenzielle Probleme erkennt und frühzeitig löst. 
+            Im Vergleich zur reaktiven Wartung reduziert dieser Ansatz Produktionsausfälle und spart langfristig Kosten.
+          </p>
+          <p>
+            Die Bedeutung der präventiven Wartung liegt nicht nur in der Verlängerung der Lebensdauer von Maschinen, sondern auch in der Optimierung der Produktionsqualität und der Sicherung betrieblicher Effizienz.
+          </p>
+        </section>
+
+        <!-- Vorteile -->
+        <section id="vorteile" class="mb-12">
+          <h2>Vorteile der präventiven Wartung</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Reduktion von Ausfallzeiten:</strong>
+                  <p class="text-gray-600">Durch frühzeitige Fehlererkennung bleibt die Produktion stabil.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kostensenkung:</strong>
+                  <p class="text-gray-600">Geringere Reparatur- und Ersatzkosten durch rechtzeitige Wartung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Qualitätssicherung:</strong>
+                  <p class="text-gray-600">Stabile Maschinenleistung gewährleistet gleichbleibend hohe Produktqualität.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Probleme und Lösungen -->
+        <section id="probleme" class="mb-12">
+          <h2>Häufige Probleme und ihre Lösungen</h2>
+          <p>In der CNC-Fertigung treten bestimmte Probleme besonders häufig auf. Hier sind die wichtigsten Herausforderungen und ihre Lösungen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Werkzeugverschleiß:</strong>
+                  <p class="text-gray-600">Intensive Nutzung führt zu schneller Abnutzung.</p>
+                  <p class="text-gray-600"><em>Lösung:</em> Regelmäßiges Nachschärfen und rechtzeitiger Austausch.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kühlmittelausfälle:</strong>
+                  <p class="text-gray-600">Verunreinigungen oder unzureichende Kühlung können die Bearbeitung beeinträchtigen.</p>
+                  <p class="text-gray-600"><em>Lösung:</em> Einsatz hochwertiger Kühlflüssigkeiten und regelmäßige Systemwartung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Elektrische Störungen:</strong>
+                  <p class="text-gray-600">Überhitzung oder Kabelverschleiß können zu Systemausfällen führen.</p>
+                  <p class="text-gray-600"><em>Lösung:</em> Routineinspektionen und Austausch alter Kabel.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Spindelverschleiß:</strong>
+                  <p class="text-gray-600">Hohe Belastungen und mangelnde Schmierung verschleißen die Spindeln.</p>
+                  <p class="text-gray-600"><em>Lösung:</em> Regelmäßige Überprüfung der Schmierung und Kontrolle der Lager.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Wartungsplan -->
+        <section id="wartungsplan" class="mb-12">
+          <h2>Schlüsselschritte für einen effektiven Wartungsplan</h2>
+          <p>Ein gut durchdachter Wartungsplan umfasst die folgenden Schritte:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ol class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">1</span>
+                <div>
+                  <strong>Identifikation kritischer Komponenten:</strong>
+                  <p class="text-gray-600">Bestimmen Sie, welche Teile am anfälligsten für Verschleiß sind.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">2</span>
+                <div>
+                  <strong>Wartungskalender:</strong>
+                  <p class="text-gray-600">Erstellen Sie regelmäßige Intervalle für Inspektionen und Wartungsarbeiten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">3</span>
+                <div>
+                  <strong>Schulungen:</strong>
+                  <p class="text-gray-600">Stellen Sie sicher, dass das Wartungspersonal die notwendigen Fähigkeiten hat.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">4</span>
+                <div>
+                  <strong>Dokumentation:</strong>
+                  <p class="text-gray-600">Halten Sie jede durchgeführte Maßnahme fest, um Trends und wiederkehrende Probleme zu identifizieren.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Technologie -->
+        <section id="technologie" class="mb-12">
+          <h2>Technologische Unterstützung für präventive Wartung</h2>
+          <p>
+            Moderne Technologien spielen eine Schlüsselrolle bei der präventiven Wartung. 
+            Sensoren erfassen wichtige Maschinendaten wie Temperatur, Druck und Schwingungen in Echtzeit. 
+            Diese Daten werden durch KI-gestützte Systeme analysiert, um potenzielle Probleme vorherzusagen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Wartungssoftware (CMMS):</strong>
+                  <p class="text-gray-600">Ermöglicht eine effiziente Planung und Dokumentation von Wartungsarbeiten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT-Integration:</strong>
+                  <p class="text-gray-600">Sorgt für die Vernetzung aller Maschinen und bietet eine zentrale Überwachung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Branchen -->
+        <section id="branchen" class="mb-12">
+          <h2>Branchenspezifische Ansätze</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Präzise Abstimmungen und regelmäßige Inspektionen für Hochgeschwindigkeitslinien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Kalibrierung und Kontrolle für extreme Präzision und Sicherheit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Einhaltung strenger Hygienestandards für biokompatible Materialien.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit durch präventive Wartung</h2>
+          <p>
+            Präventive Wartung fördert Nachhaltigkeit, indem sie den Energieverbrauch optimiert und die Lebensdauer von Komponenten verlängert. 
+            Indem Unternehmen ressourcenschonend arbeiten, reduzieren sie Abfall und tragen zur Umweltfreundlichkeit bei.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Optimierung des Energieverbrauchs durch effiziente Wartung.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Verlängerung der Maschinenlebensdauer durch regelmäßige Pflege.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Reduzierung von Abfall durch vorausschauende Wartung.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Präventive Wartung ist eine essenzielle Strategie, um Ausfallzeiten zu minimieren, die Effizienz zu steigern und die Lebensdauer von CNC-Maschinen zu verlängern. 
+            Durch die Kombination traditioneller Ansätze mit modernster Technologie können Unternehmen ihre Fertigungsprozesse optimieren und gleichzeitig nachhaltig wirtschaften.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/sicherheit/wartungsplaene" class="text-blue-600 hover:text-blue-800">
+                  Wartungspläne für CNC-Maschinen
+                </a>
+              </li>
+              <li>
+                <a href="/sicherheit/arbeitsschutz" class="text-blue-600 hover:text-blue-800">
+                  Arbeitssicherheit in CNC-Umgebungen
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

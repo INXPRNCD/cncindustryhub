@@ -1,0 +1,420 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Technologie & Innovation', href: '/technologie' },
+  { title: 'Blockchain und Big Data', href: '/technologie/blockchain' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#blockchain", title: "Blockchain" },
+  { href: "#big-data", title: "Big Data" },
+  { href: "#synergien", title: "Synergien" },
+  { href: "#anwendungen", title: "Anwendungen" },
+  { href: "#herausforderungen", title: "Herausforderungen" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Blockchain und Big Data: Revolutionäre Technologien in der CNC-Fertigung"
+  description="Erfahren Sie, wie Blockchain und Big Data die CNC-Fertigung durch Transparenz, Sicherheit und datengetriebene Optimierung revolutionieren."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Blockchain und Big Data: Revolutionäre Technologien in der CNC-Fertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die Kombination von Blockchain und Big Data transformiert die CNC-Fertigung in eine datengesteuerte, hochgradig effiziente Branche. 
+            Diese Technologien bieten nicht nur Transparenz und Sicherheit, sondern auch die Grundlage für eine nachhaltige und zukunftsorientierte Fertigung.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Was ist Blockchain und Big Data in der CNC-Fertigung?</h2>
+          <p>
+            <strong>Blockchain</strong> ist eine dezentrale Datenbank, die unveränderliche Datensätze speichert und eine fälschungssichere Nachverfolgbarkeit ermöglicht. 
+            <strong>Big Data</strong> bezieht sich auf die Verarbeitung und Analyse großer Datenmengen, die in der Fertigung gesammelt werden, z. B. von Sensoren und Maschinenprotokollen.
+          </p>
+          <p>
+            Gemeinsam bilden diese Technologien die Grundlage für datengetriebene Entscheidungen, höhere Effizienz und Sicherheit in der CNC-Fertigung.
+          </p>
+        </section>
+
+        <!-- Blockchain -->
+        <section id="blockchain" class="mb-12">
+          <h2>Blockchain in CNC: Sicherheit und Transparenz</h2>
+          <p>Blockchain ist in der CNC-Fertigung unverzichtbar, um:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Datenintegrität:</strong>
+                  <p class="text-gray-600">Jede Änderung in den Produktionsdaten wird dokumentiert und bleibt nachvollziehbar.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IP-Schutz:</strong>
+                  <p class="text-gray-600">Geistiges Eigentum wird durch unveränderliche Datensätze geschützt.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Lieferketten:</strong>
+                  <p class="text-gray-600">Transparenz entlang der gesamten Produktionskette gewährleistet.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Zum Beispiel ermöglicht Blockchain die Nachverfolgbarkeit von CNC-gefertigten Bauteilen, was für Branchen wie Luftfahrt und Medizintechnik entscheidend ist, um Sicherheitsstandards und Vorschriften einzuhalten.
+          </p>
+        </section>
+
+        <!-- Big Data -->
+        <section id="big-data" class="mb-12">
+          <h2>Big Data: Optimierung durch Datenanalyse</h2>
+          <p>
+            <strong>Big Data</strong> revolutioniert CNC-Prozesse durch die Analyse von Sensordaten, Produktionsmetriken und Maschinenprotokollen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitdaten:</strong>
+                  <p class="text-gray-600">Optimierung von Schnittgeschwindigkeiten und Werkzeugbewegungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Predictive Maintenance:</strong>
+                  <p class="text-gray-600">Vorhersage von Wartungsanforderungen zur Vermeidung von Ausfallzeiten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Produktionsplanung:</strong>
+                  <p class="text-gray-600">Datengetriebene Entscheidungen zur Reduktion von Ausschuss und Optimierung der Effizienz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Synergien -->
+        <section id="synergien" class="mb-12">
+          <h2>Synergieeffekte: Integration von Blockchain und Big Data</h2>
+          <p>Die Kombination von Blockchain und Big Data maximiert die Vorteile beider Technologien:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Verifizierung:</strong>
+                  <p class="text-gray-600">Blockchain stellt sicher, dass die für Big Data verwendeten Daten authentisch und unverändert sind.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT-Integration:</strong>
+                  <p class="text-gray-600">CNC-Maschinen erfassen Echtzeitdaten, die sowohl für Big Data-Analysen als auch für die Blockchain-Speicherung verwendet werden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kollaboration:</strong>
+                  <p class="text-gray-600">Globale Produktionsstandorte können sicher auf dieselben Daten zugreifen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Anwendungen -->
+        <section id="anwendungen" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Optimierung von Produktionslinien durch Big Data und Rückverfolgbarkeit von Bauteilen durch Blockchain.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Qualitätssicherung und Nachverfolgbarkeit von Bauteilen durch Blockchain, kombiniert mit Big-Data-Analysen zur Fehlerreduktion.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Rückverfolgbarkeit sensibler Materialien und präzise Prozesssteuerung durch datenbasierte Technologien.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Herausforderungen -->
+        <section id="herausforderungen" class="mb-12">
+          <h2>Herausforderungen und Lösungen</h2>
+          <p>Trotz ihrer Vorteile stehen Blockchain und Big Data in der CNC-Fertigung vor Herausforderungen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Datenmanagement:</strong>
+                  <p class="text-gray-600">Hohe Datenvolumen erfordern skalierbare Speicherlösungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Implementierungskosten:</strong>
+                  <p class="text-gray-600">Der Einsatz dieser Technologien erfordert hohe Anfangsinvestitionen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Lösungen umfassen:</p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Einsatz von skalierbaren Blockchain-Plattformen.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Nutzung von Cloud-Diensten zur Verarbeitung und Speicherung großer Datenmengen.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit durch Blockchain und Big Data</h2>
+          <p>Blockchain und Big Data fördern nachhaltige Fertigungspraktiken durch:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Ressourcenschonung:</strong>
+                  <p class="text-gray-600">Reduktion von Materialverschwendung durch präzise Steuerung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Energieeffizienz:</strong>
+                  <p class="text-gray-600">Analyse von Energieverbrauchsdaten zur Optimierung der Ressourcennutzung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Materialrecycling:</strong>
+                  <p class="text-gray-600">Verfolgbarkeit von Rohstoffen für eine Kreislaufwirtschaft.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukünftige Entwicklungen</h2>
+          <p>Die Zukunft der CNC-Fertigung liegt in der verstärkten Integration von Blockchain und Big Data:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Neuronale Netzwerke:</strong>
+                  <p class="text-gray-600">Fortschritte in KI werden die Integration weiter verbessern.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Industrie 5.0:</strong>
+                  <p class="text-gray-600">Diese Technologien werden eine Schlüsselrolle bei der Schaffung autonomer Fertigungslinien spielen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Unternehmen, die frühzeitig auf diese Technologien setzen, werden nicht nur ihre Effizienz steigern, sondern auch die Grundlage für eine nachhaltige, datengetriebene Produktion schaffen.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Blockchain und Big Data sind unverzichtbar für die Modernisierung der CNC-Fertigung. 
+            Sie fördern Effizienz, Sicherheit und Nachhaltigkeit und bieten Unternehmen die Möglichkeit, sich in einem zunehmend datengetriebenen Markt abzuheben.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/technologie/industrie40" class="text-blue-600 hover:text-blue-800">
+                  Industrie 4.0 und CNC
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/ki" class="text-blue-600 hover:text-blue-800">
+                  KI in der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/ml" class="text-blue-600 hover:text-blue-800">
+                  Maschinelles Lernen in der CNC
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

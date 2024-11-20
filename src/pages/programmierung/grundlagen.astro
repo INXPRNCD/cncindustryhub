@@ -1,0 +1,333 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Programmierung', href: '/programmierung' },
+  { title: 'Grundlagen der CNC-Programmierung', href: '/programmierung/grundlagen' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#grundlagen", title: "G-Code und M-Code" },
+  { href: "#syntax-struktur", title: "Syntax und Struktur" },
+  { href: "#steuerungssysteme", title: "Steuerungssysteme" },
+  { href: "#praxisbeispiele", title: "Praxisbeispiele" },
+  { href: "#integration", title: "Integration" }
+];
+---
+
+<Layout 
+  title="Grundlagen der CNC-Programmierung: G-Code und M-Code"
+  description="Detaillierter Leitfaden zu den Grundlagen der CNC-Programmierung mit Fokus auf G-Code und M-Code. Erfahren Sie mehr über Struktur, Syntax und Anwendungen in der modernen Fertigung."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Grundlagen der CNC-Programmierung: G-Code und M-Code
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie alles über die essenziellen Codes der CNC-Fertigung, ihre Anwendungen und wie sie die Effizienz und Präzision moderner Maschinensteuerung verbessern.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die CNC-Programmierung basiert auf zwei zentralen Elementen: <strong>G-Code</strong> und <strong>M-Code</strong>. 
+            Sie bilden das Rückgrat moderner Fertigungssysteme und ermöglichen die präzise Steuerung von Maschinenbewegungen und -funktionen. 
+            Diese Grundlagenkenntnisse sind entscheidend, um die Vorteile der CNC-Technologie vollständig auszuschöpfen.
+          </p>
+        </section>
+
+        <!-- Grundlagen -->
+        <section id="grundlagen" class="mb-12">
+          <h2>Grundlagen von G-Code und M-Code</h2>
+          <h3 class="text-xl font-bold mb-4">Definition und Unterschiede</h3>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-6">
+              <li>
+                <strong class="text-lg">G-Code:</strong>
+                <p class="text-gray-600 mb-3">Steuerung der Bewegungen und Positionierung der Maschinenachsen.</p>
+                <ul class="space-y-2 pl-6">
+                  <li><code class="bg-gray-100 px-2 py-1 rounded">G00</code>: Schnellpositionierung für rasche Bewegungen.</li>
+                  <li><code class="bg-gray-100 px-2 py-1 rounded">G01</code>: Lineare Interpolation für präzise Schnitte.</li>
+                  <li><code class="bg-gray-100 px-2 py-1 rounded">G02/G03</code>: Kreisbewegungen im/gegen den Uhrzeigersinn.</li>
+                </ul>
+              </li>
+              <li>
+                <strong class="text-lg">M-Code:</strong>
+                <p class="text-gray-600 mb-3">Verwaltung der Maschinenfunktionen wie Kühlung und Werkzeugwechsel.</p>
+                <ul class="space-y-2 pl-6">
+                  <li><code class="bg-gray-100 px-2 py-1 rounded">M03</code>: Spindel ein (im Uhrzeigersinn).</li>
+                  <li><code class="bg-gray-100 px-2 py-1 rounded">M08</code>: Kühlmittel aktivieren.</li>
+                  <li><code class="bg-gray-100 px-2 py-1 rounded">M30</code>: Programmende und Rückstellung.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Syntax und Struktur -->
+        <section id="syntax-struktur" class="mb-12">
+          <h2>Syntax und Struktur von CNC-Programmen</h2>
+          <h3 class="text-xl font-bold mb-4">Aufbau eines CNC-Programms</h3>
+          
+          <div class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6">
+            <pre class="text-sm">
+N10 G21 (Einheit: Millimeter)
+N20 G90 (Absolutkoordinaten)
+N30 G01 X100 Y100 F500 (Linearbewegung zu X100/Y100 mit Vorschub 500)
+N40 M30 (Programmende)
+            </pre>
+          </div>
+
+          <h3 class="text-xl font-bold mb-4">Kommentare und Parameter</h3>
+          <p>
+            Kommentare (<code class="bg-gray-100 px-2 py-1 rounded">(Einheit: Millimeter)</code>) und Parameter 
+            (<code class="bg-gray-100 px-2 py-1 rounded">F500</code> für Vorschubgeschwindigkeit) verbessern die Lesbarkeit und Nachvollziehbarkeit der Programme.
+          </p>
+        </section>
+
+        <!-- Steuerungssysteme -->
+        <section id="steuerungssysteme" class="mb-12">
+          <h2>Unterschiede zwischen Steuerungssystemen</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Siemens:</strong>
+                  <p class="text-gray-600">Benutzerfreundlich und ideal für Anfänger mit vereinfachter Syntax.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>FANUC:</strong>
+                  <p class="text-gray-600">Industriestandard mit umfangreichen Anpassungsmöglichkeiten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Heidenhain:</strong>
+                  <p class="text-gray-600">Hervorragend geeignet für Präzisionsfertigung dank intuitiver Dialogprogrammierung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Praxisbeispiele -->
+        <section id="praxisbeispiele" class="mb-12">
+          <h2>Praxisbeispiele und Anwendungsbereiche</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">Einfache G-Code-Programme</h3>
+              <p>Prototypenbau mit grundlegenden Befehlen wie <code class="bg-gray-100 px-2 py-1 rounded">G01</code> für lineare Bewegungen.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">Komplexe Programmierungen</h3>
+              <p>Serienfertigung erfordert umfangreiche Programme mit parametrischen Befehlen und Unterprogrammen.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">Branchenanwendungen</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Luftfahrt:</strong>
+                    <p class="text-gray-600">Fertigung präziser Bauteile wie Turbinenschaufeln.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Automobilindustrie:</strong>
+                    <p class="text-gray-600">Produktion von Motorkomponenten.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Medizintechnik:</strong>
+                    <p class="text-gray-600">Herstellung biokompatibler Implantate.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Integration -->
+        <section id="integration" class="mb-12">
+          <h2>Integration in moderne CNC-Technologie</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">Automatisierung durch CAD/CAM</h3>
+              <p>
+                Moderne CAD/CAM-Systeme generieren automatisch G-Code und M-Code, wodurch manuelle Eingriffe minimiert werden. 
+                Simulationsfunktionen sorgen für fehlerfreie Ergebnisse.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-bold mb-4">Echtzeitüberwachung</h3>
+              <p>
+                Sensoren und KI-basierte Systeme ermöglichen die Überwachung von Maschinenparametern in Echtzeit, um Ausfallzeiten zu minimieren.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die Beherrschung von G-Code und M-Code ist essenziell für eine effiziente und präzise CNC-Programmierung. 
+            Mit modernen Technologien wie CAD/CAM und Echtzeitüberwachung eröffnen sich neue Möglichkeiten für die Fertigung von morgen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/programmierung/cam" class="text-blue-600 hover:text-blue-800">
+                  CAM-Software im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/programmierung/fortgeschritten" class="text-blue-600 hover:text-blue-800">
+                  Fortgeschrittene G-Code-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+
+pre {
+  background-color: #1a202c;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+code {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+</style>

@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Materialbearbeitung', href: '/materialbearbeitung' },
+  { title: 'CNC für exotische Materialien', href: '/materialbearbeitung/exotisch' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#materialtypen", title: "Materialtypen" },
+  { href: "#bearbeitungsstrategien", title: "Bearbeitungsstrategien" },
+  { href: "#werkzeugtechnologien", title: "Werkzeugtechnologien" },
+  { href: "#innovationen", title: "Innovationen" }
+];
+---
+
+<Layout 
+  title="CNC für exotische Materialien – Präzision und Fortschritt"
+  description="Ein umfassender Leitfaden zur CNC-Bearbeitung exotischer Materialien wie Kohlefaser, Keramik, Glas und Nickellegierungen mit präzisen Strategien und Werkzeuginnovationen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC für exotische Materialien: Fortschritt und Präzision
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Optimierte Strategien und technologische Innovationen für die Bearbeitung anspruchsvoller Materialien.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die CNC-Bearbeitung exotischer Materialien wie Kohlefaser, Keramik, Glas und Nickellegierungen ist ein essenzieller Bestandteil moderner High-Tech-Fertigung. 
+            Diese Materialien zeichnen sich durch außergewöhnliche mechanische und chemische Eigenschaften aus, stellen jedoch hohe Anforderungen an Werkzeuge, Maschinen und Bearbeitungsstrategien.
+          </p>
+        </section>
+
+        <!-- Materialtypen -->
+        <section id="materialtypen" class="mb-12">
+          <h2>Materialtypen und Eigenschaften</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Kohlefaser (CFK)</h3>
+              <div class="space-y-4">
+                <p><strong>Eigenschaften:</strong> Leicht, extrem belastbar, aber abrasiv.</p>
+                <p><strong>Herausforderungen:</strong> Delamination und schneller Werkzeugverschleiß durch abrasive Fasern.</p>
+                <p><strong>Bearbeitung:</strong> Verwendung diamantbeschichteter Werkzeuge und vibrationsarmer CNC-Maschinen.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Keramik</h3>
+              <div class="space-y-4">
+                <p><strong>Eigenschaften:</strong> Hohe Härte, Hitzebeständigkeit und chemische Stabilität.</p>
+                <p><strong>Herausforderungen:</strong> Rissbildung und Sprödigkeit.</p>
+                <p><strong>Bearbeitung:</strong> Laserschneiden und präzise Vorschübe mit vibrationsarmen Werkzeugen.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Glas</h3>
+              <div class="space-y-4">
+                <p><strong>Eigenschaften:</strong> Transparent, spröde, chemisch stabil.</p>
+                <p><strong>Herausforderungen:</strong> Präzise Schnittkanten ohne Mikrorisse.</p>
+                <p><strong>Bearbeitung:</strong> Wasserstrahlschneiden und Lasertechnologie für minimalen Materialverlust.</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Nickellegierungen (Inconel)</h3>
+              <div class="space-y-4">
+                <p><strong>Eigenschaften:</strong> Hitzebeständig, korrosionsfest und extrem belastbar.</p>
+                <p><strong>Herausforderungen:</strong> Hohe Werkzeugbelastung durch zähe Materialeigenschaften.</p>
+                <p><strong>Bearbeitung:</strong> Einsatz von Hartmetallwerkzeugen und effektiver Kühlung.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bearbeitungsstrategien -->
+        <section id="bearbeitungsstrategien" class="mb-12">
+          <h2>Bearbeitungsstrategien</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Optimale Bearbeitung von CFK:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Diamantbeschichtete Werkzeuge zur Reduzierung von Verschleiß.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Optimierte Vorschübe zur Vermeidung von Delamination.</p>
+              </li>
+            </ul>
+          </div>
+
+          <p>Die CNC-Bearbeitung exotischer Materialien erfordert präzise Einstellungen und fortschrittliche Maschinen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Einsatz vibrationsarmer CNC-Systeme zur Reduktion thermischer und mechanischer Belastungen.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Minimalmengenschmierung (MMS) für saubere Schnitte und reduzierte Materialbeanspruchung.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Optimierung von Schnittparametern wie Vorschub, Geschwindigkeit und Werkzeugwinkel.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Werkzeugtechnologien -->
+        <section id="werkzeugtechnologien" class="mb-12">
+          <h2>Werkzeugtechnologien</h2>
+          <p>Innovative Werkzeuge sind entscheidend für die präzise Bearbeitung exotischer Materialien:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Diamantbeschichtete Werkzeuge:</strong>
+                  <p class="text-gray-600">Ideal für abrasive Materialien wie CFK.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Keramische Schneidstoffe:</strong>
+                  <p class="text-gray-600">Perfekt für harte Materialien wie Inconel und Keramik.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hartmetallfräser:</strong>
+                  <p class="text-gray-600">Geeignet für anspruchsvolle Anwendungen bei Nickellegierungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Innovationen -->
+        <section id="innovationen" class="mb-12">
+          <h2>Innovationen und Zukunftsperspektiven</h2>
+          <p>
+            Die CNC-Technologie entwickelt sich stetig weiter, um den Anforderungen exotischer Materialien gerecht zu werden:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Sensorintegration zur Analyse von Werkzeugbelastung und Materialeigenschaften.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>KI-Integration:</strong>
+                  <p class="text-gray-600">Optimierung von Werkzeugwegen und Parametern für maximale Präzision.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltigkeit:</strong>
+                  <p class="text-gray-600">Reduktion von Materialverlust und Energieverbrauch durch optimierte Prozesse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die Bearbeitung exotischer Materialien erfordert höchste Präzision, innovative Werkzeuge und optimierte CNC-Technologien. 
+            Durch den Einsatz modernster Strategien und Technologien können Herausforderungen gemeistert und neue Maßstäbe in der Fertigung gesetzt werden.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/materialbearbeitung/metalle" class="text-blue-600 hover:text-blue-800">
+                  CNC-Bearbeitung von Metallen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

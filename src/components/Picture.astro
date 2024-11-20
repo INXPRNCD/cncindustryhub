@@ -1,0 +1,32 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+}
+
+const { src, alt, class: className } = Astro.props;
+
+// Get file extension
+const ext = src.split('.').pop()?.toLowerCase();
+
+// Generate fallback path by replacing webp with jpg
+const fallbackSrc = src.replace(/\.webp$/, '.jpg');
+
+// Default fallback if neither main image nor jpg fallback loads
+const defaultFallback = '/images/fallback-industry.jpg';
+---
+
+<picture class:list={["block relative", className]}>
+  {ext === 'webp' && (
+    <source srcset={src} type="image/webp" />
+  )}
+  <img
+    src={fallbackSrc}
+    alt={alt}
+    class="w-full h-full object-cover rounded-lg"
+    loading="lazy"
+    decoding="async"
+    onerror={`this.onerror=null; this.src='${defaultFallback}';`}
+  />
+</picture>

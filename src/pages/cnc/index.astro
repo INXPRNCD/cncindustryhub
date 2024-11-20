@@ -1,0 +1,264 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import { clusterPages } from '../../data/clusterPages';
+
+const breadcrumbItems = [
+  { title: 'CNC – Alles, was Sie wissen müssen', href: '/cnc' }
+];
+
+const navItems = [
+  { href: "#grundlagen", title: "Grundlagen" },
+  { href: "#maschinentypen", title: "Maschinentypen" },
+  { href: "#industrieanwendungen", title: "Industrieanwendungen" },
+  { href: "#komponenten", title: "Komponenten" },
+  { href: "#programmierung", title: "Programmierung" },
+  { href: "#materialbearbeitung", title: "Materialbearbeitung" },
+  { href: "#technologie-innovation", title: "Technologie" },
+  { href: "#sicherheit", title: "Sicherheit" },
+  { href: "#strategie-investitionen", title: "Strategie" },
+  { href: "#karriere", title: "Karriere" },
+  { href: "#fertigungsmethoden", title: "Fertigungsmethoden" }
+];
+---
+
+<Layout 
+  title="CNC – Alles, was Sie wissen müssen | Der ultimative Guide"
+  description="Ein umfassender Guide zu CNC: Grundlagen, Maschinentypen, Anwendungen, Werkzeuge und Innovationen. Entdecken Sie die Welt der modernen Fertigungstechnologie."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC – Alles, was Sie wissen müssen
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Willkommen bei Ihrem umfassenden Guide zur CNC-Technologie. Von Grundlagen über Maschinentypen bis hin zu zukunftsweisenden Innovationen – hier finden Sie alles, was Sie über CNC wissen müssen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- CNC-Grundlagen -->
+        <section id="grundlagen" class="mb-12">
+          <h2>CNC-Grundlagen</h2>
+          <p>
+            CNC, kurz für „Computerized Numerical Control", ist eine Kerntechnologie der modernen Fertigung. 
+            Sie hat die Produktion in nahezu allen Branchen revolutioniert. 
+            Dieser Abschnitt gibt Ihnen einen Überblick über die Grundlagen, die Funktionsweise und die historische Entwicklung der CNC-Technologie.
+          </p>
+          <ul>
+            <li><a href="/grundlagen/einfuehrung">Einführung und Geschichte der CNC-Technologie</a></li>
+            <li><a href="/grundlagen/wie-funktioniert-cnc">Wichtige Prinzipien und Technologien</a></li>
+            <li><a href="/grundlagen/industrie-4-0">CNC in der Industrie 4.0</a></li>
+          </ul>
+        </section>
+
+        <!-- CNC-Maschinentypen -->
+        <section id="maschinentypen" class="mb-12">
+          <h2>CNC-Maschinentypen</h2>
+          <p>
+            Von Fräsmaschinen über Drehmaschinen bis hin zu Hybrid-CNC-Systemen – erfahren Sie mehr über die verschiedenen Maschinentypen, ihre Funktionsweisen und Einsatzgebiete.
+          </p>
+          <ul>
+            <li><a href="/maschinen/grundtypen">Arten von CNC-Maschinen</a></li>
+            <li><a href="/maschinen/5-achsen">Hybrid- und Spezialmaschinen</a></li>
+            <li><a href="/maschinen/wasserstrahl">Laser-, Wasserstrahl- und Plasmaschneiden</a></li>
+          </ul>
+        </section>
+
+        <!-- Industrieanwendungen -->
+        <section id="industrieanwendungen" class="mb-12">
+          <h2>Industrieanwendungen</h2>
+          <p>
+            CNC ist in nahezu jeder Branche unverzichtbar. Entdecken Sie, wie diese Technologie in der Luftfahrt, Automobilproduktion, Medizintechnik und anderen Sektoren eingesetzt wird.
+          </p>
+          <ul>
+            <li><a href="/industrieanwendungen/aerospace">CNC in der Luftfahrt</a></li>
+            <li><a href="/industrieanwendungen/automotive">Automobilindustrie</a></li>
+            <li><a href="/industrieanwendungen/medical">Medizintechnik</a></li>
+          </ul>
+        </section>
+
+        <!-- Komponenten & Werkzeuge -->
+        <section id="komponenten" class="mb-12">
+          <h2>Komponenten & Werkzeuge</h2>
+          <p>
+            Erfahren Sie alles über die essenziellen Bauteile und Werkzeuge, die in CNC-Maschinen verwendet werden. 
+            Lernen Sie, wie Achsen, Spindeln und spezielle Werkzeuge die Präzision beeinflussen.
+          </p>
+          <ul>
+            <li><a href="/komponenten/grundlagen">Wichtige CNC-Komponenten</a></li>
+            <li><a href="/komponenten/werkzeuge">Werkzeugtypen und ihre Anwendungen</a></li>
+            <li><a href="/komponenten/spindeln">Hochgeschwindigkeitsspindeln</a></li>
+          </ul>
+        </section>
+
+        <!-- CNC-Programmierung -->
+        <section id="programmierung" class="mb-12">
+          <h2>CNC-Programmierung</h2>
+          <p>
+            Die CNC-Programmierung bildet die Grundlage für die Steuerung und Automatisierung moderner Maschinen. 
+            Von G-Code über CAM-Software bis hin zu Echtzeitsteuerung – hier finden Sie alles, was Sie wissen müssen.
+          </p>
+          <ul>
+            <li><a href="/programmierung/grundlagen">G-Code und M-Code: Grundlagen</a></li>
+            <li><a href="/programmierung/fortgeschritten">Fortgeschrittene Programmierung</a></li>
+            <li><a href="/programmierung/echtzeit">Echtzeitsteuerung</a></li>
+          </ul>
+        </section>
+
+        <!-- Materialbearbeitung -->
+        <section id="materialbearbeitung" class="mb-12">
+          <h2>Materialbearbeitung</h2>
+          <p>
+            CNC-Maschinen können verschiedene Materialien bearbeiten – von Metallen und Kunststoffen bis hin zu Verbundwerkstoffen. 
+            Entdecken Sie die Möglichkeiten und Herausforderungen bei der Materialbearbeitung.
+          </p>
+          <ul>
+            <li><a href="/materialbearbeitung/metalle">Metalle und Kunststoffe</a></li>
+            <li><a href="/materialbearbeitung/exotisch">Exotische Materialien</a></li>
+            <li><a href="/materialbearbeitung/nachhaltigkeit">Nachhaltigkeit in der CNC-Bearbeitung</a></li>
+          </ul>
+        </section>
+
+        <!-- Technologie & Innovation -->
+        <section id="technologie-innovation" class="mb-12">
+          <h2>Technologie & Innovation</h2>
+          <p>
+            Von KI und Robotik bis hin zu Big Data und Blockchain – CNC-Technologie entwickelt sich kontinuierlich weiter. 
+            Erfahren Sie mehr über die Innovationen, die die Fertigung von morgen prägen.
+          </p>
+          <ul>
+            <li><a href="/technologie/ki">KI und CNC</a></li>
+            <li><a href="/technologie/industrie40">Industrie 4.0</a></li>
+            <li><a href="/technologie/blockchain">Big Data und Blockchain</a></li>
+          </ul>
+        </section>
+
+        <!-- Sicherheit & Wartung -->
+        <section id="sicherheit" class="mb-12">
+          <h2>Sicherheit & Wartung</h2>
+          <p>
+            Schützen Sie Ihre Investition und Ihre Mitarbeiter. Von präventiver Wartung bis hin zu Sicherheitsstandards wie ISO 45001 – hier erfahren Sie, wie Sie Ihre CNC-Systeme optimal schützen und warten.
+          </p>
+          <ul>
+            <li><a href="/sicherheit/arbeitsschutz">Arbeitssicherheit in CNC-Umgebungen</a></li>
+            <li><a href="/sicherheit/wartungsplaene">Wartungspläne und Zertifikate</a></li>
+          </ul>
+        </section>
+
+        <!-- Geschäftsstrategie & Investitionen -->
+        <section id="strategie-investitionen" class="mb-12">
+          <h2>Geschäftsstrategie & Investitionen</h2>
+          <p>
+            Erfahren Sie, wie Sie den ROI Ihrer CNC-Investitionen maximieren können. 
+            Dieser Abschnitt behandelt Kosten-Nutzen-Analysen, Markttrends und langfristige Strategien.
+          </p>
+          <ul>
+            <li><a href="/business/roi">Kosten-Nutzen-Analysen</a></li>
+            <li><a href="/business/trends">Markttrends</a></li>
+          </ul>
+        </section>
+
+        <!-- Ausbildung & Karriere -->
+        <section id="karriere" class="mb-12">
+          <h2>Ausbildung & Karriere</h2>
+          <p>
+            Entdecken Sie Karrierewege, wichtige Zertifizierungen und Gehaltsaussichten in der CNC-Industrie. 
+            Perfekt für Fachkräfte und Einsteiger.
+          </p>
+          <ul>
+            <li><a href="/karriere/wege">Karrierewege und Spezialisierungen</a></li>
+            <li><a href="/karriere/weiterbildung">Weiterbildung und Gehaltsvergleiche</a></li>
+          </ul>
+        </section>
+
+        <!-- Fertigungsmethoden -->
+        <section id="fertigungsmethoden" class="mb-12">
+          <h2>Fertigungsmethoden</h2>
+          <p>
+            CNC alleine ist nur ein Teil der modernen Fertigung. Vergleichen Sie CNC mit traditionellen Methoden und entdecken Sie die Potenziale hybrider Systeme.
+          </p>
+          <ul>
+            <li><a href="/fertigung/vergleich-additiv">CNC vs. Additive Fertigung</a></li>
+            <li><a href="/fertigung/traditionell">Vergleich mit traditionellen Methoden</a></li>
+            <li><a href="/fertigung/hybrid">Hybrid-CNC-Maschinen</a></li>
+          </ul>
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section id="zusammenfassung" class="mb-12">
+          <h2>Zusammenfassung</h2>
+          <p>
+            Die CNC-Technologie ist das Rückgrat der modernen Fertigung. Mit ihrer Präzision, Effizienz und Flexibilität ermöglicht sie die Herstellung komplexer Bauteile in höchster Qualität. 
+            Durch die Integration von Technologien wie KI, IoT und Blockchain entwickelt sich CNC kontinuierlich weiter und bleibt auch in Zukunft ein unverzichtbarer Bestandteil der Industrie.
+          </p>
+          <p>
+            Nutzen Sie diesen Guide als Ihre zentrale Ressource für alles rund um CNC. Egal ob Sie Einsteiger sind oder Experte – hier finden Sie das Wissen, das Sie für Ihren Erfolg in der CNC-Fertigung benötigen.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

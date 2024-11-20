@@ -1,0 +1,254 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Fertigungsmethoden', href: '/fertigung' },
+  { title: 'CNC vs. Additive Fertigung', href: '/fertigung/vergleich-additiv' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#technologische-unterschiede", title: "Technologische Unterschiede" },
+  { href: "#vor-und-nachteile", title: "Vor- und Nachteile" },
+  { href: "#anwendungsszenarien", title: "Anwendungsszenarien" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="CNC vs. Additive Fertigung: Technologien im Vergleich"
+  description="Ein detaillierter Vergleich zwischen CNC-Fertigung und Additiver Fertigung. Lernen Sie Vor- und Nachteile, technologische Unterschiede und die Zukunft hybrider Systeme kennen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC vs. Additive Fertigung: Technologien im Vergleich
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Ein umfassender Leitfaden zur Wahl der richtigen Fertigungstechnologie für Ihre Anforderungen in der modernen Produktion.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            CNC- und Additive Fertigung sind zentrale Technologien in der Fertigungsindustrie. 
+            Während die CNC-Fertigung für präzise, subtraktive Prozesse steht, ermöglicht die Additive Fertigung, auch bekannt als 3D-Druck, den schichtweisen Aufbau komplexer Geometrien. 
+            Beide Methoden bieten einzigartige Vorteile, die in Branchen wie Luftfahrt, Medizintechnik und Automobil unverzichtbar sind.
+          </p>
+        </section>
+
+        <!-- Technologische Unterschiede -->
+        <section id="technologische-unterschiede" class="mb-12">
+          <h2>Technologische Unterschiede</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC-Fertigung</h3>
+              <p>
+                CNC (Computer Numerical Control) basiert auf der subtraktiven Bearbeitung, bei der Material durch Fräsen, Drehen oder Schleifen abgetragen wird. 
+                Diese Methode bietet extrem hohe Präzision und eignet sich für Materialien wie Metalle, Kunststoffe und Holz.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Additive Fertigung</h3>
+              <p>
+                Die Additive Fertigung, oft als 3D-Druck bezeichnet, arbeitet mit dem schichtweisen Aufbau von Materialien. 
+                Diese Technologie ermöglicht Designfreiheit und ist ideal für Prototypen oder individuelle Kleinserien. 
+                Häufig verwendete Materialien sind Polymere, Metalle und Keramik.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vor- und Nachteile -->
+        <section id="vor-und-nachteile" class="mb-12">
+          <h2>Vor- und Nachteile</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Vorteile der CNC-Fertigung</h3>
+              <ul class="space-y-2">
+                <li>Höchste Präzision und Wiederholbarkeit.</li>
+                <li>Schnelligkeit bei Großserienproduktion.</li>
+                <li>Breite Materialvielfalt und mechanische Festigkeit.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Nachteile der CNC-Fertigung</h3>
+              <ul class="space-y-2">
+                <li>Materialverlust durch subtraktives Verfahren.</li>
+                <li>Hohe Anfangsinvestitionen für Maschinen.</li>
+                <li>Begrenzte Fertigungskomplexität bei organischen Formen.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Vorteile der Additiven Fertigung</h3>
+              <ul class="space-y-2">
+                <li>Designfreiheit für komplexe Geometrien.</li>
+                <li>Effiziente Materialnutzung und weniger Abfall.</li>
+                <li>Kosteneffizienz bei Prototypen und Kleinserien.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Nachteile der Additiven Fertigung</h3>
+              <ul class="space-y-2">
+                <li>Begrenzte Materialvielfalt und geringere mechanische Festigkeit.</li>
+                <li>Längere Produktionszeiten für große Serien.</li>
+                <li>Niedrigere Oberflächenqualität im Vergleich zu CNC.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Anwendungsszenarien -->
+        <section id="anwendungsszenarien" class="mb-12">
+          <h2>Anwendungsszenarien</h2>
+          <p>Beide Technologien haben spezifische Einsatzbereiche:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">CNC für robuste und hochpräzise Bauteile; Additiv für leichte, komplexe Strukturen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">CNC für chirurgische Instrumente und Implantate; Additiv für personalisierte Prothesen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">CNC für Massenproduktion; Additiv für maßgeschneiderte Komponenten.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Die Zukunft der Fertigung: Hybride Technologien</h2>
+          <p>
+            Hybride CNC-Maschinen kombinieren subtraktive und additive Prozesse. 
+            Diese Innovation ermöglicht eine höhere Effizienz, indem komplexe Geometrien zuerst additiv gefertigt und anschließend durch CNC veredelt werden. 
+            Vernetzte Systeme in Industrie 4.0 schaffen zudem smarte Produktionsumgebungen, die beide Technologien integrieren.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CNC- und Additive Fertigung sind keine Konkurrenten, sondern komplementäre Technologien. 
+            Ihre Kombination bietet Unternehmen eine größere Flexibilität, Effizienz und Innovationsfähigkeit. 
+            Hybride Lösungen und die Integration in Industrie 4.0 werden die Zukunft der Fertigung prägen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/fertigung/traditionell" class="text-blue-600 hover:text-blue-800">
+                  Vergleich mit traditionellen Methoden
+                </a>
+              </li>
+              <li>
+                <a href="/fertigung/hybrid" class="text-blue-600 hover:text-blue-800">
+                  Hybrid-CNC-Maschinen
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

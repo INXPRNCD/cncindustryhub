@@ -1,0 +1,366 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Grundlagen', href: '/grundlagen' },
+  { title: 'Wichtige Begriffe aus der CNC-Welt', href: '/grundlagen/wichtige-begriffe' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#historie", title: "Die Entwicklung der CNC-Terminologie" },
+  { href: "#glossar", title: "Glossar: Zentrale Begriffe" },
+  { href: "#praxisanwendungen", title: "Anwendungen in der Praxis" },
+  { href: "#ressourcen", title: "Weiterführende Ressourcen" }
+];
+---
+
+<Layout 
+  title="Glossar der CNC-Begriffe: Wichtige Begriffe aus der CNC-Welt"
+  description="Ein umfassendes Glossar zu zentralen CNC-Begriffen. Lernen Sie G-Code, CAD/CAM und moderne Technologien wie IoT und KI kennen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Glossar der CNC-Begriffe: Wichtige Begriffe aus der CNC-Welt
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Ein Leitfaden zu den unverzichtbaren Begriffen der CNC-Technologie – für Einsteiger, Profis und alle, die präzise Fertigung besser verstehen wollen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die CNC-Technologie ist ein essenzieller Bestandteil moderner Fertigung. Sie ermöglicht Präzision, Automatisierung und Effizienz in zahlreichen Branchen. 
+            Doch um diese Technologie optimal zu nutzen, ist ein Verständnis ihrer Terminologie unverzichtbar.
+          </p>
+          <p>
+            Dieses Glossar bietet Ihnen eine Übersicht der wichtigsten Begriffe, strukturiert nach Software, Hardware, Prozessen und technologischen Innovationen. 
+            Es hilft Ihnen, von der Konstruktion bis zur Fertigung alle Aspekte der CNC-Welt zu verstehen.
+          </p>
+        </section>
+
+        <!-- Historische Entwicklung -->
+        <section id="historie" class="mb-12">
+          <h2>Die Entwicklung der CNC-Terminologie</h2>
+          <p>
+            Die CNC-Terminologie hat sich über Jahrzehnte hinweg entwickelt, getrieben durch Fortschritte in der Technologie:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">1</span>
+                <div>
+                  <strong>1940er Jahre:</strong>
+                  <p class="text-gray-600">Einführung der numerischen Steuerung (NC) mit Lochkarten als Grundlage für Maschinenbewegungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">2</span>
+                <div>
+                  <strong>1970er Jahre:</strong>
+                  <p class="text-gray-600">Übergang von NC zu CNC durch die Integration von Mikroprozessoren, die die Automatisierung revolutionierten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">3</span>
+                <div>
+                  <strong>1980er Jahre:</strong>
+                  <p class="text-gray-600">Einführung von CAD/CAM-Systemen, die die Konstruktion und Fertigung eng verzahnten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">4</span>
+                <div>
+                  <strong>Heute:</strong>
+                  <p class="text-gray-600">Integration moderner Technologien wie IoT, KI und digitaler Zwillinge, die die Terminologie erweitern und spezifizieren.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Glossar -->
+        <section id="glossar" class="mb-12">
+          <h2>Glossar: Zentrale Begriffe aus der CNC-Welt</h2>
+          
+          <div class="space-y-8">
+            <!-- Software -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">1. Software</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>CAD (Computer-Aided Design):</strong>
+                    <p class="text-gray-600">Software zur Erstellung und Bearbeitung von 2D- und 3D-Konstruktionen. Beispiel: Design eines Werkstücks für die Automobilindustrie.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>CAM (Computer-Aided Manufacturing):</strong>
+                    <p class="text-gray-600">Übersetzung von CAD-Designs in maschinenlesbare Befehle wie G-Code.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Postprozessor:</strong>
+                    <p class="text-gray-600">Softwaremodul, das CAM-Ausgaben an spezifische Maschinen anpasst.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Hardware -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">2. Hardware</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Steuerungsmodul:</strong>
+                    <p class="text-gray-600">Zentrale Einheit, die Softwarebefehle in Maschinenbewegungen umsetzt.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Servomotoren:</strong>
+                    <p class="text-gray-600">Hochpräzise Motoren, die die Bewegungen der Achsen steuern.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Spindel:</strong>
+                    <p class="text-gray-600">Hauptkomponente für Bearbeitungsprozesse wie Fräsen und Bohren.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Sensoren:</strong>
+                    <p class="text-gray-600">Systeme, die Echtzeitdaten zur Optimierung und Fehlererkennung erfassen.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Prozesse -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">3. Prozesse</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>G-Code:</strong>
+                    <p class="text-gray-600">Sprache für Bewegungsbefehle, z. B. Vorschubgeschwindigkeit und Koordinaten.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>M-Code:</strong>
+                    <p class="text-gray-600">Steuert Maschinenfunktionen wie Werkzeugwechsel oder Kühlung.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Vorschubrate:</strong>
+                    <p class="text-gray-600">Geschwindigkeit, mit der sich das Werkzeug durch das Material bewegt.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Drehmoment:</strong>
+                    <p class="text-gray-600">Kraft, die auf die Spindel wirkt.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Innovationen -->
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">4. Innovationen</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>IoT (Internet of Things):</strong>
+                    <p class="text-gray-600">Vernetzte Maschinen, die Daten in Echtzeit austauschen.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Künstliche Intelligenz (KI):</strong>
+                    <p class="text-gray-600">Algorithmen, die Prozesse optimieren und Fehler vermeiden.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Digitale Zwillinge:</strong>
+                    <p class="text-gray-600">Virtuelle Modelle, die den Fertigungsprozess simulieren.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Praxisanwendungen -->
+        <section id="praxisanwendungen" class="mb-12">
+          <h2>Anwendungen der Begriffe in der Praxis</h2>
+          <p>Die CNC-Terminologie findet in verschiedenen Branchen Anwendung:</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">G-Code und M-Code steuern die Fertigung von Motorblöcken und Getriebeteilen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">CAD und CAM ermöglichen die Herstellung komplexer Flugzeugteile mit hoher Präzision.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Begriffe wie Vorschubrate und Drehmoment sind entscheidend für die Produktion chirurgischer Instrumente.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Weiterführende Ressourcen -->
+        <section id="ressourcen" class="mb-12">
+          <h2>Weiterführende Ressourcen</h2>
+          <p>Für ein tieferes Verständnis empfehlen wir:</p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <ul class="space-y-2">
+              <li>
+                <a href="/grundlagen" class="text-blue-600 hover:text-blue-800">
+                  Grundlagen der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/grundlagen/cad-cam" class="text-blue-600 hover:text-blue-800">
+                  Einführung in CAD und CAM
+                </a>
+              </li>
+              <li>
+                <a href="/technologie" class="text-blue-600 hover:text-blue-800">
+                  Technologische Innovationen in der CNC
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Ein fundiertes Wissen über die CNC-Terminologie ist essenziell, um die Vorteile moderner Fertigungstechnologien voll auszuschöpfen. 
+            Dieses Glossar bietet eine umfassende Grundlage, um die Welt der CNC-Technologie besser zu verstehen und effektiv zu nutzen.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

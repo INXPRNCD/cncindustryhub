@@ -1,0 +1,315 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Geschäftsstrategie & Investitionen', href: '/business' },
+  { title: 'Kosten-Nutzen-Analyse', href: '/business/roi' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#kostenfaktoren", title: "Kostenfaktoren" },
+  { href: "#nutzenfaktoren", title: "Nutzenfaktoren" },
+  { href: "#roi-berechnung", title: "ROI-Berechnung" },
+  { href: "#branche", title: "Branchenspezifisch" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Kosten-Nutzen-Analyse von CNC-Maschinen – Investitionen optimieren"
+  description="Erfahren Sie, wie eine Kosten-Nutzen-Analyse für CNC-Maschinen Ihnen hilft, Investitionsentscheidungen zu optimieren. Nutzen Sie ROI-Berechnungen, Marktanalysen und branchenspezifische Strategien."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Kosten-Nutzen-Analyse von CNC-Maschinen
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Eine fundierte Analyse für maximale Rentabilität und langfristigen Erfolg in der Fertigungsindustrie.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die <strong>Kosten-Nutzen-Analyse (CNA)</strong> für CNC-Maschinen ist ein unverzichtbares Werkzeug für Unternehmen, die in Fertigungstechnologie investieren möchten. 
+            Sie ermöglicht eine detaillierte Bewertung aller finanziellen und operativen Faktoren, um den <strong>Return on Investment (ROI)</strong> zu maximieren und Risiken zu minimieren. 
+            Mit modernen Technologien wie <strong>KI</strong> und <strong>Big Data</strong> können Unternehmen ihre Analysen auf eine neue Ebene heben.
+          </p>
+        </section>
+
+        <!-- Kostenfaktoren -->
+        <section id="kostenfaktoren" class="mb-12">
+          <h2>Kostenfaktoren</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Anschaffungskosten</h3>
+              <p>Zu den Anschaffungskosten zählen:</p>
+              <ul class="space-y-2">
+                <li><strong>Maschinenpreis:</strong> Variiert je nach Typ, Automatisierungsgrad und Hersteller.</li>
+                <li><strong>Installation:</strong> Kosten für die Einrichtung und Kalibrierung.</li>
+                <li><strong>Software:</strong> Lizenzen für CAD/CAM und CNC-Steuerungssysteme.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Betriebskosten</h3>
+              <p>Zu den laufenden Kosten gehören:</p>
+              <ul class="space-y-2">
+                <li><strong>Energieverbrauch:</strong> Abhängig von der Leistung und Laufzeit der Maschine.</li>
+                <li><strong>Wartung:</strong> Austausch von Verschleißteilen, Inspektionen und Service.</li>
+                <li><strong>Personal:</strong> Schulung der Bediener und Wartungspersonal.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Verborgene Kosten</h3>
+              <p>Oft unterschätzt, aber entscheidend für die Gesamtkosten:</p>
+              <ul class="space-y-2">
+                <li><strong>Stillstandszeiten:</strong> Produktionsverluste durch ungeplante Ausfälle.</li>
+                <li><strong>Werkzeugverschleiß:</strong> Regelmäßiger Austausch erhöht die Kosten.</li>
+                <li><strong>Ungenutzte Kapazitäten:</strong> Ineffiziente Produktionsplanung kann Potenziale verschenken.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nutzenfaktoren -->
+        <section id="nutzenfaktoren" class="mb-12">
+          <h2>Nutzenfaktoren</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Produktionsvorteile</h3>
+              <p>Durch CNC-Technologie können Unternehmen ihre Produktivität und Präzision erheblich steigern:</p>
+              <ul class="space-y-2">
+                <li>Fehlerreduzierung durch automatisierte Prozesse.</li>
+                <li>Kürzere Zykluszeiten und höhere Produktionseffizienz.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Einsparungen</h3>
+              <p>CNC-Maschinen ermöglichen erhebliche Kosteneinsparungen:</p>
+              <ul class="space-y-2">
+                <li>Optimierte Materialnutzung reduziert Abfall.</li>
+                <li>Automatisierung verringert den Bedarf an manuellen Eingriffen.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Skalierbarkeit</h3>
+              <p>CNC-Systeme sind flexibel und können sowohl für Großserienfertigung als auch für komplexe Prototypen eingesetzt werden.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ROI-Berechnung -->
+        <section id="roi-berechnung" class="mb-12">
+          <h2>ROI-Berechnung</h2>
+          <p>Die Berechnung des <strong>Return on Investment (ROI)</strong> zeigt die Wirtschaftlichkeit einer Investition:</p>
+
+          <div class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6">
+            <pre class="text-sm">ROI = (Einnahmen aus der Investition - Investitionskosten) / Investitionskosten × 100 %</pre>
+          </div>
+
+          <p>Beispiel:</p>
+          <p>Ein Unternehmen investiert 200.000 € in eine CNC-Maschine. Die Maschine spart jährlich 60.000 € durch erhöhte Effizienz und reduzierte Fehler.</p>
+
+          <div class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto mb-6">
+            <pre class="text-sm">ROI = (60.000 - 200.000) / 200.000 × 100 = -70 %</pre>
+          </div>
+
+          <p>Die Amortisationszeit beträgt 3,3 Jahre.</p>
+        </section>
+
+        <!-- Branchenspezifische Betrachtungen -->
+        <section id="branche" class="mb-12">
+          <h2>Branchenspezifische Betrachtungen</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Hohe Stückzahlen und standardisierte Prozesse sorgen für schnelle Amortisation und höhere Effizienz.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Die Fertigung hochpräziser Komponenten wie Turbinenschaufeln rechtfertigt höhere Investitionskosten.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Strenge Hygiene- und Präzisionsanforderungen machen CNC-Maschinen unverzichtbar.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukünftige Entwicklungen</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Künstliche Intelligenz:</strong>
+                  <p class="text-gray-600">Automatisierte Analysen für dynamische CNA.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Big Data:</strong>
+                  <p class="text-gray-600">Echtzeitdaten für präzise Vorhersagen und Optimierungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Industrie 4.0:</strong>
+                  <p class="text-gray-600">Integration der CNA in smarte Fertigungssysteme.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Eine umfassende <strong>Kosten-Nutzen-Analyse</strong> ist essenziell, um die Wirtschaftlichkeit von CNC-Investitionen zu gewährleisten. 
+            Durch die Kombination aus präziser Kostenbewertung, Nutzenmaximierung und modernen Technologien wie KI und Echtzeitdaten wird die CNA zu einem unverzichtbaren Werkzeug für zukunftssichere Entscheidungen in der Fertigungsindustrie.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/business/finanzierung" class="text-blue-600 hover:text-blue-800">
+                  Finanzierungsmodelle für CNC-Maschinen
+                </a>
+              </li>
+              <li>
+                <a href="/business/trends" class="text-blue-600 hover:text-blue-800">
+                  Aktuelle Markttrends
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+code {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+</style>

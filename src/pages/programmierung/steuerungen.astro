@@ -1,0 +1,293 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Programmierung', href: '/programmierung' },
+  { title: 'CNC-Steuerungen', href: '/programmierung/steuerungen' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#vergleich", title: "Vergleich" },
+  { href: "#technologien", title: "Technologien" },
+  { href: "#branchenspezifisch", title: "Branchen" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="CNC-Steuerungen: Siemens, FANUC, Heidenhain im Vergleich"
+  description="Vergleich von Siemens, FANUC und Heidenhain CNC-Steuerungen – Funktionen, Vorteile und Einsatzbereiche für maximale Präzision und Effizienz."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Steuerungen: Siemens, FANUC, Heidenhain im Vergleich
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie die Unterschiede, Funktionen und Vorteile der marktführenden CNC-Steuerungen von Siemens, FANUC und Heidenhain. Optimale Lösungen für die Fertigung der Zukunft.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in CNC-Steuerungen</h2>
+          <p>
+            CNC-Steuerungen sind essenziell für die präzise Steuerung moderner Fertigungsmaschinen. 
+            Siemens, FANUC und Heidenhain zählen zu den weltweit führenden Anbietern und setzen neue Maßstäbe in Benutzerfreundlichkeit, Automatisierung und Präzision.
+          </p>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Wussten Sie?</strong> Über 70 % der weltweit genutzten CNC-Maschinen werden mit Steuerungen dieser drei Marken betrieben.</p>
+          </blockquote>
+        </section>
+
+        <!-- Vergleich -->
+        <section id="vergleich" class="mb-12">
+          <h2>Vergleich: Siemens, FANUC und Heidenhain</h2>
+          <p>
+            Die Unterschiede der drei Steuerungen liegen in ihrer Spezialisierung auf unterschiedliche Branchen und Anwendungen:
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kriterium</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Siemens</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">FANUC</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Heidenhain</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4"><strong>Programmiersprachen</strong></td>
+                  <td class="px-6 py-4">G-Code, ISO-Code, grafische Programmierung</td>
+                  <td class="px-6 py-4">G-Code, Makroprogrammierung</td>
+                  <td class="px-6 py-4">Klartextprogrammierung, G-Code</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4"><strong>Besonderheiten</strong></td>
+                  <td class="px-6 py-4">Flexibilität, Großserienintegration</td>
+                  <td class="px-6 py-4">Automatisierung, Roboterintegration</td>
+                  <td class="px-6 py-4">Präzision, Dialogorientierung</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4"><strong>Branchen</strong></td>
+                  <td class="px-6 py-4">Luftfahrt, Automobilindustrie</td>
+                  <td class="px-6 py-4">Elektronik, Automobilbau</td>
+                  <td class="px-6 py-4">Medizintechnik, Werkzeugbau</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-gray-600 italic">Jede Steuerung hat ihre Stärken – abhängig von den Anforderungen Ihres Projekts.</p>
+        </section>
+
+        <!-- Technologien -->
+        <section id="technologien" class="mb-12">
+          <h2>Technologische Funktionen</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Programmiersprachen:</strong>
+                  <p class="text-gray-600">Siemens bietet grafische Programmierung für intuitive Bedienung, während FANUC durch präzise Makro- und G-Code-Funktionalität punktet. Heidenhain setzt auf werkstattorientierte Klartextprogrammierung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CAD/CAM-Integration:</strong>
+                  <p class="text-gray-600">Alle Steuerungen unterstützen die nahtlose Verbindung mit CAD/CAM-Systemen, um Werkzeugwege zu optimieren.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT und Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Siemens und FANUC bieten fortschrittliche IoT-Integrationen, während Heidenhain Echtzeit-Fehlerüberwachung für maximale Präzision bereitstellt.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Branchenspezifisch -->
+        <section id="branchenspezifisch" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          <p>Jede Steuerung ist auf spezifische Branchenanforderungen zugeschnitten:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Siemens bietet Lösungen für die Fertigung komplexer Turbinen und Flugzeugkomponenten mit höchster Präzision.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">FANUC garantiert schnelle, effiziente Automatisierung und Serienproduktion.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Heidenhain ermöglicht die präzise Bearbeitung biokompatibler Materialien für Implantate und chirurgische Instrumente.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Beispiel:</strong> Mit FANUCs Roboterintegration können Automobilhersteller ihre Fertigung um bis zu 40 % effizienter gestalten.</p>
+          </blockquote>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukunft der CNC-Steuerungen</h2>
+          <p>
+            Die Zukunft der CNC-Steuerungen wird durch <strong>KI</strong>, <strong>digitale Zwillinge</strong> und <strong>Smart Manufacturing</strong> geprägt. 
+            Siemens investiert in die Entwicklung digitaler Zwillinge, FANUC treibt Automatisierung voran, und Heidenhain perfektioniert Präzisionstechnologien.
+          </p>
+
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0">„Die nächste Generation von CNC-Steuerungen wird Fertigungsprozesse in Echtzeit optimieren und Produktionsausfälle nahezu eliminieren." – CNC-Experte</p>
+          </blockquote>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Siemens, FANUC und Heidenhain bieten maßgeschneiderte Steuerungslösungen für unterschiedliche Branchen. 
+            Mit innovativen Technologien wie IoT und KI treiben sie die Entwicklung der Fertigung der Zukunft voran.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/programmierung/grundlagen" class="text-blue-600 hover:text-blue-800">
+                  Grundlagen der CNC-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/programmierung/fortgeschritten" class="text-blue-600 hover:text-blue-800">
+                  Fortgeschrittene G-Code-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

@@ -1,0 +1,335 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Maschinentypen', href: '/maschinen' },
+  { title: 'CNC-Router und Graviermaschinen', href: '/maschinen/cnc-router-und-graviermaschinen' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#technologische-grundlagen", title: "Technologische Grundlagen" },
+  { href: "#materialkompatibilität", title: "Materialkompatibilität" },
+  { href: "#anwendungsbereiche", title: "Anwendungsbereiche" },
+  { href: "#vergleich", title: "Vergleich" },
+  { href: "#zukunftstechnologien", title: "Zukunftstechnologien" }
+];
+---
+
+<Layout 
+  title="CNC-Router und Graviermaschinen: Grundlagen, Anwendungen und Zukunft"
+  description="Ein umfassender Leitfaden zu CNC-Routern und Graviermaschinen: Technologische Grundlagen, Materialien, Anwendungen und Innovationen in der Fertigung."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Router und Graviermaschinen: Grundlagen, Anwendungen und Zukunft
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie alles über CNC-Router und Graviermaschinen – ihre Technologien, Einsatzmöglichkeiten und Zukunftsperspektiven in der Präzisionsfertigung.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            CNC-Router und Graviermaschinen sind unverzichtbare Werkzeuge für moderne Fertigungsprozesse. 
+            Sie bieten vielseitige Anwendungsmöglichkeiten – von großflächigen Projekten wie Möbelbau bis hin zu filigranen Gravuren im Schmuckdesign.
+          </p>
+          <p>
+            In diesem Leitfaden erhalten Sie Einblicke in die Technologien, Materialien und Anwendungen dieser Maschinen sowie in Zukunftstrends wie KI und IoT.
+          </p>
+        </section>
+
+        <!-- Technologische Grundlagen -->
+        <section id="technologische-grundlagen" class="mb-12">
+          <h2>Technologische Grundlagen</h2>
+          <p>
+            Die Funktionsweise von CNC-Routern und Graviermaschinen basiert auf fortschrittlichen Technologien, die Präzision und Flexibilität vereinen:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC-Router</h3>
+              <ul class="space-y-3">
+                <li><strong>Arbeitsbereich:</strong> Für großflächige Projekte ausgelegt</li>
+                <li><strong>Schneidwerkzeuge:</strong> Fräser, Bohrer, Gravurköpfe</li>
+                <li><strong>Technologie:</strong> Hochgeschwindigkeitsspindeln</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Graviermaschinen</h3>
+              <ul class="space-y-3">
+                <li><strong>Einsatzbereich:</strong> Filigrane Arbeiten</li>
+                <li><strong>Präzision:</strong> Fein abgestimmte Bewegungssteuerung</li>
+                <li><strong>Softwareintegration:</strong> CAD/CAM-Programme</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Materialkompatibilität -->
+        <section id="materialkompatibilität" class="mb-12">
+          <h2>Materialkompatibilität</h2>
+          <p>
+            Die Vielseitigkeit von CNC-Routern und Graviermaschinen zeigt sich in ihrer Fähigkeit, unterschiedliche Materialien zu bearbeiten:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Typische Materialien:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Holz:</strong>
+                  <p class="text-gray-600">Ideal für Möbelteile, Dekorationen und großflächige Gravuren.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kunststoff:</strong>
+                  <p class="text-gray-600">Geeignet für Schilder und Lichtleiter aus Acryl.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Aluminium:</strong>
+                  <p class="text-gray-600">Perfekt für die Herstellung von Prototypen und hochpräzisen Bauteilen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Bearbeitungsqualität:</h3>
+            <p>
+              Während CNC-Router schneller arbeiten, bieten Graviermaschinen eine höhere Präzision, insbesondere bei härteren Materialien.
+            </p>
+          </div>
+        </section>
+
+        <!-- Anwendungsbereiche -->
+        <section id="anwendungsbereiche" class="mb-12">
+          <h2>Anwendungsbereiche</h2>
+          <p>
+            Dank ihrer Vielseitigkeit finden CNC-Router und Graviermaschinen Anwendung in einer Vielzahl von Branchen:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Industrielle Anwendungen</h3>
+              <ul class="space-y-2">
+                <li>Möbelbau und Innenausstattung</li>
+                <li>Werbetechnik und Beschilderung</li>
+                <li>Prototypenbau und Modellierung</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Künstlerische Anwendungen</h3>
+              <ul class="space-y-2">
+                <li>Schmuckherstellung</li>
+                <li>Kunstinstallationen</li>
+                <li>Personalisierte Geschenke</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vergleich -->
+        <section id="vergleich" class="mb-12">
+          <h2>Vergleich zu anderen CNC-Maschinen</h2>
+          <p>
+            CNC-Router und Graviermaschinen unterscheiden sich erheblich in Bezug auf Präzision, Geschwindigkeit und Anwendungsbereiche.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Maschinentyp</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vorteile</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nachteile</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typische Anwendungen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">CNC-Router</td>
+                  <td class="px-6 py-4">Hohe Geschwindigkeit, große Bearbeitungsflächen</td>
+                  <td class="px-6 py-4">Geringere Präzision bei feinen Details</td>
+                  <td class="px-6 py-4">Möbelbau, großflächige Gravuren</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Graviermaschinen</td>
+                  <td class="px-6 py-4">Höchste Präzision, ideal für kleine Details</td>
+                  <td class="px-6 py-4">Langsame Bearbeitung, kleinere Arbeitsbereiche</td>
+                  <td class="px-6 py-4">Schmuckgravuren, Schilder</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Zukunftstechnologien -->
+        <section id="zukunftstechnologien" class="mb-12">
+          <h2>Zukunftstechnologien</h2>
+          <p>
+            Die Integration moderner Technologien in CNC-Router und Graviermaschinen verspricht erhebliche Fortschritte:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Künstliche Intelligenz (KI):</strong>
+                  <p class="text-gray-600">Automatische Optimierung der Schneidparameter für höchste Effizienz.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT-Integration:</strong>
+                  <p class="text-gray-600">Vernetzung der Maschinen zur Echtzeitüberwachung und -steuerung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Multi-Material-Bearbeitung:</strong>
+                  <p class="text-gray-600">Bearbeitung von komplexen Materialkombinationen in einem Arbeitsgang.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Diese Technologien machen CNC-Maschinen zu unverzichtbaren Werkzeugen für die smarte Fertigung.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CNC-Router und Graviermaschinen sind unverzichtbare Helfer in der Präzisionsfertigung. 
+            Ihre Vielseitigkeit und Präzision machen sie zu einer idealen Wahl für unterschiedlichste Projekte – von großflächigen Möbeln bis hin zu filigranen Gravuren. 
+            Mit der Integration von KI und IoT wird ihre Bedeutung in der modernen Fertigung weiter steigen.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/grundtypen" class="text-blue-600 hover:text-blue-800">
+                  Übersicht der CNC-Maschinentypen
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

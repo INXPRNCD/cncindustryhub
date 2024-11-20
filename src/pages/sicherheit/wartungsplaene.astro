@@ -1,0 +1,402 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Sicherheit & Wartung', href: '/sicherheit' },
+  { title: 'Wartungspläne', href: '/sicherheit/wartungsplaene' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#arten", title: "Wartungsarten" },
+  { href: "#bestandteile", title: "Bestandteile" },
+  { href: "#technologie", title: "Technologie" },
+  { href: "#branchen", title: "Branchen" },
+  { href: "#herausforderungen", title: "Herausforderungen" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Effektive Wartungspläne für CNC-Maschinen: Maximale Effizienz und Zuverlässigkeit"
+  description="Erfahren Sie, wie Sie mit effektiven Wartungsplänen die Lebensdauer Ihrer CNC-Maschinen verlängern, Ausfallzeiten minimieren und die Produktionsqualität optimieren können."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Effektive Wartungspläne für CNC-Maschinen: Maximale Effizienz und Zuverlässigkeit
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Ein gut strukturierter Wartungsplan ist essenziell, um die Lebensdauer von CNC-Maschinen zu verlängern, Ausfallzeiten zu minimieren und die Produktionsqualität sicherzustellen. 
+            Moderne Technologien wie IoT und KI ermöglichen optimierte Wartungsstrategien für maximale Effizienz.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Warum Wartungspläne für CNC-Maschinen unverzichtbar sind</h2>
+          <p>Wartungspläne bieten entscheidende Vorteile:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Längere Lebensdauer:</strong>
+                  <p class="text-gray-600">Regelmäßige Wartung reduziert Verschleiß und schützt Investitionen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Erhöhte Produktivität:</strong>
+                  <p class="text-gray-600">Vorbeugende Maßnahmen minimieren ungeplante Stillstände.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kostenkontrolle:</strong>
+                  <p class="text-gray-600">Frühzeitige Reparaturen sind günstiger als Notfallreparaturen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Wartungsarten -->
+        <section id="arten" class="mb-12">
+          <h2>Die drei Arten von Wartungsplänen</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Präventive Wartung</h3>
+              <p>
+                Diese proaktive Wartung erfolgt in festen Intervallen. Beispiele sind die Schmierung beweglicher Teile oder der Austausch von Verschleißkomponenten. 
+                Ziel ist es, potenzielle Ausfälle frühzeitig zu verhindern.
+              </p>
+              <p class="mt-4">
+                <em>Beispiel:</em> Monatliche Überprüfung von Führungsbahnen und Spindellagern.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Reaktive Wartung</h3>
+              <p>
+                Hierbei handelt es sich um Reparaturen, die nach einem Ausfall durchgeführt werden. 
+                Diese Strategie ist oft kostspielig und zeitaufwendig, bleibt aber eine unvermeidbare Ergänzung zu präventiven Ansätzen.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Predictive Maintenance</h3>
+              <p>
+                Diese datengetriebene Wartung nutzt Sensoren und maschinelles Lernen, um den Zustand der Maschine in Echtzeit zu überwachen. 
+                Anhand von Anomalien und Mustern werden Wartungsbedarfe vorhergesagt.
+              </p>
+              <p class="mt-4">
+                <em>Technologien:</em> Vibrationssensoren, Thermografie, akustische Überwachung.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bestandteile -->
+        <section id="bestandteile" class="mb-12">
+          <h2>Die wesentlichen Bestandteile eines Wartungsplans</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Regelmäßige Inspektionen:</strong>
+                  <p class="text-gray-600">Tägliche Sichtprüfungen und detaillierte monatliche Analysen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Wartungszeitpläne:</strong>
+                  <p class="text-gray-600">Erstellung eines Kalenders für Schmierung, Reinigung und Komponententausch.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Dokumentation:</strong>
+                  <p class="text-gray-600">Systematische Aufzeichnung aller durchgeführten Wartungsmaßnahmen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Schulungen:</strong>
+                  <p class="text-gray-600">Bediener sollten einfache Wartungsaufgaben wie das Überprüfen von Kühlmitteln sicher beherrschen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technologie -->
+        <section id="technologie" class="mb-12">
+          <h2>Technologische Unterstützung für CNC-Wartungspläne</h2>
+          <p>Moderne Technologien revolutionieren die CNC-Wartung:</p>
+
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Echtzeitüberwachung</h3>
+              <p>
+                Sensoren überwachen Maschinenzustände wie Temperatur, Vibrationen und Belastung in Echtzeit. 
+                So können potenzielle Probleme frühzeitig erkannt werden.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">IoT und CMMS</h3>
+              <p>
+                Das Internet of Things (IoT) vernetzt Maschinen, während Computerized Maintenance Management Systems (CMMS) eine zentrale Planung, Dokumentation und Analyse von Wartungsaktivitäten ermöglichen.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Künstliche Intelligenz</h3>
+              <p>
+                KI analysiert historische und Echtzeitdaten, um Wartungsstrategien dynamisch anzupassen und die Effizienz zu maximieren.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Branchen -->
+        <section id="branchen" class="mb-12">
+          <h2>Branchenspezifische Anwendungen von Wartungsplänen</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Präventive Wartung für Hochgeschwindigkeitsmaschinen zur Herstellung von Karosserieteilen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Regelmäßige Kalibrierung und Prüfung zur Sicherstellung präziser Toleranzen bei Strukturkomponenten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Wartung von Maschinen zur Bearbeitung steriler und biokompatibler Materialien.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Herausforderungen -->
+        <section id="herausforderungen" class="mb-12">
+          <h2>Herausforderungen und Lösungen</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Qualifizierungsbedarf:</strong>
+                  <p class="text-gray-600">Schulungsprogramme für Bediener und Wartungspersonal.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kosten:</strong>
+                  <p class="text-gray-600">Implementierungskosten für predictive Technologien können durch langfristige Einsparungen kompensiert werden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Technologieintegration:</strong>
+                  <p class="text-gray-600">CMMS und IoT erleichtern die Einbindung neuer Technologien in bestehende Systeme.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukunft der CNC-Wartung</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Automatisierung von Wartungsprozessen durch Robotik.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Nachhaltige Strategien durch energieeffiziente Maschinen und recycelbare Komponenten.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Einsatz von KI zur dynamischen Optimierung von Wartungsplänen.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Wartungspläne für CNC-Maschinen sind essenziell, um den reibungslosen Betrieb zu gewährleisten, Kosten zu senken und die Lebensdauer der Maschinen zu verlängern. 
+            Durch die Integration moderner Technologien wie IoT und KI wird die Zukunft der CNC-Wartung effizienter, nachhaltiger und präziser.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/sicherheit/arbeitsschutz" class="text-blue-600 hover:text-blue-800">
+                  Arbeitssicherheit in CNC-Umgebungen
+                </a>
+              </li>
+              <li>
+                <a href="/sicherheit/zertifikate" class="text-blue-600 hover:text-blue-800">
+                  Sicherheitszertifikate und Standards
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

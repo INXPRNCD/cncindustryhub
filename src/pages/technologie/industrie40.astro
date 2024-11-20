@@ -1,0 +1,354 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Technologie & Innovation', href: '/technologie' },
+  { title: 'Industrie 4.0 und CNC', href: '/technologie/industrie40' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#iot-in-cnc", title: "IoT in CNC" },
+  { href: "#smart-manufacturing", title: "Smart Manufacturing" },
+  { href: "#digitale-zwillinge", title: "Digitale Zwillinge" },
+  { href: "#vorteile", title: "Vorteile" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Industrie 4.0 und CNC: Die Zukunft der Fertigung"
+  description="Erfahren Sie, wie Industrie 4.0 die CNC-Bearbeitung revolutioniert: IoT, digitale Zwillinge, Smart Manufacturing und KI für effizientere Produktionsprozesse."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Industrie 4.0 und CNC: Die Zukunft der Fertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie, wie Industrie 4.0 mit Technologien wie IoT, KI und digitalen Zwillingen die CNC-Fertigung optimiert und revolutioniert.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in Industrie 4.0 und CNC</h2>
+          <p>
+            Industrie 4.0 beschreibt die vierte industrielle Revolution, die auf Digitalisierung, Automatisierung und datengetriebenen Entscheidungen basiert. 
+            In der CNC-Fertigung schafft sie vernetzte Maschinen, Echtzeitdatenüberwachung und intelligente Produktionssysteme, die Effizienz und Präzision auf ein neues Niveau heben.
+          </p>
+        </section>
+
+        <!-- IoT in CNC -->
+        <section id="iot-in-cnc" class="mb-12">
+          <h2>IoT in der CNC-Bearbeitung</h2>
+          <p>
+            Das <strong>Internet of Things (IoT)</strong> ist ein Kernbestandteil von Industrie 4.0, das CNC-Maschinen miteinander vernetzt und Daten in Echtzeit austauscht. 
+            Dadurch entsteht eine dynamische Fertigungsumgebung:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Sensorintegration:</strong>
+                  <p class="text-gray-600">Echtzeitüberwachung von Temperatur, Vibrationen und Werkzeugzustand.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatische Anpassungen:</strong>
+                  <p class="text-gray-600">Optimierung von Schnittparametern basierend auf Live-Daten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fehlervermeidung:</strong>
+                  <p class="text-gray-600">Proaktive Identifikation und Korrektur von Prozessabweichungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Smart Manufacturing -->
+        <section id="smart-manufacturing" class="mb-12">
+          <h2>Smart Manufacturing und CNC-Automatisierung</h2>
+          <p>
+            <strong>Smart Manufacturing</strong> nutzt datengetriebene Ansätze und adaptive Steuerungen, um CNC-Prozesse effizienter zu gestalten:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatisierung:</strong>
+                  <p class="text-gray-600">Reduktion manueller Eingriffe durch intelligente Steuerungssysteme.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Datenbasierte Fertigung:</strong>
+                  <p class="text-gray-600">Big-Data-Analysen ermöglichen präzisere und schnellere Entscheidungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Beispiele:</strong>
+                  <p class="text-gray-600">Vernetzte Produktionslinien in der Automobilindustrie und der Luftfahrtfertigung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Digitale Zwillinge -->
+        <section id="digitale-zwillinge" class="mb-12">
+          <h2>Digitale Zwillinge: Simulation und Optimierung</h2>
+          <p>
+            Ein <strong>digitaler Zwilling</strong> ist eine virtuelle Nachbildung von CNC-Prozessen, die Simulationen und Optimierungen in Echtzeit ermöglicht:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Simulation:</strong>
+                  <p class="text-gray-600">Vorhersage von Bearbeitungsergebnissen und Optimierung von Werkzeugwegen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Reduktion von Ausschuss:</strong>
+                  <p class="text-gray-600">Präzise Planung verhindert Materialverluste.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Integration:</strong>
+                  <p class="text-gray-600">Verbindung mit CAD/CAM-Systemen für nahtlose Prozesssteuerung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Vorteile -->
+        <section id="vorteile" class="mb-12">
+          <h2>Vorteile von Industrie 4.0 für CNC</h2>
+          <p>Die Integration von Industrie 4.0 in CNC-Systeme bringt zahlreiche Vorteile:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Effizienzsteigerung:</strong>
+                  <p class="text-gray-600">Kürzere Produktionszeiten durch Echtzeitüberwachung und Optimierung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Präzision:</strong>
+                  <p class="text-gray-600">Verbesserte Bearbeitungsqualität durch datenbasierte Anpassungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kosteneffizienz:</strong>
+                  <p class="text-gray-600">Reduktion von Stillstandzeiten durch vorausschauende Wartung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukünftige Entwicklungen in Industrie 4.0</h2>
+          <p>Industrie 4.0 ist ein kontinuierlicher Fortschritt. Folgende Entwicklungen zeichnen sich ab:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>KI-gestützte Steuerung:</strong>
+                  <p class="text-gray-600">Maschinelles Lernen ermöglicht autonome CNC-Prozesse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Industrie 5.0:</strong>
+                  <p class="text-gray-600">Mensch-Maschine-Kollaboration für individualisierte Fertigung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltigkeit:</strong>
+                  <p class="text-gray-600">Optimierung von Ressourcen und Energieverbrauch durch datengetriebene Technologien.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Industrie 4.0 transformiert die CNC-Bearbeitung durch IoT, digitale Zwillinge und KI. 
+            Die Integration dieser Technologien ermöglicht eine präzisere, effizientere und nachhaltigere Fertigung. 
+            Der Weg in die Zukunft führt über vernetzte Maschinen und intelligente Steuerungen – bereit für Industrie 5.0.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/technologie/ki" class="text-blue-600 hover:text-blue-800">
+                  KI in der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/robotik" class="text-blue-600 hover:text-blue-800">
+                  Robotik und CNC
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/blockchain" class="text-blue-600 hover:text-blue-800">
+                  Blockchain in der CNC-Fertigung
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

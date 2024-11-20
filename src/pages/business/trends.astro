@@ -1,0 +1,309 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Geschäftsstrategie & Investitionen', href: '/business' },
+  { title: 'Markttrends', href: '/business/trends' }
+];
+
+const navItems = [
+  { href: "#markttrends", title: "Markttrends" },
+  { href: "#strategien", title: "Investitionsstrategien" },
+  { href: "#innovationen", title: "Innovationen" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Markttrends und langfristige Investitionen in der CNC-Industrie"
+  description="Erfahren Sie alles über aktuelle Markttrends, Investitionsstrategien und Zukunftsperspektiven in der CNC-Industrie. Von KI bis zu hybriden Fertigungssystemen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Markttrends und langfristige Investitionen in der CNC-Industrie
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die CNC-Technologie befindet sich in einem dynamischen Wandel, geprägt von technologischen Innovationen und wirtschaftlichen Trends. 
+            Langfristige Investitionen in moderne CNC-Systeme ermöglichen es Unternehmen, wettbewerbsfähig zu bleiben und von neuen Marktchancen zu profitieren.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Aktuelle Markttrends -->
+        <section id="markttrends" class="mb-12">
+          <h2>Aktuelle Markttrends in der CNC-Technologie</h2>
+          <p>
+            Die CNC-Industrie wächst rasant, angetrieben durch Innovationen wie <strong>Künstliche Intelligenz (KI)</strong>, <strong>hybride Fertigungssysteme</strong> und die Integration von <strong>IoT</strong>. 
+            Laut Marktanalysen verzeichnet die CNC-Branche ein jährliches Wachstum von über 5 %, wobei der asiatisch-pazifische Raum eine führende Rolle spielt. 
+            Europa und Nordamerika setzen auf spezialisierte Anwendungen, wie Präzisionsbearbeitung in der Luftfahrt und der Medizintechnik.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hybride Fertigungstechnologien:</strong>
+                  <p class="text-gray-600">Kombination von CNC mit 3D-Druck für höhere Flexibilität und Effizienz.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Komplexe Geometrien:</strong>
+                  <p class="text-gray-600">Nahtlose Integration von Prototyping und Serienproduktion.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Investitionsstrategien -->
+        <section id="strategien" class="mb-12">
+          <h2>Langfristige Investitionsstrategien für CNC-Systeme</h2>
+          <p>
+            Langfristige Investitionen in CNC-Technologien erfordern eine strategische Planung, die <strong>Flexibilität</strong>, <strong>Skalierbarkeit</strong> und <strong>Lebenszykluskosten (LCC)</strong> berücksichtigt. 
+            Moderne CNC-Maschinen bieten Unternehmen die Möglichkeit, ihre Produktionskapazitäten zu erweitern, ohne erhebliche Neuinvestitionen tätigen zu müssen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Schnelle Amortisation durch hohe Stückzahlen und standardisierte Prozesse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Hohe Materialkosten und Präzisionsanforderungen rechtfertigen Investitionen in fortschrittliche Systeme.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technologische Innovationen -->
+        <section id="innovationen" class="mb-12">
+          <h2>Technologische Innovationen als Treiber für Investitionen</h2>
+          <p>
+            Die Verbindung von CNC-Systemen mit <strong>Big Data</strong> und <strong>KI</strong> revolutioniert die Prozessoptimierung. 
+            Echtzeitdaten ermöglichen die automatische Anpassung von Bearbeitungsparametern, wodurch Produktionsfehler minimiert und die Effizienz gesteigert werden.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hybride CNC-Systeme:</strong>
+                  <p class="text-gray-600">Integration von additiver Fertigung für komplexe Anforderungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Cloud-Plattformen:</strong>
+                  <p class="text-gray-600">Förderung globaler Zusammenarbeit und einfacher Datenaustausch.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und ressourceneffiziente Investitionen</h2>
+          <p>
+            Nachhaltigkeit spielt eine immer größere Rolle in der CNC-Industrie. 
+            Moderne CNC-Maschinen sind energieeffizient und ermöglichen eine präzise Materialnutzung, die Abfall minimiert. 
+            Zudem wird die Verwendung recycelbarer und umweltfreundlicher Materialien gefördert.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Staatliche Förderung:</strong>
+                  <p class="text-gray-600">Programme unterstützen Investitionen in nachhaltige Technologien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Grüne Fertigung:</strong>
+                  <p class="text-gray-600">Umstellung auf umweltfreundliche Fertigungsprozesse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukunft der CNC-Investitionen</h2>
+          <p>
+            Die CNC-Technologie wird zunehmend durch <strong>Industrie 5.0</strong> geprägt, die den Fokus auf die Mensch-Maschine-Interaktion und personalisierte Fertigung legt. 
+            Hybride Systeme, digitale Zwillinge und KI-gestützte CNC-Maschinen werden in den kommenden Jahren die Haupttreiber der Branche sein.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Cloud-basierte Fertigung:</strong>
+                  <p class="text-gray-600">Neue Möglichkeiten zur Kostensenkung und Produktivitätssteigerung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Wettbewerbsvorteile:</strong>
+                  <p class="text-gray-600">Frühzeitige Investitionen in flexible und innovative Technologien sichern langfristige Vorteile.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Langfristige Investitionen in CNC-Technologien sind der Schlüssel zu nachhaltigem Wachstum und Wettbewerbsfähigkeit. 
+            Durch den Fokus auf Markttrends, technologische Innovationen und nachhaltige Strategien können Unternehmen ihre Produktionsziele effizienter erreichen und sich auf die Zukunft der Fertigung vorbereiten.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/business/roi" class="text-blue-600 hover:text-blue-800">
+                  ROI-Berechnungen für CNC-Investitionen
+                </a>
+              </li>
+              <li>
+                <a href="/business/finanzierung" class="text-blue-600 hover:text-blue-800">
+                  Finanzierungsmodelle für CNC-Maschinen
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

@@ -1,0 +1,218 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import Picture from '../../components/Picture.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Grundlagen', href: '/grundlagen' },
+  { title: 'Die Grundlagen der CNC-Technologie', href: '/grundlagen/einfuehrung' }
+];
+---
+
+<Layout 
+  title="Die Grundlagen der CNC-Technologie: Einführung, Geschichte und Entwicklung"
+  description="Erfahren Sie die Grundlagen der CNC-Technologie: Definition, Geschichte, Meilensteine und ihre Rolle in der modernen Fertigung."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Die Grundlagen der CNC-Technologie: Einführung, Geschichte und Entwicklung
+          </h1>
+          <p class="text-xl text-gray-600">
+            Entdecken Sie die Ursprünge, Funktionsweise und den Einfluss der CNC-Technologie auf die Fertigungsindustrie – von den ersten Steuerungen bis zur modernen digitalen Fertigung.
+          </p>
+        </header>
+
+        <!-- Einführung -->
+        <section id="einfuhrung" class="mb-12">
+          <h2>Einführung in die CNC-Technologie</h2>
+          <p>
+            Die <strong>Computerized Numerical Control (CNC)</strong> ist eine bahnbrechende Technologie, die computergestützte Steuerung für Maschinen bietet. 
+            Mit CNC können komplexe Fertigungsprozesse automatisiert, präzise ausgeführt und wiederholt werden, was die Effizienz und Genauigkeit drastisch erhöht.
+          </p>
+          <figure class="my-8">
+            <Picture
+              src="/images/cnc-definition.webp"
+              alt="CNC-Technologie Einführung"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Die CNC-Technologie automatisiert und optimiert Fertigungsprozesse.
+            </figcaption>
+          </figure>
+          <p>
+            Im Gegensatz zu manuellen Steuerungen bietet CNC eine exakte Kontrolle über Bewegungen entlang der X-, Y- und Z-Achsen, die durch numerische Codes wie den <strong>G-Code</strong> definiert werden. 
+            <a href="/grundlagen/cnc-definition">Lesen Sie mehr über die Definition und Bedeutung der CNC-Technologie.</a>
+          </p>
+        </section>
+
+        <!-- Geschichte -->
+        <section id="geschichte" class="mb-12">
+          <h2>Die Geschichte der CNC-Technologie</h2>
+          <p>
+            Die Ursprünge der CNC-Technologie reichen in die <strong>1940er Jahre</strong> zurück, als erste numerische Steuerungen (NC-Systeme) für die Luftfahrtindustrie entwickelt wurden. Diese Steuerungen nutzten Lochkarten, um präzise Maschinenbewegungen zu programmieren.
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>1940er Jahre:</strong> Entwicklung von NC-Systemen zur Steuerung von Fräsmaschinen.</li>
+            <li><strong>1950er Jahre:</strong> Erste industrielle Anwendungen in der Luftfahrt und Verteidigungsindustrie.</li>
+            <li><strong>1970er Jahre:</strong> Einführung von Mikroprozessoren und CAD/CAM-Systemen.</li>
+          </ul>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Wussten Sie?</strong> Die erste vollständig CNC-gesteuerte Maschine wurde 1952 am MIT entwickelt und revolutionierte die Fertigung durch eine nie dagewesene Präzision.</p>
+          </blockquote>
+          <p>
+            Mehr über diese faszinierende Geschichte erfahren Sie in unserem <a href="/grundlagen/cnc-geschichte">detaillierten Bericht zur CNC-Geschichte</a>.
+          </p>
+        </section>
+
+        <!-- Entwicklung -->
+        <section id="entwicklung" class="mb-12">
+          <h2>Die Entwicklung der CNC-Technologie</h2>
+          <p>
+            Die Weiterentwicklung der CNC-Technologie wurde maßgeblich durch den Einsatz von <strong>CAD/CAM-Software</strong> (Computer-Aided Design/Manufacturing) vorangetrieben. 
+            Diese Software ermöglichte es, komplexe Designs digital zu erstellen und direkt in maschinenlesbare Befehle zu übersetzen.
+          </p>
+          <p>
+            Fortschritte in der Automatisierung und Digitalisierung machten CNC zu einem unverzichtbaren Werkzeug für die <strong>Serienproduktion</strong> und die Herstellung komplexer Komponenten wie in der Automobil- und Luftfahrtindustrie.
+          </p>
+          <figure class="my-8">
+            <Picture
+              src="/images/cnc-entwicklung.webp"
+              alt="Meilensteine der CNC-Entwicklung"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Meilensteine in der Entwicklung der CNC-Technologie.
+            </figcaption>
+          </figure>
+          <p>
+            Erfahren Sie mehr über die <a href="/grundlagen/cnc-entwicklung">wichtigsten Fortschritte in der CNC-Technologie</a>.
+          </p>
+        </section>
+
+        <!-- Automatisierung und Digitalisierung -->
+        <section id="automatisierung" class="mb-12">
+          <h2>Die Rolle der CNC bei Automatisierung und Digitalisierung</h2>
+          <p>
+            CNC-Systeme haben die <strong>Automatisierung in der Industrie</strong> revolutioniert, indem sie es ermöglichen, präzise Fertigungsprozesse ohne menschliches Eingreifen durchzuführen. 
+            Besonders in der Serienproduktion sorgen CNC-Maschinen für gleichbleibende Qualität bei hohen Stückzahlen.
+          </p>
+          <p>
+            Mit der Einführung von <strong>Industrie 4.0</strong> sind CNC-Systeme Teil eines digitalen Netzwerks geworden. Durch Technologien wie IoT (Internet of Things) und Big Data können Maschinen in Echtzeit überwacht und Prozesse optimiert werden.
+          </p>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Zitat:</strong> "CNC-Systeme sind die Brücke zwischen traditioneller Fertigung und moderner, digitalisierter Produktion." – Industrieexperte.</p>
+          </blockquote>
+          <p>
+            Lesen Sie mehr über <a href="/grundlagen/cnc-und-industrie-4-0">CNC in der Industrie 4.0</a>.
+          </p>
+        </section>
+
+        <!-- Schlüsselbegriffe -->
+        <section id="schluesselbegriffe" class="mb-12">
+          <h2>Wichtige Begriffe der CNC-Technologie</h2>
+          <p>
+            Um die CNC-Technologie besser zu verstehen, sollten Sie die folgenden Begriffe kennen:
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>G-Code:</strong> Die Sprache, die Maschinenbewegungen und Operationen definiert.</li>
+            <li><strong>Achsenbewegung:</strong> Bewegungen entlang der X-, Y- und Z-Achsen, die die Präzision von CNC ausmachen.</li>
+            <li><strong>CAD/CAM:</strong> Software zur Konstruktion und Fertigungssteuerung.</li>
+            <li><strong>Lochkartensteuerung:</strong> Historische Methode zur Steuerung von Maschinenbewegungen.</li>
+          </ul>
+          <p>
+            Mehr Details finden Sie in unserem <a href="/grundlagen/wichtige-begriffe">Glossar der CNC-Technologie</a>.
+          </p>
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section id="zusammenfassung" class="mb-12">
+          <h2>Zusammenfassung</h2>
+          <p>
+            Die CNC-Technologie hat die industrielle Fertigung revolutioniert und prägt sie bis heute. 
+            Ihre Geschichte zeigt, wie Innovationen in der numerischen Steuerung zur heutigen digitalen Fertigung führten. 
+            Von den ersten NC-Systemen bis zur Integration in Industrie 4.0 – CNC bleibt eine unverzichtbare Säule der modernen Produktion.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Vertiefen Sie Ihr Wissen zu den Subtopics:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/grundlagen/cnc-definition" class="text-blue-600 hover:text-blue-800">
+                  Einführung in die CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/grundlagen/cnc-geschichte" class="text-blue-600 hover:text-blue-800">
+                  Die Geschichte der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/grundlagen/cnc-entwicklung" class="text-blue-600 hover:text-blue-800">
+                  Die Entwicklung der CNC-Technologie
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose figure {
+  margin: 2rem 0;
+}
+
+.prose figcaption {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

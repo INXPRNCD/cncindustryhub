@@ -1,0 +1,308 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Geschäftsstrategie & Investitionen', href: '/business' }
+];
+
+const navItems = [
+  { href: "#kosten-nutzen", title: "Kosten-Nutzen-Analyse" },
+  { href: "#roi", title: "ROI und Finanzierung" },
+  { href: "#markttrends", title: "Markttrends" },
+  { href: "#vorteile", title: "Langfristige Vorteile" }
+];
+---
+
+<Layout 
+  title="Geschäftsstrategie & Investitionen in CNC: Der Schlüssel zur zukunftssicheren Fertigung"
+  description="Erfahren Sie alles über Kosten-Nutzen-Analysen, ROI-Berechnungen und Finanzierungsmöglichkeiten für CNC-Investitionen sowie aktuelle Markttrends und Zukunftsperspektiven."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Geschäftsstrategie & Investitionen in CNC: Der Schlüssel zur zukunftssicheren Fertigung
+          </h1>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Kosten-Nutzen-Analyse -->
+        <section id="kosten-nutzen" class="mb-12">
+          <h2>Kosten-Nutzen-Analyse von CNC-Maschinen</h2>
+          <p>
+            Die <strong>Kosten-Nutzen-Analyse</strong> spielt eine zentrale Rolle bei der Entscheidungsfindung für CNC-Investitionen. 
+            Sie bewertet nicht nur die Anschaffungskosten, sondern auch den langfristigen Nutzen, den CNC-Maschinen durch höhere Effizienz, reduzierte Fehlerquoten und optimierte Produktionszeiten bieten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Wesentliche Faktoren in der Analyse:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Anschaffungskosten:</strong>
+                  <p class="text-gray-600">Maschinenpreis, Softwarelizenzierung und Schulungskosten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Laufende Betriebskosten:</strong>
+                  <p class="text-gray-600">Energieverbrauch, Wartung und Werkzeugverschleiß.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Langfristiger Nutzen:</strong>
+                  <p class="text-gray-600">Gesteigerte Produktivität, geringerer Materialverlust und Skalierbarkeit.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Studien zeigen, dass Unternehmen durch CNC-Technologien ihre Produktionsleistung um bis zu <strong>30 %</strong> steigern und Ausschuss um <strong>20 %</strong> senken können. 
+            Dies führt zu einer typischen Amortisationszeit von <strong>2 bis 5 Jahren</strong>, abhängig von der Branche und dem Einsatzgebiet.
+          </p>
+        </section>
+
+        <!-- ROI und Finanzierung -->
+        <section id="roi" class="mb-12">
+          <h2>ROI und Finanzierung von CNC-Maschinen</h2>
+          <p>
+            Der <strong>Return on Investment (ROI)</strong> ist ein zentraler Indikator für die Rentabilität einer CNC-Investition. 
+            Unternehmen profitieren durch höhere Effizienz und geringere Betriebskosten.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Berechnung des ROI</h3>
+              <p>Eine präzise ROI-Berechnung umfasst:</p>
+              <ul class="space-y-2">
+                <li><strong>Initialkosten:</strong> Anschaffungs- und Installationskosten.</li>
+                <li><strong>Erträge:</strong> Ersparnisse durch höhere Effizienz und reduzierte Fehler.</li>
+                <li><strong>Amortisationszeit:</strong> Zeitraum, in dem die Investition durch Einsparungen gedeckt ist.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Finanzierungsoptionen</h3>
+              <p>Die Finanzierung von CNC-Maschinen ist durch verschiedene Modelle flexibel gestaltbar:</p>
+              <ul class="space-y-2">
+                <li><strong>Leasing:</strong> Ideal für KMUs, da es geringe Anfangskosten und steuerliche Vorteile bietet.</li>
+                <li><strong>Kauf durch Kredite:</strong> Industrielle Finanzierungen mit angepassten Rückzahlungsmodellen.</li>
+                <li><strong>Förderprogramme:</strong> Nationale und EU-weite Subventionen unterstützen Innovationen in der Fertigungstechnologie.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            Der Einsatz von Finanzierungsmöglichkeiten wie Leasingmodellen ermöglicht Unternehmen, modernste Technologien zu implementieren, ohne die Liquidität zu beeinträchtigen.
+          </p>
+        </section>
+
+        <!-- Markttrends -->
+        <section id="markttrends" class="mb-12">
+          <h2>Markttrends und langfristige Investitionen</h2>
+          <p>
+            Der CNC-Markt unterliegt dynamischen Veränderungen, angetrieben durch Technologien wie IoT, KI und hybride Fertigungssysteme. 
+            Unternehmen, die strategisch in diese Entwicklungen investieren, sichern sich entscheidende Wettbewerbsvorteile.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Zukunftsweisende Markttrends:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT-Integration:</strong>
+                  <p class="text-gray-600">Echtzeitüberwachung und datengetriebene Entscheidungsfindung verbessern die Produktionsprozesse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltigkeit:</strong>
+                  <p class="text-gray-600">CNC-Systeme tragen durch optimierten Energieverbrauch und Materialreduktion zu umweltfreundlicher Fertigung bei.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatisierung:</strong>
+                  <p class="text-gray-600">Hybridlösungen kombinieren CNC, Robotik und additive Fertigung für maximale Effizienz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Langfristige Vorteile -->
+        <section id="vorteile" class="mb-12">
+          <h2>Langfristige Vorteile von CNC-Investitionen</h2>
+          <p>Unternehmen profitieren durch:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Reduktion der Betriebskosten:</strong>
+                  <p class="text-gray-600">Geringere Fehlerquoten und effizientere Nutzung von Ressourcen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Steigerung der Produktionskapazität:</strong>
+                  <p class="text-gray-600">CNC-Systeme ermöglichen skalierbare Prozesse für Serienfertigung und individuelle Prototypen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltige Produktion:</strong>
+                  <p class="text-gray-600">Optimierte Materialnutzung und Energieeffizienz fördern ressourcenschonendes Wirtschaften.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Der globale CNC-Markt wird laut Prognosen bis 2030 mit einer jährlichen Wachstumsrate von <strong>6,5 %</strong> expandieren, 
+            was die Bedeutung von Investitionen in innovative Technologien unterstreicht.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Strategische CNC-Investitionen bieten Unternehmen nicht nur finanzielle Vorteile, sondern sichern auch deren Zukunftsfähigkeit. 
+            Durch fundierte <strong>Kosten-Nutzen-Analysen</strong>, intelligente Finanzierung und Berücksichtigung von Markttrends können Unternehmen ihre Effizienz steigern, die Produktionsqualität erhöhen und langfristige Wettbewerbsvorteile erzielen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/business/roi" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte ROI-Berechnungen
+                </a>
+              </li>
+              <li>
+                <a href="/business/finanzierung" class="text-blue-600 hover:text-blue-800">
+                  Finanzierungsmodelle im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/business/trends" class="text-blue-600 hover:text-blue-800">
+                  Aktuelle Markttrends
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

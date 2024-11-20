@@ -1,0 +1,405 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Komponenten & Werkzeuge', href: '/komponenten' }
+];
+
+const navItems = [
+  { href: "#wichtige-cnc-komponenten", title: "Wichtige Komponenten" },
+  { href: "#werkzeugtypen", title: "Werkzeugtypen" },
+  { href: "#hochgeschwindigkeitsspindeln", title: "Hochgeschwindigkeitsspindeln" },
+  { href: "#kuehlmittel-schmierstoffe", title: "Kühlmittel & Schmierstoffe" },
+  { href: "#werkzeugwartung", title: "Werkzeugwartung" },
+  { href: "#material-spezifische-werkzeuge", title: "Materialspezifische Werkzeuge" }
+];
+---
+
+<Layout 
+  title="Komponenten & Werkzeuge: Präzision und Effizienz in der CNC-Fertigung"
+  description="Entdecken Sie die essenziellen CNC-Komponenten, Werkzeugtypen, Schmierstoffe und Wartungsstrategien für optimale Präzision und Effizienz in der Fertigung."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Komponenten & Werkzeuge: Präzision und Effizienz in der CNC-Fertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Eine umfassende Übersicht über essenzielle CNC-Komponenten, Werkzeugtypen und deren Bedeutung für die moderne Fertigung. Von Achsen und Spindeln bis hin zu Hochgeschwindigkeitsspindeln und Schmierstoffen – hier erfahren Sie alles für maximale Präzision.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Wichtige CNC-Komponenten -->
+        <section id="wichtige-cnc-komponenten" class="mb-12">
+          <h2>Wichtige CNC-Komponenten: Achsen, Spindeln, Motoren erklärt</h2>
+          <p>CNC-Komponenten bilden das Fundament moderner Präzisionsfertigung. Die wichtigsten Bauteile sind:</p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Komponente</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Funktion</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vorteile</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Achsen</td>
+                  <td class="px-6 py-4">Steuern die Bewegungen in X-, Y-, Z- sowie Rotationsrichtungen (A, B).</td>
+                  <td class="px-6 py-4">Ermöglichen die Bearbeitung komplexer 3D-Geometrien.</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Spindeln</td>
+                  <td class="px-6 py-4">Antrieb der Werkzeuge, verantwortlich für Schnittgeschwindigkeit und Präzision.</td>
+                  <td class="px-6 py-4">Hochgeschwindigkeitsspindeln erhöhen Effizienz und Oberflächengüte.</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Motoren</td>
+                  <td class="px-6 py-4">Treiber für präzise Bewegungen der Achsen und Werkzeuge.</td>
+                  <td class="px-6 py-4">Servomotoren bieten höchste Wiederholgenauigkeit.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>Hinweis:</strong> Regelmäßige Wartung dieser Komponenten verlängert ihre Lebensdauer erheblich.</p>
+        </section>
+
+        <!-- Werkzeugtypen -->
+        <section id="werkzeugtypen" class="mb-12">
+          <h2>Werkzeugtypen in der CNC-Technologie</h2>
+          <p>Die Wahl des richtigen Werkzeugs ist entscheidend für die Qualität und Effizienz der Bearbeitung. Hier sind die wichtigsten Typen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fräswerkzeuge:</strong>
+                  <p class="text-gray-600">Geeignet für das Abtragen von Material und die Bearbeitung von 3D-Geometrien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Drehwerkzeuge:</strong>
+                  <p class="text-gray-600">Perfekt für die Fertigung rotationssymmetrischer Bauteile.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Gravurwerkzeuge:</strong>
+                  <p class="text-gray-600">Präzise für Logos, Muster oder Designs.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Schneidwerkzeuge:</strong>
+                  <p class="text-gray-600">Für saubere, gerade Schnitte in Metallen und Kunststoffen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Eine detaillierte Planung der Werkzeugwege in CAD/CAM-Systemen maximiert die Effizienz und minimiert Fehler.</p>
+        </section>
+
+        <!-- Hochgeschwindigkeitsspindeln -->
+        <section id="hochgeschwindigkeitsspindeln" class="mb-12">
+          <h2>Hochgeschwindigkeitsspindeln und ihre Rolle in der Präzision</h2>
+          <p>
+            Hochgeschwindigkeitsspindeln sind für filigrane Arbeiten und schnelle Bearbeitungszeiten essenziell. Ihre Vorteile umfassen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Hohe Drehzahlen für präzise Schnitte und minimale Werkzeugmarkierungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Reduzierte thermische Belastung des Materials.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Besonders geeignet für die Bearbeitung von Aluminium, Kunststoff und empfindlichen Materialien.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Die Investition in Hochgeschwindigkeitsspindeln zahlt sich besonders in Branchen mit hoher Präzisionsanforderung wie der Luftfahrt und Medizintechnik aus.
+          </p>
+        </section>
+
+        <!-- Kühlmittel und Schmierstoffe -->
+        <section id="kuehlmittel-schmierstoffe" class="mb-12">
+          <h2>Kühlmittel und Schmierstoffe für CNC-Maschinen</h2>
+          <p>
+            Die richtige Schmierung und Kühlung gewährleistet optimale Leistung und verlängert die Lebensdauer Ihrer CNC-Maschine:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kühlmittel:</strong>
+                  <p class="text-gray-600">Reduzieren Reibung und thermische Belastung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Schmierstoffe:</strong>
+                  <p class="text-gray-600">Minimieren Verschleiß an beweglichen Teilen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hybridlösungen:</strong>
+                  <p class="text-gray-600">Kombinieren Kühlung und Schmierung für maximalen Schutz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Tipp:</strong> Überprüfen Sie regelmäßig die Qualität der verwendeten Schmierstoffe und wechseln Sie diese gemäß den Herstellerempfehlungen.
+          </p>
+        </section>
+
+        <!-- Werkzeugwartung -->
+        <section id="werkzeugwartung" class="mb-12">
+          <h2>Verschleiß und Wartung von CNC-Werkzeugen</h2>
+          <p>
+            Regelmäßige Wartung minimiert Ausfallzeiten und verlängert die Lebensdauer Ihrer Werkzeuge. Strategien umfassen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Regelmäßige Inspektionen auf Verschleiß oder Beschädigungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Optimale Schnittparameter zur Reduzierung von Belastungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Verwendung hochwertiger Werkstoffe für Schneidwerkzeuge.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Eine gut organisierte Werkzeugwartung spart langfristig Kosten und steigert die Produktivität.</p>
+        </section>
+
+        <!-- Materialspezifische Werkzeuge -->
+        <section id="material-spezifische-werkzeuge" class="mb-12">
+          <h2>CNC-Werkzeuge für spezifische Materialien</h2>
+          <p>Für jedes Material gibt es spezialisierte CNC-Werkzeuge, um optimale Ergebnisse zu erzielen:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Metalle:</strong>
+                  <p class="text-gray-600">Karbidwerkzeuge für harte Materialien wie Stahl und Titan.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kunststoffe:</strong>
+                  <p class="text-gray-600">Scharfe Schneiden zur Vermeidung von Rissen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Keramik und Glas:</strong>
+                  <p class="text-gray-600">Diamantbeschichtete Werkzeuge für präzise Schnitte.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Holz:</strong>
+                  <p class="text-gray-600">Werkzeuge mit hoher Vorschubgeschwindigkeit und speziellen Schneidwinkeln.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Wählen Sie Werkzeuge basierend auf den Materialeigenschaften und den spezifischen Projektanforderungen aus.</p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die richtige Kombination aus CNC-Komponenten und Werkzeugen bildet die Grundlage für Präzision, Effizienz und Nachhaltigkeit in der Fertigung. 
+            Mit innovativen Technologien wie Hochgeschwindigkeitsspindeln und optimaler Wartung sichern Sie langfristig Ihren Wettbewerbsvorteil.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/materialien/metalle" class="text-blue-600 hover:text-blue-800">
+                  CNC-Bearbeitung von Metallen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

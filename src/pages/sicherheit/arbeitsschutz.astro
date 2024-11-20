@@ -1,0 +1,330 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Sicherheit & Wartung', href: '/sicherheit' },
+  { title: 'Arbeitssicherheit', href: '/sicherheit/arbeitsschutz' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#sicherheitsrichtlinien", title: "Sicherheitsrichtlinien" },
+  { href: "#schutzmassnahmen", title: "Schutzmaßnahmen" },
+  { href: "#technologie", title: "Technologie" },
+  { href: "#zertifikate", title: "Zertifikate" },
+  { href: "#branchen", title: "Branchen" }
+];
+---
+
+<Layout 
+  title="Arbeitssicherheit in CNC-Umgebungen | Sicherheit & Wartung"
+  description="Erfahren Sie alles über Arbeitssicherheit in CNC-Umgebungen: Sicherheitsrichtlinien, Schutzmaßnahmen, PSA, Zertifikate und technologische Innovationen für maximale Sicherheit."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Arbeitssicherheit in CNC-Umgebungen
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Optimale Sicherheitsrichtlinien, innovative Technologien und branchenspezifische Lösungen für sichere CNC-Fertigungsumgebungen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die Arbeitssicherheit in CNC-Umgebungen ist ein zentraler Bestandteil moderner Fertigungsprozesse. 
+            Sie schützt nicht nur die Bediener und Maschinen, sondern steigert auch die betriebliche Effizienz. 
+            In diesem Leitfaden erfahren Sie alles über Sicherheitsrichtlinien, persönliche Schutzausrüstung (PSA), technologische Sicherheitslösungen und branchenspezifische Anforderungen.
+          </p>
+        </section>
+
+        <!-- Sicherheitsrichtlinien -->
+        <section id="sicherheitsrichtlinien" class="mb-12">
+          <h2>Sicherheitsrichtlinien für Bediener</h2>
+          <p>Klare Sicherheitsrichtlinien sind essenziell, um Risiken in der CNC-Fertigung zu minimieren.</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Pflichtschulungen:</strong>
+                  <p class="text-gray-600">Regelmäßige Schulungen stellen sicher, dass Bediener die Maschinen korrekt und sicher verwenden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Risikobewusstsein:</strong>
+                  <p class="text-gray-600">Bediener müssen Gefahren wie Quetschungen, Schnitte und Stromschläge erkennen und vermeiden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Gefahrenstoffe:</strong>
+                  <p class="text-gray-600">Der sichere Umgang mit Kühlmitteln und Schmierstoffen wird durch standardisierte Arbeitsanweisungen unterstützt.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Durch die Kombination von Schulungen und dokumentierten Richtlinien können Unfälle signifikant reduziert werden.</p>
+        </section>
+
+        <!-- Schutzmaßnahmen -->
+        <section id="schutzmassnahmen" class="mb-12">
+          <h2>Schutzmaßnahmen und Persönliche Schutzausrüstung (PSA)</h2>
+          <p>Technische Schutzmaßnahmen und PSA sind unverzichtbare Bestandteile sicherer CNC-Umgebungen:</p>
+
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Technische Schutzmaßnahmen</h3>
+              <ul class="space-y-2">
+                <li>Not-Aus-Schalter</li>
+                <li>Schutzabdeckungen</li>
+                <li>Verriegelungssysteme</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Persönliche Schutzausrüstung</h3>
+              <ul class="space-y-2">
+                <li>Schutzbrillen</li>
+                <li>Gehörschutz</li>
+                <li>Handschuhe</li>
+                <li>Sicherheitsschuhe</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>Regelmäßige Inspektionen der Schutzmaßnahmen und PSA gewährleisten eine dauerhafte Wirksamkeit.</p>
+        </section>
+
+        <!-- Technologie -->
+        <section id="technologie" class="mb-12">
+          <h2>Technologische Sicherheitslösungen</h2>
+          <p>Moderne Technologien spielen eine Schlüsselrolle in der CNC-Sicherheit:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Sensorintegration:</strong>
+                  <p class="text-gray-600">Sensoren überwachen in Echtzeit Parameter wie Temperatur, Schwingungen und Maschinenbewegungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Abweichungen von Sicherheitsparametern lösen automatische Stopps aus.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT-Integration:</strong>
+                  <p class="text-gray-600">Vernetzte CNC-Maschinen ermöglichen zentrale Sicherheitskontrollen und erhöhen die Transparenz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Die Kombination aus Echtzeitüberwachung und IoT reduziert das Risiko menschlicher Fehler und erhöht die Produktionssicherheit.</p>
+        </section>
+
+        <!-- Zertifikate -->
+        <section id="zertifikate" class="mb-12">
+          <h2>Sicherheitszertifikate und Standards</h2>
+          <p>Internationale Standards und Zertifikate stellen sicher, dass CNC-Umgebungen sicher und gesetzeskonform sind:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>ISO 45001:</strong>
+                  <p class="text-gray-600">Dieses Managementsystem unterstützt Unternehmen bei der Implementierung von Arbeitsschutzmaßnahmen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CE-Kennzeichnung:</strong>
+                  <p class="text-gray-600">Sie garantiert, dass CNC-Maschinen den EU-Richtlinien entsprechen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Maschinenrichtlinie 2006/42/EG:</strong>
+                  <p class="text-gray-600">Diese Richtlinie definiert die grundlegenden Sicherheitsanforderungen für Maschinen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Durch die Einhaltung dieser Standards können Unternehmen ihre Sicherheitspraktiken verbessern und Haftungsrisiken minimieren.</p>
+        </section>
+
+        <!-- Branchen -->
+        <section id="branchen" class="mb-12">
+          <h2>Branchenspezifische Anforderungen</h2>
+          <p>Jede Branche hat spezifische Anforderungen an die CNC-Sicherheit:</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Sicherheit bei der Verarbeitung großer Karosserieteile und schwerer Werkstücke.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Umgang mit Hochtemperatur-Werkstoffen und Verbundmaterialien.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Präzisionsfertigung unter sterilen Bedingungen für biokompatible Materialien.</p>
+            </div>
+          </div>
+
+          <p>Maßgeschneiderte Sicherheitslösungen gewährleisten branchenspezifische Konformität und Effizienz.</p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die Arbeitssicherheit in CNC-Umgebungen ist eine unverzichtbare Grundlage für eine effiziente und sichere Fertigung. 
+            Mit klaren Sicherheitsrichtlinien, moderner Technologie und branchenspezifischen Schutzmaßnahmen können Unternehmen Risiken minimieren und ihre Produktivität maximieren. 
+            Zukünftige Entwicklungen wie KI-gestützte Sicherheitssysteme und vernetzte Maschinen werden die Sicherheit weiter verbessern.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/sicherheit/wartungsplaene" class="text-blue-600 hover:text-blue-800">
+                  Wartungspläne für CNC-Maschinen
+                </a>
+              </li>
+              <li>
+                <a href="/sicherheit/zertifikate" class="text-blue-600 hover:text-blue-800">
+                  Sicherheitszertifikate und Standards
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

@@ -1,0 +1,362 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Sicherheit & Wartung', href: '/sicherheit' }
+];
+
+const navItems = [
+  { href: "#arbeitssicherheit", title: "Arbeitssicherheit" },
+  { href: "#wartungsplaene", title: "Wartungspläne" },
+  { href: "#praeventive-wartung", title: "Präventive Wartung" },
+  { href: "#sicherheitszertifikate", title: "Sicherheitszertifikate" },
+  { href: "#technologische-entwicklungen", title: "Technologische Entwicklungen" }
+];
+---
+
+<Layout 
+  title="Sicherheit & Wartung: Maximale Effizienz und Schutz in der CNC-Fertigung"
+  description="Erfahren Sie alles über Sicherheit und Wartung in der CNC-Fertigung: Von Arbeitsschutz über Wartungspläne bis hin zu technologischen Innovationen für maximale Effizienz und Sicherheit."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Sicherheit & Wartung: Maximale Effizienz und Schutz in der CNC-Fertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            In der CNC-Fertigung sind Sicherheit und Wartung unerlässlich, um Unfälle zu vermeiden, die Maschinenleistung zu optimieren und Produktionsausfälle zu minimieren. 
+            Dieser umfassende Leitfaden beleuchtet die wichtigsten Sicherheitsrichtlinien, effektive Wartungsstrategien und technologische Fortschritte.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Arbeitssicherheit -->
+        <section id="arbeitssicherheit" class="mb-12">
+          <h2>Arbeitssicherheit in CNC-Umgebungen</h2>
+          <p>
+            Die <strong>Arbeitssicherheit</strong> in CNC-Umgebungen erfordert die Einhaltung strenger Richtlinien, um Risiken für Bediener und Maschinen zu minimieren. 
+            Sicherheitsstandards sind entscheidend, um Arbeitsunfälle zu verhindern und einen reibungslosen Betrieb zu gewährleisten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Sicherheitsrichtlinien:</strong>
+                  <p class="text-gray-600">Bediener müssen regelmäßig geschult werden, um Risiken wie Quetschungen, Stromschläge und Schnittverletzungen zu vermeiden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Schutzmaßnahmen:</strong>
+                  <p class="text-gray-600">Persönliche Schutzausrüstung (PSA) wie Schutzbrillen, Handschuhe und Gehörschutz sind obligatorisch.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Maschinensicherheit:</strong>
+                  <p class="text-gray-600">CNC-Maschinen sollten mit Not-Aus-Schaltern, Verriegelungssystemen und Schutzabdeckungen ausgestattet sein.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Zertifikate wie <strong>ISO 45001</strong> und CE-Kennzeichnungen garantieren die Einhaltung internationaler Sicherheitsstandards und stärken das Vertrauen in die Fertigungsprozesse.
+          </p>
+        </section>
+
+        <!-- Wartungspläne -->
+        <section id="wartungsplaene" class="mb-12">
+          <h2>Wartungspläne für CNC-Maschinen</h2>
+          <p>
+            Regelmäßige <strong>Wartungspläne</strong> sind entscheidend, um CNC-Maschinen langfristig leistungsfähig zu halten. 
+            Sie verlängern die Lebensdauer der Maschinen und reduzieren unvorhergesehene Ausfälle.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Inspektionszyklen:</strong>
+                  <p class="text-gray-600">Wichtige Komponenten wie Spindeln, Führungen und Steuerungen sollten regelmäßig überprüft werden.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Proaktive Maßnahmen:</strong>
+                  <p class="text-gray-600">Austausch von Verschleißteilen, Schmierung von Lagern und Kalibrierung der Maschinensteuerung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Dokumentation:</strong>
+                  <p class="text-gray-600">Wartungsprotokolle sorgen für Transparenz und ermöglichen eine lückenlose Nachverfolgung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Eine gut geplante Wartung minimiert Produktionsausfälle und trägt dazu bei, die Effizienz der Fertigung zu steigern.</p>
+        </section>
+
+        <!-- Präventive Wartung -->
+        <section id="praeventive-wartung" class="mb-12">
+          <h2>Präventive Wartung und häufige Probleme</h2>
+          <p>
+            Die <strong>präventive Wartung</strong> dient der frühzeitigen Erkennung und Vermeidung von Maschinenproblemen. 
+            Sie sorgt für einen störungsfreien Betrieb und spart langfristig Kosten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Typische Probleme:</strong>
+                  <p class="text-gray-600">Werkzeugverschleiß, unregelmäßige Spindeldrehzahlen und elektrische Störungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Lösungen:</strong>
+                  <p class="text-gray-600">Einsatz von Sensoren zur Überwachung von Maschinenparametern und proaktive Planung von Reparaturen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Technologische Unterstützung:</strong>
+                  <p class="text-gray-600">KI-basierte Systeme können Muster erkennen und frühzeitig Warnungen ausgeben.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Präventive Wartung hilft, Maschinenstillstände zu vermeiden und die Produktionsqualität konstant hoch zu halten.</p>
+        </section>
+
+        <!-- Sicherheitszertifikate -->
+        <section id="sicherheitszertifikate" class="mb-12">
+          <h2>Sicherheitszertifikate und Standards</h2>
+          <p>
+            Sicherheitszertifikate gewährleisten die Einhaltung gesetzlicher Vorschriften und schaffen ein sicheres Arbeitsumfeld für Mitarbeiter und Maschinen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>ISO 45001:</strong>
+                  <p class="text-gray-600">International anerkannter Standard für Arbeitsschutzmanagementsysteme.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CE-Kennzeichnung:</strong>
+                  <p class="text-gray-600">Bescheinigt, dass Maschinen den europäischen Sicherheitsanforderungen entsprechen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Maschinenrichtlinie:</strong>
+                  <p class="text-gray-600">Vorschriften zur sicheren Konstruktion und Nutzung von Maschinen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Diese Zertifikate fördern nicht nur die Sicherheit, sondern auch das Vertrauen von Kunden und Mitarbeitern.</p>
+        </section>
+
+        <!-- Technologische Entwicklungen -->
+        <section id="technologische-entwicklungen" class="mb-12">
+          <h2>Zukunft der Sicherheit und Wartung</h2>
+          <p>
+            Die Zukunft der CNC-Fertigung liegt in der Integration von <strong>IoT</strong>, <strong>KI</strong> und fortschrittlichen Wartungstechnologien.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Sensoren analysieren kontinuierlich den Maschinenzustand und melden potenzielle Probleme.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>KI-gestützte Wartung:</strong>
+                  <p class="text-gray-600">Maschinelles Lernen optimiert Wartungspläne und minimiert Ausfallzeiten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Nachhaltigkeit:</strong>
+                  <p class="text-gray-600">Effiziente Wartung reduziert den Energieverbrauch und vermeidet Materialverschwendung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Diese Technologien ermöglichen eine vorausschauende Wartung und tragen zu einer sicheren und nachhaltigen Fertigungsumgebung bei.</p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Sicherheit und Wartung bilden die Grundlage für eine erfolgreiche CNC-Fertigung. 
+            Durch die Implementierung von Sicherheitsstandards, präventiven Wartungsmaßnahmen und modernen Technologien können Unternehmen ihre Effizienz steigern und gleichzeitig ein sicheres Arbeitsumfeld gewährleisten. 
+            Die Zukunft gehört nachhaltigen, datengetriebenen Strategien, die Mensch und Maschine optimal schützen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/sicherheit/arbeitsschutz" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte Informationen zum Arbeitsschutz
+                </a>
+              </li>
+              <li>
+                <a href="/sicherheit/wartungsplaene" class="text-blue-600 hover:text-blue-800">
+                  Wartungspläne für CNC-Maschinen
+                </a>
+              </li>
+              <li>
+                <a href="/sicherheit/zertifikate" class="text-blue-600 hover:text-blue-800">
+                  Sicherheitszertifikate und Standards
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

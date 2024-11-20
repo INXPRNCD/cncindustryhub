@@ -1,0 +1,287 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Fertigungsmethoden', href: '/fertigung' }
+];
+
+const navItems = [
+  { href: "#cnc-vs-additiv", title: "CNC vs. Additiv" },
+  { href: "#traditionell", title: "Traditionelle Methoden" },
+  { href: "#hybrid", title: "Hybrid-CNC" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Fertigungsmethoden: CNC-Technologie im Vergleich zu modernen Ansätzen"
+  description="Vergleichen Sie CNC mit additiver Fertigung und traditionellen Methoden. Erfahren Sie mehr über Hybrid-CNC-Maschinen und die Zukunft der Fertigungstechnologien."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Fertigungsmethoden: CNC-Technologie im Vergleich zu modernen Ansätzen
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die Fertigungsindustrie befindet sich in einem technologischen Wandel. Von der klassischen CNC-Fertigung über additive Technologien bis hin zu Hybridlösungen – jede Methode bringt einzigartige Vorteile und Herausforderungen mit sich. In diesem Artikel beleuchten wir die wichtigsten Fertigungsmethoden und ihre Anwendung in Industrie 4.0.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- CNC vs. Additive Fertigung -->
+        <section id="cnc-vs-additiv" class="mb-12">
+          <h2>CNC vs. Additive Fertigung: Ein Vergleich</h2>
+          <p>
+            Die Wahl zwischen CNC-Fertigung und additiver Fertigung hängt stark von den Anforderungen des jeweiligen Projekts ab. 
+            Beide Technologien bieten spezifische Vorteile und Einsatzmöglichkeiten, die je nach Branche und Produktionsziel variieren.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Vorteile der CNC-Fertigung</h3>
+              <ul class="space-y-2">
+                <li>Herausragende Präzision und Wiederholbarkeit, ideal für die Luftfahrt- und Automobilindustrie.</li>
+                <li>Effizienz bei der Herstellung von Großserien und Kleinserien.</li>
+                <li>Bearbeitung robuster Materialien wie Titan, Aluminium und hochfeste Kunststoffe.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Vorteile der additiven Fertigung</h3>
+              <ul class="space-y-2">
+                <li>Fertigung komplexer Geometrien, die mit subtraktiven Methoden kaum realisierbar sind.</li>
+                <li>Geringer Materialverlust durch schichtweisen Aufbau.</li>
+                <li>Schnelles Prototyping und individualisierte Produkte, besonders in der Medizintechnik.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            Der hybride Ansatz, der additive und subtraktive Technologien kombiniert, schafft neue Möglichkeiten für maßgeschneiderte Lösungen.
+          </p>
+        </section>
+
+        <!-- Traditionelle Methoden -->
+        <section id="traditionell" class="mb-12">
+          <h2>Vergleich: CNC vs. traditionelle Fertigungsmethoden</h2>
+          <p>
+            CNC hat traditionelle Fertigungsmethoden in vielen Bereichen revolutioniert. Dennoch haben auch diese ihren Platz in der Fertigungskette.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">CNC im Vergleich zur manuellen Fertigung</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Präzision:</strong>
+                  <p class="text-gray-600">CNC-Maschinen bieten eine mikrometergenaue Genauigkeit, die manuell nur schwer zu erreichen ist.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Effizienz:</strong>
+                  <p class="text-gray-600">CNC ist unschlagbar bei der Produktion hoher Stückzahlen und bei komplexen Designs.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kosten:</strong>
+                  <p class="text-gray-600">Obwohl CNC in der Anschaffung teurer ist, bietet sie durch Fehlerreduktion und Automatisierung langfristig erhebliche Einsparungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Manuelle Fertigung: Ihre Nischen</h3>
+            <ul class="space-y-2">
+              <li>Effizient bei Einzelstücken und Sonderanfertigungen.</li>
+              <li>Ideal für künstlerische Arbeiten oder Designs, die keine automatisierte Präzision erfordern.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Hybrid-CNC -->
+        <section id="hybrid" class="mb-12">
+          <h2>Hybrid-CNC-Maschinen: Eine neue Ära der Fertigung</h2>
+          <p>
+            Hybrid-CNC-Maschinen vereinen die Präzision der CNC-Fertigung mit der Flexibilität der additiven Fertigung. 
+            Diese Technologien bieten einzigartige Vorteile, die in immer mehr Branchen genutzt werden.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Vorteile hybrider CNC-Maschinen</h3>
+            <ul class="space-y-2">
+              <li>Kombination von subtraktiven und additiven Prozessen in einem Arbeitsgang.</li>
+              <li>Reduzierung von Produktionszeiten und Materialverlust.</li>
+              <li>Vielseitigkeit für komplexe Anwendungen, von der Luftfahrt bis zur Medizintechnik.</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Anwendungen in der Industrie</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Herstellung von leichten und hochpräzisen Bauteilen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Prototyping und Serienfertigung von Komponenten mit minimalem Aufwand.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Produktion biokompatibler Implantate mit hoher Genauigkeit.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukunft der Fertigungsmethoden: CNC und Industrie 4.0</h2>
+          <p>
+            Die CNC-Technologie ist ein wesentlicher Bestandteil der Industrie 4.0. 
+            Durch die Integration von IoT, KI und Big Data eröffnen sich völlig neue Möglichkeiten in der Fertigung.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Innovationen in der CNC-Fertigung</h3>
+            <ul class="space-y-2">
+              <li>Echtzeit-Überwachung und Anpassung von Produktionsprozessen durch IoT.</li>
+              <li>Optimierte Produktionsparameter durch KI-gestützte Analysen.</li>
+              <li>Hybride Systeme, die additive und subtraktive Prozesse in einer einzigen Maschine integrieren.</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Langfristige Trends</h3>
+            <ul class="space-y-2">
+              <li>Verschmelzung von Fertigung und Digitalisierung: CNC-Prozesse werden cloudbasiert und global vernetzbar.</li>
+              <li>Nachhaltigkeit in der Fertigung: CNC-Technologien minimieren Materialverschwendung und optimieren Energieeffizienz.</li>
+              <li>Industrie 5.0: Der Fokus liegt auf der Zusammenarbeit zwischen Mensch und Maschine für personalisierte Lösungen.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Technologie bleibt das Herzstück moderner Fertigungsmethoden. 
+            Mit der Integration von hybriden Ansätzen und innovativen Technologien wird sie auch in Zukunft eine zentrale Rolle spielen. 
+            Unternehmen, die auf diese Technologien setzen, profitieren von Präzision, Effizienz und Wettbewerbsfähigkeit.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/fertigung/vergleich-additiv" class="text-blue-600 hover:text-blue-800">
+                  CNC vs. Additive Fertigung im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/fertigung/traditionell" class="text-blue-600 hover:text-blue-800">
+                  Vergleich mit traditionellen Methoden
+                </a>
+              </li>
+              <li>
+                <a href="/fertigung/hybrid" class="text-blue-600 hover:text-blue-800">
+                  Hybrid-CNC-Maschinen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

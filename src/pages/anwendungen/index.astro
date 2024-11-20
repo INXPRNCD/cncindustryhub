@@ -1,0 +1,249 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import Card from '../../components/Card.astro';
+
+const breadcrumbItems = [
+  { title: 'Branchenlösungen', href: '/anwendungen' }
+];
+
+const navItems = [
+  { href: "#luftfahrt", title: "Luftfahrt" },
+  { href: "#automotive", title: "Automobilindustrie" },
+  { href: "#medizintechnik", title: "Medizintechnik" },
+  { href: "#elektronik", title: "Elektronik" },
+  { href: "#bauwesen", title: "Bauwesen" },
+  { href: "#schmuck", title: "Schmuckindustrie" },
+  { href: "#landwirtschaft", title: "Landwirtschaft" },
+  { href: "#schifffahrt", title: "Schifffahrt" }
+];
+---
+
+<Layout 
+  title="CNC-Branchenlösungen: Innovative Fertigungstechnologien für Ihre Industrie"
+  description="Entdecken Sie maßgeschneiderte CNC-Lösungen für verschiedene Branchen – von der Luftfahrt bis zur Schmuckindustrie. Erfahren Sie, wie CNC-Technologie Ihre Fertigung optimiert."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Branchenlösungen: Innovative Fertigungstechnologien für Ihre Industrie
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie, wie CNC-Technologie verschiedene Branchen revolutioniert und maßgeschneiderte Lösungen für spezifische Fertigungsanforderungen bietet.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einführung -->
+        <section class="mb-12">
+          <h2>Branchenspezifische CNC-Lösungen</h2>
+          <p>
+            Die CNC-Technologie hat sich als unverzichtbares Werkzeug in der modernen Fertigung etabliert. 
+            Jede Branche stellt dabei einzigartige Anforderungen an Präzision, Materialbearbeitung und Produktionseffizienz. 
+            Unsere spezialisierten Lösungen adressieren diese spezifischen Bedürfnisse und optimieren Ihre Fertigungsprozesse.
+          </p>
+        </section>
+
+        <!-- Luftfahrt -->
+        <section id="luftfahrt" class="mb-12">
+          <Card
+            title="Luftfahrtindustrie"
+            description="Höchste Präzision für sicherheitskritische Komponenten. Von Turbinenschaufeln bis zu Strukturbauteilen – CNC garantiert die erforderliche Genauigkeit und Zuverlässigkeit."
+            icon="/icons/tech.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/aerospace" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Luftfahrtfertigung →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Automotive -->
+        <section id="automotive" class="mb-12">
+          <Card
+            title="Automobilindustrie"
+            description="Effiziente Serienfertigung von Motorkomponenten, Getriebeteilen und Karosserieelementen. CNC ermöglicht präzise, automatisierte Produktionsprozesse."
+            icon="/icons/industry.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/automotive" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Automobilfertigung →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Medizintechnik -->
+        <section id="medizintechnik" class="mb-12">
+          <Card
+            title="Medizintechnik"
+            description="Präzisionsfertigung für Implantate und chirurgische Instrumente. CNC gewährleistet die Einhaltung höchster Qualitäts- und Sicherheitsstandards."
+            icon="/icons/tech.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/medical" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Medizintechnik →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Elektronik -->
+        <section id="elektronik" class="mb-12">
+          <Card
+            title="Elektronikfertigung"
+            description="Präzise Herstellung von Leiterplatten und elektronischen Komponenten. CNC ermöglicht die Fertigung komplexer Schaltungen und Gehäuse."
+            icon="/icons/tech.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/electronics" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Elektronikfertigung →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Bauwesen -->
+        <section id="bauwesen" class="mb-12">
+          <Card
+            title="Bauwesen"
+            description="Innovative Lösungen für Architektur und Konstruktion. CNC revolutioniert die Herstellung von Baukomponenten und dekorativen Elementen."
+            icon="/icons/industry.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/construction" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zum Bauwesen →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Schmuckindustrie -->
+        <section id="schmuck" class="mb-12">
+          <Card
+            title="Schmuckindustrie"
+            description="Filigrane Bearbeitung und präzise Gravuren. CNC ermöglicht die Herstellung komplexer Designs und individueller Schmuckstücke."
+            icon="/icons/tech.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/jewelry" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Schmuckfertigung →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Landwirtschaft -->
+        <section id="landwirtschaft" class="mb-12">
+          <Card
+            title="Landwirtschaft und Energieerzeugung"
+            description="Robuste Komponenten für landwirtschaftliche Maschinen und Energieanlagen. CNC garantiert Langlebigkeit und Zuverlässigkeit."
+            icon="/icons/industry.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/agriculture" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Landwirtschaft →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Schifffahrt -->
+        <section id="schifffahrt" class="mb-12">
+          <Card
+            title="Schifffahrt"
+            description="Präzisionsfertigung für maritime Anwendungen. Von Propellern bis zu Strukturbauteilen – CNC gewährleistet höchste Qualität."
+            icon="/icons/industry.svg"
+            class="hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="mt-4">
+              <a href="/industrieanwendungen/maritime" class="text-blue-600 hover:text-blue-800 font-medium">
+                Mehr zur Schifffahrt →
+              </a>
+            </div>
+          </Card>
+        </section>
+
+        <!-- Fazit -->
+        <section class="mb-12">
+          <h2>Ihre Branchenlösung</h2>
+          <p>
+            Jede Branche hat ihre eigenen Herausforderungen und Anforderungen an die CNC-Fertigung. 
+            Unsere spezialisierten Lösungen helfen Ihnen, diese Anforderungen zu erfüllen und Ihre Produktivität zu steigern. 
+            Kontaktieren Sie uns, um mehr über die optimale CNC-Lösung für Ihre Branche zu erfahren.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

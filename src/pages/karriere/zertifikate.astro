@@ -1,0 +1,291 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Ausbildung & Karriere', href: '/karriere' },
+  { title: 'Wichtige Zertifizierungen', href: '/karriere/zertifikate' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#arten", title: "Arten von Zertifikaten" },
+  { href: "#vorteile", title: "Vorteile" },
+  { href: "#programme", title: "Programme" },
+  { href: "#herausforderungen", title: "Herausforderungen" },
+  { href: "#entwicklungen", title: "Entwicklungen" }
+];
+---
+
+<Layout 
+  title="Wichtige Zertifizierungen in der CNC-Industrie"
+  description="Erfahren Sie alles über wichtige CNC-Zertifizierungen: Von technischen Zertifikaten bis zu Managementnachweisen. Ein Leitfaden für Ihre Karriereentwicklung."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Wichtige Zertifizierungen in der CNC-Industrie
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Zertifizierungen sind der Schlüssel zu beruflichem Erfolg und technologischem Fortschritt in der CNC-Fertigung. Sie gewährleisten Kompetenz, Qualität und internationale Wettbewerbsfähigkeit.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in CNC-Zertifizierungen</h2>
+          <p>
+            Zertifikate dienen als Nachweis technischer Fähigkeiten und Branchenstandards. 
+            Sie stellen sicher, dass CNC-Fachkräfte über die notwendigen Kenntnisse verfügen, um in einer sich wandelnden Industrie 4.0 erfolgreich zu agieren. 
+            Globale Standards wie <strong>ISO 45001</strong> oder <strong>ISO 9001</strong> definieren Sicherheit und Qualität in der Fertigung.
+          </p>
+        </section>
+
+        <!-- Arten von CNC-Zertifikaten -->
+        <section id="arten" class="mb-12">
+          <h2>Arten von CNC-Zertifikaten</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Technische Zertifikate</h3>
+              <p class="mb-4">Diese Nachweise sind für die Maschinenbedienung, Programmierung und Wartung unerlässlich:</p>
+              <ul class="space-y-2">
+                <li><strong>Grundlagenzertifikate:</strong> G-Code, CAD/CAM-Software und CNC-Bedienung.</li>
+                <li><strong>Aufbauzertifikate:</strong> CNC-Programmierung, Automatisierung und Werkzeugtechnologie.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Branchenspezifische Zertifikate</h3>
+              <p class="mb-4">In spezialisierten Branchen sind spezifische Nachweise erforderlich:</p>
+              <ul class="space-y-2">
+                <li><strong>Luftfahrt:</strong> Nadcap-Akkreditierungen für Präzision und Qualität.</li>
+                <li><strong>Automobilindustrie:</strong> IATF 16949 für effiziente Produktionsprozesse.</li>
+                <li><strong>Medizintechnik:</strong> ISO 13485 zur Sicherstellung von biokompatiblen Standards.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Managementbezogene Zertifikate</h3>
+              <p class="mb-4">Diese fokussieren sich auf Arbeitsschutz und Qualitätssicherung:</p>
+              <ul class="space-y-2">
+                <li><strong>ISO 45001:</strong> Arbeitsschutzmanagementsysteme.</li>
+                <li><strong>ISO 9001:</strong> Qualitätsmanagement für konsistente Fertigungsprozesse.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vorteile -->
+        <section id="vorteile" class="mb-12">
+          <h2>Vorteile von CNC-Zertifizierungen</h2>
+          <p>
+            Zertifikate bieten eine Vielzahl von Vorteilen, die sowohl Fachkräfte als auch Unternehmen profitieren lassen:
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Karriereentwicklung</h3>
+              <p class="text-gray-600">
+                Zertifizierte Fachkräfte haben Zugang zu besseren Gehaltschancen und Führungspositionen.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Qualitätssicherung</h3>
+              <p class="text-gray-600">
+                Nachweise garantieren technologische Exzellenz und die Einhaltung globaler Standards.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Wettbewerbsvorteile</h3>
+              <p class="text-gray-600">
+                Internationale Zertifikate wie <strong>ISO 45001</strong> erhöhen die Glaubwürdigkeit und eröffnen globale Geschäftsmöglichkeiten.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Programme und Anbieter -->
+        <section id="programme" class="mb-12">
+          <h2>Zertifizierungsprogramme und Anbieter</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Herstellerzertifikate</h3>
+              <p class="mb-4">Führende Anbieter bieten praxisnahe Programme:</p>
+              <ul class="space-y-2">
+                <li><strong>Fanuc:</strong> Zertifikate für CNC-Programmierung und Bedienung.</li>
+                <li><strong>Siemens Sinumerik:</strong> Spezialisierte Schulungen für komplexe Fertigungsumgebungen.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Unabhängige Zertifizierungsstellen</h3>
+              <ul class="space-y-2">
+                <li><strong>NIMS:</strong> National Institute for Metalworking Skills für CNC-Fähigkeiten.</li>
+                <li><strong>EWF:</strong> European Federation for Welding, Joining and Cutting.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Herausforderungen -->
+        <section id="herausforderungen" class="mb-12">
+          <h2>Herausforderungen und Lösungen</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Herausforderungen</h3>
+              <p class="text-gray-600">
+                Die Zertifizierung bringt hohe Kosten und Zeitaufwand mit sich. 
+                Zudem erfordert der technologische Fortschritt eine ständige Anpassung.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Lösungen</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p class="text-gray-600">Digitale Zertifizierungen reduzieren Kosten und bieten Flexibilität.</p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p class="text-gray-600">Modulare Programme erleichtern den Einstieg und das Fortschreiten.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Entwicklungen -->
+        <section id="entwicklungen" class="mb-12">
+          <h2>Zukünftige Entwicklungen</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Industrie 4.0-Zertifikate</h3>
+              <p class="text-gray-600">
+                Zukünftige Zertifikate decken IoT, KI und Big Data ab, um auf neue Herausforderungen vorbereitet zu sein.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Blockchain-basierte Zertifikate</h3>
+              <p class="text-gray-600">
+                Diese digitalen Nachweise gewährleisten Transparenz und Fälschungssicherheit.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Lebenslanges Lernen</h3>
+              <p class="text-gray-600">
+                Virtuelle Schulungen und Online-Kurse ermöglichen kontinuierliche Weiterbildung.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CNC-Zertifizierungen sind essenziell für beruflichen Erfolg und Wettbewerbsfähigkeit in einer globalisierten Fertigungsindustrie. 
+            Sie garantieren Qualität und öffnen Türen zu neuen Karrieremöglichkeiten. 
+            Die kontinuierliche Anpassung an technologische Innovationen macht sie zu einem unverzichtbaren Bestandteil moderner CNC-Karrieren.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/karriere/wege" class="text-blue-600 hover:text-blue-800">
+                  Karrierewege in der CNC-Industrie
+                </a>
+              </li>
+              <li>
+                <a href="/karriere/weiterbildung" class="text-blue-600 hover:text-blue-800">
+                  Weiterbildungsmöglichkeiten
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

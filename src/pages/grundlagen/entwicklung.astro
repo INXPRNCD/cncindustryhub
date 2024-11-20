@@ -1,0 +1,317 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import Picture from '../../components/Picture.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Grundlagen', href: '/grundlagen' },
+  { title: 'Die Entwicklung und Fortschritte der CNC-Technologie', href: '/grundlagen/entwicklung' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#historische-entwicklung", title: "Historische Entwicklung" },
+  { href: "#technologische-fortschritte", title: "Technologische Fortschritte" },
+  { href: "#digitalisierung-industrie4", title: "Digitalisierung und Industrie 4.0" },
+  { href: "#branchenrelevanz", title: "Branchenrelevanz" }
+];
+---
+
+<Layout 
+  title="Die Entwicklung und Fortschritte der CNC-Technologie"
+  description="Ein detaillierter Leitfaden zur Entwicklung und den Fortschritten der CNC-Technologie: Historie, technologische Innovationen und die Rolle in Industrie 4.0."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Die Entwicklung und Fortschritte der CNC-Technologie
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie, wie sich die CNC-Technologie von ihren Anfängen in der numerischen Steuerung zur treibenden Kraft der modernen Fertigung entwickelt hat.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            Die <strong>CNC-Technologie</strong> (Computerized Numerical Control) hat die Art und Weise, wie Produkte hergestellt werden, grundlegend verändert. 
+            Von einfachen Lochkartensteuerungen bis hin zu intelligenten, vernetzten Maschinen ist CNC heute ein unverzichtbares Werkzeug für Präzision und Automatisierung.
+          </p>
+          <p>
+            Dieser Artikel führt Sie durch die Geschichte, die technologischen Meilensteine und die aktuellen Trends, die die CNC-Technologie geprägt haben.
+          </p>
+        </section>
+
+        <!-- Historische Entwicklung -->
+        <section id="historische-entwicklung" class="mb-12">
+          <h2>Historische Entwicklung der CNC-Technologie</h2>
+          <p>
+            Die Ursprünge der CNC-Technologie liegen in den 1940er Jahren, als numerische Steuerungssysteme (NC) entwickelt wurden, um die Präzision und Effizienz in der Luftfahrt zu verbessern. 
+            Diese Systeme verwendeten Lochkarten zur Programmierung von Maschinenbewegungen.
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Wichtige Meilensteine:</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">1</span>
+                <div>
+                  <strong>1940er Jahre:</strong>
+                  <p class="text-gray-600">Entwicklung der ersten NC-Systeme für Fräsmaschinen in der Luftfahrtindustrie.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">2</span>
+                <div>
+                  <strong>1952:</strong>
+                  <p class="text-gray-600">Der erste CNC-Fräser wurde am MIT entwickelt, gesteuert durch Lochkarten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">3</span>
+                <div>
+                  <strong>1970er Jahre:</strong>
+                  <p class="text-gray-600">Einführung von Mikroprozessoren, die den Übergang von NC zu CNC ermöglichten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">4</span>
+                <div>
+                  <strong>1980er Jahre:</strong>
+                  <p class="text-gray-600">Integration von CAD/CAM-Systemen zur Verbindung von Design und Fertigung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Meilenstein:</strong> Die Einführung des G-Codes in den 1970er Jahren standardisierte die Steuerung von CNC-Maschinen und legte den Grundstein für moderne Automatisierung.</p>
+          </blockquote>
+          <figure class="my-8">
+            <Picture
+              src="/images/historische-entwicklung.webp"
+              alt="Historische Entwicklung der CNC-Technologie"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Die Transformation von NC zu CNC: Meilensteine der Entwicklung.
+            </figcaption>
+          </figure>
+        </section>
+
+        <!-- Technologische Fortschritte -->
+        <section id="technologische-fortschritte" class="mb-12">
+          <h2>Technologische Fortschritte in der CNC-Technologie</h2>
+          <p>
+            Im Laufe der Jahre hat die CNC-Technologie durch zahlreiche Innovationen ihre Leistungsfähigkeit und Vielseitigkeit gesteigert:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Maschinensysteme</h3>
+              <ul class="space-y-2">
+                <li><strong>3-Achs- und 5-Achs-Systeme:</strong> Ermöglichen die Bearbeitung komplexer Geometrien</li>
+                <li><strong>Hybrid-CNC-Maschinen:</strong> Kombination von additiven und subtraktiven Prozessen</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Steuerung & Überwachung</h3>
+              <ul class="space-y-2">
+                <li><strong>Feedback-Systeme:</strong> Sensoren für Präzision und Fehlerreduktion</li>
+                <li><strong>Moderne Steuerungen:</strong> FANUC, Siemens, Heidenhain</li>
+              </ul>
+            </div>
+          </div>
+          <figure class="my-8">
+            <Picture
+              src="/images/technologische-fortschritte.webp"
+              alt="Technologische Fortschritte in der CNC-Technologie"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Moderne CNC-Maschinen vereinen Präzision, Effizienz und Vielseitigkeit.
+            </figcaption>
+          </figure>
+        </section>
+
+        <!-- Digitalisierung und Industrie 4.0 -->
+        <section id="digitalisierung-industrie4" class="mb-12">
+          <h2>Digitalisierung und Industrie 4.0</h2>
+          <p>
+            Die CNC-Technologie ist ein Schlüsselbestandteil von <strong>Industrie 4.0</strong>, da sie nahtlos mit digitalen Technologien verknüpft ist. IoT und Big Data ermöglichen eine smarte, vernetzte Fertigung.
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Digitale Innovationen:</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT:</strong>
+                  <p class="text-gray-600">Vernetzte Maschinen ermöglichen Echtzeitüberwachung und vorausschauende Wartung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Big Data:</strong>
+                  <p class="text-gray-600">Analyse großer Datenmengen zur Optimierung von Produktionsprozessen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>KI und maschinelles Lernen:</strong>
+                  <p class="text-gray-600">Verbesserte Bearbeitungsstrategien und Fehlerreduktion durch intelligente Algorithmen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Digitale Zwillinge:</strong>
+                  <p class="text-gray-600">Simulation und Optimierung von Produktionsabläufen vor der physischen Umsetzung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Fakt:</strong> Vernetzte CNC-Maschinen können die Produktivität in der Fertigung um bis zu 30 % steigern.</p>
+          </blockquote>
+        </section>
+
+        <!-- Branchenrelevanz -->
+        <section id="branchenrelevanz" class="mb-12">
+          <h2>Branchenrelevanz und Einfluss der CNC-Technologie</h2>
+          <p>
+            CNC hat die Fertigung in verschiedenen Branchen revolutioniert, indem sie Präzision und Automatisierung auf ein neues Niveau gehoben hat:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Präzise Fertigung von Motoren und Karosserieteilen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Herstellung von Turbinenschaufeln und Flugzeugrümpfen mit höchster Genauigkeit.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Produktion von chirurgischen Instrumenten und Implantaten.</p>
+            </div>
+          </div>
+          <figure class="my-8">
+            <Picture
+              src="/images/branchenrelevanz.webp"
+              alt="Branchenanwendungen der CNC-Technologie"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Branchenübergreifende Anwendungen der CNC-Technologie.
+            </figcaption>
+          </figure>
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section id="zusammenfassung" class="mb-12">
+          <h2>Zusammenfassung</h2>
+          <p>
+            Die CNC-Technologie hat eine beeindruckende Entwicklung durchlaufen – von ihren Anfängen in der Luftfahrt bis zur heutigen Integration in Industrie 4.0. 
+            Durch technologische Fortschritte und digitale Innovationen bleibt sie eine der treibenden Kräfte in der Fertigung.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/grundlagen" class="text-blue-600 hover:text-blue-800">
+                  Grundlagen der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/grundlagen/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose figure {
+  margin: 2rem 0;
+}
+
+.prose figcaption {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

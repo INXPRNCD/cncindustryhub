@@ -1,0 +1,368 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Ausbildung & Karriere', href: '/karriere' }
+];
+
+const navItems = [
+  { href: "#karrierewege", title: "Karrierewege" },
+  { href: "#zertifizierungen", title: "Zertifizierungen" },
+  { href: "#weiterbildung", title: "Weiterbildung" },
+  { href: "#soft-skills", title: "Soft Skills" },
+  { href: "#bildungsprogramme", title: "Bildungsprogramme" }
+];
+---
+
+<Layout 
+  title="Ausbildung & Karriere in der CNC-Industrie"
+  description="Entdecken Sie vielfältige Karrieremöglichkeiten in der CNC-Industrie: Von Ausbildungswegen über Zertifizierungen bis hin zu Gehaltsvergleichen und Weiterbildungsmöglichkeiten."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Ausbildung & Karriere in der CNC-Industrie
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die CNC-Technologie ist nicht nur ein zentraler Bestandteil moderner Fertigungsprozesse, sondern bietet auch vielseitige Karrieremöglichkeiten und Weiterbildungschancen. In diesem Leitfaden erfahren Sie, wie Sie Ihre berufliche Zukunft durch Spezialisierungen, Zertifizierungen und gezielte Weiterbildungen gestalten können.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Karrierewege -->
+        <section id="karrierewege" class="mb-12">
+          <h2>Karrierewege und Spezialisierungen in der CNC-Industrie</h2>
+          <p>Die CNC-Branche bietet vielfältige Karrieremöglichkeiten, die von praktischen Positionen bis hin zu Führungsrollen reichen. Zu den häufigsten Karrierewegen gehören:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CNC-Maschinenbediener:</strong>
+                  <p class="text-gray-600">Verantwortlich für die Einrichtung, Überwachung und Wartung von CNC-Maschinen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CNC-Programmierer:</strong>
+                  <p class="text-gray-600">Spezialisiert auf die Entwicklung präziser CAD/CAM-Programme und Optimierung der Bearbeitungsprozesse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Qualitätssicherungsingenieure:</strong>
+                  <p class="text-gray-600">Fokussiert auf die Einhaltung höchster Qualitätsstandards und Kalibrierung der Maschinen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Spezialisierungen in Bereichen wie <strong>hybrider Fertigung</strong> (Kombination aus CNC und 3D-Druck) oder der Automatisierung eröffnen zusätzliche Möglichkeiten in Branchen wie Luftfahrt, Automobil und Medizintechnik.
+          </p>
+        </section>
+
+        <!-- Zertifizierungen -->
+        <section id="zertifizierungen" class="mb-12">
+          <h2>Wichtige Zertifizierungen für CNC-Fachkräfte</h2>
+          <p>Eine anerkannte Zertifizierung kann den Unterschied zwischen einer guten und einer exzellenten Karriere machen. Zu den wichtigsten Zertifikaten gehören:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>DIN ISO 9001:</strong>
+                  <p class="text-gray-600">Zertifizierung für Qualitätsmanagementsysteme, unverzichtbar in der Fertigungsindustrie.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fanuc- und Siemens-Zertifikate:</strong>
+                  <p class="text-gray-600">Bescheinigen fortgeschrittene Kenntnisse in der Steuerung und Programmierung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Heidenhain-Schulungen:</strong>
+                  <p class="text-gray-600">Für präzise Bearbeitungsprozesse und Maschinenkalibrierung.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Zertifikate zeigen nicht nur technisches Fachwissen, sondern stärken auch die Wettbewerbsfähigkeit von Fachkräften und Unternehmen auf globalen Märkten.
+          </p>
+        </section>
+
+        <!-- Weiterbildung und Gehälter -->
+        <section id="weiterbildung" class="mb-12">
+          <h2>Weiterbildung und Gehaltsvergleiche in der CNC-Industrie</h2>
+          <p>Die CNC-Branche entwickelt sich rasant, weshalb kontinuierliche Weiterbildung essenziell ist. Besonders gefragt sind Programme zu:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatisierungstechnik:</strong>
+                  <p class="text-gray-600">Schwerpunkt auf KI und Robotik.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Materialkunde:</strong>
+                  <p class="text-gray-600">Spezialisierung auf moderne Werkstoffe wie Titan oder Verbundmaterialien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Prozessoptimierung:</strong>
+                  <p class="text-gray-600">Effizientere Nutzung von CNC-Maschinen durch Softwareintegration.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Position</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Durchschnittsgehalt (jährlich in CHF)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">CNC-Maschinenbediener</td>
+                  <td class="px-6 py-4">55'000 CHF – 75'000 CHF</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">CNC-Programmierer</td>
+                  <td class="px-6 py-4">75'000 CHF – 100'000 CHF</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Leitende Ingenieure</td>
+                  <td class="px-6 py-4">110'000 CHF und mehr</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section id="soft-skills" class="mb-12">
+          <h2>Die Bedeutung von Soft Skills in der CNC-Industrie</h2>
+          <p>
+            Neben technischem Know-how sind Soft Skills wie <strong>Problemlösungsfähigkeit</strong>, <strong>Kommunikation</strong> und <strong>Teamarbeit</strong> unverzichtbar. 
+            Führungskompetenzen werden zunehmend gefragt, da viele CNC-Fachkräfte in leitende Rollen aufsteigen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Beispiele für die Integration von Soft Skills:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Effektive Kommunikation bei interdisziplinären Projekten.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Problemlösungsstrategien zur Minimierung von Maschinenausfällen.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Teamarbeit zur Optimierung komplexer Fertigungsprozesse.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Bildungsprogramme -->
+        <section id="bildungsprogramme" class="mb-12">
+          <h2>Bildungsprogramme und Fördermöglichkeiten</h2>
+          <p>Eine fundierte Ausbildung ist der Schlüssel zu einer erfolgreichen Karriere. Zu den beliebtesten Bildungsprogrammen gehören:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Meisterschule:</strong>
+                  <p class="text-gray-600">Spezialisierung auf CNC-Technologien und Führungskompetenzen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CNC-Schulungen an Hochschulen:</strong>
+                  <p class="text-gray-600">Praxisorientierte Studiengänge mit Fokus auf CAD/CAM.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Industriepartnerschaften:</strong>
+                  <p class="text-gray-600">Kooperationen zwischen Unternehmen und Bildungseinrichtungen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Fördermöglichkeiten wie das <strong>Aufstiegs-BAföG</strong> oder EU-Subventionen erleichtern den Zugang zu Weiterbildungen und fördern Karriereschritte.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Industrie bietet zahlreiche Karrieremöglichkeiten und Weiterbildungschancen. 
+            Von zertifizierten Schulungen bis hin zu attraktiven Gehältern: Mit der richtigen Strategie und stetiger Weiterbildung können Fachkräfte in dieser zukunftssicheren Branche erfolgreich sein. 
+            Nutzen Sie die Vorteile moderner Bildungsprogramme und starten Sie Ihre Karriere in der CNC-Technologie.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/karriere/wege" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte Karrierewege
+                </a>
+              </li>
+              <li>
+                <a href="/karriere/zertifikate" class="text-blue-600 hover:text-blue-800">
+                  Wichtige Zertifizierungen
+                </a>
+              </li>
+              <li>
+                <a href="/karriere/weiterbildung" class="text-blue-600 hover:text-blue-800">
+                  Weiterbildungsmöglichkeiten
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

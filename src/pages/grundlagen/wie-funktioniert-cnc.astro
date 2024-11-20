@@ -1,0 +1,264 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import Picture from '../../components/Picture.astro';
+import CncWorkflowDiagram from '../../components/CncWorkflowDiagram.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Grundlagen', href: '/grundlagen' },
+  { title: 'Wie funktioniert CNC?', href: '/grundlagen/wie-funktioniert-cnc' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#grundprinzipien", title: "Grundprinzipien der CNC" },
+  { href: "#achsensystem", title: "Achsensystem und Komponenten" },
+  { href: "#cad-cam-integration", title: "CAD/CAM-Integration" },
+  { href: "#automatisierung", title: "Automatisierung durch CNC" }
+];
+---
+
+<Layout 
+  title="Wie funktioniert CNC? Prinzipien und Technologien der numerischen Steuerung"
+  description="Erfahren Sie, wie CNC funktioniert: Numerische Steuerung, Achsensysteme, CAD/CAM-Integration und Automatisierung. Ein umfassender Leitfaden zur CNC-Funktionsweise."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Wie funktioniert CNC? Wichtige Prinzipien und Technologien
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie, wie CNC-Systeme Maschinenbewegungen steuern, Designs in präzise Fertigungsabläufe umsetzen und industrielle Automatisierung ermöglichen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in die CNC-Funktionsweise</h2>
+          <p>
+            Die <strong>CNC-Technologie</strong> revolutioniert die industrielle Fertigung durch die Steuerung von Maschinenbewegungen über numerische Befehle. 
+            Diese Befehle werden mit Programmiersprachen wie <strong>G-Code</strong> und <strong>M-Code</strong> geschrieben, um Bewegungen, Geschwindigkeiten und Zusatzfunktionen exakt zu definieren.
+          </p>
+          <Picture
+            src="/images/cnc-steuerung.webp"
+            alt="CNC-Steuerung und Programmierung"
+            class="my-8"
+          />
+          <p>
+            Im Vergleich zu manuellen Methoden bietet CNC deutlich höhere Präzision, Effizienz und Automatisierung. Dies macht die Technologie unverzichtbar in Branchen wie der Automobilindustrie, Luftfahrt und dem Prototypenbau.
+          </p>
+        </section>
+
+        <!-- Grundprinzipien -->
+        <section id="grundprinzipien" class="mb-12">
+          <h2>Grundprinzipien der CNC-Technologie</h2>
+          <p>
+            CNC-Maschinen basieren auf der numerischen Steuerung, die durch Standardcodes wie den <strong>G-Code</strong> definiert wird. Dieser steuert die Bewegung entlang der Achsen (X, Y, Z), während der <strong>M-Code</strong> Funktionen wie Werkzeugwechsel oder Kühlung aktiviert.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg my-6">
+            <h3 class="text-lg font-semibold mb-4">Beispiel eines G-Codes:</h3>
+            <code class="block bg-gray-800 text-white p-4 rounded">G01 X50 Y50 Z0 F150</code>
+            <p class="mt-4 text-sm text-gray-600">
+              Dieser Befehl bewegt das Werkzeug zu den Koordinaten X50, Y50, Z0 mit einer Vorschubgeschwindigkeit von 150 mm/min.
+            </p>
+          </div>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Interessant:</strong> Der G-Code ist seit den 1950er Jahren der weltweit anerkannte Standard für CNC-Programmierung und wird kontinuierlich weiterentwickelt.</p>
+          </blockquote>
+        </section>
+
+        <!-- Achsensystem -->
+        <section id="achsensystem" class="mb-12">
+          <h2>Achsensystem und technologische Komponenten</h2>
+          <p>
+            Das Achsensystem ist das Herzstück jeder CNC-Maschine. Die Bewegungen entlang der Achsen X (horizontal), Y (vertikal) und Z (tiefe) bestimmen die Position des Werkzeugs. 
+            Komplexe CNC-Systeme, wie 5-Achs-Maschinen, fügen Rotationen (A, B, C) hinzu, um multidirektionale Bearbeitungen zu ermöglichen.
+          </p>
+          <Picture
+            src="/images/achsensystem.webp"
+            alt="Das Achsensystem einer CNC-Maschine"
+            class="my-8"
+          />
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Wichtige Komponenten:</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span><strong>Servomotoren:</strong> Treiben präzise Bewegungen an und reagieren auf Echtzeit-Feedback.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span><strong>Spindeln:</strong> Erzeugen die erforderliche Drehkraft für Schneid- und Fräsoperationen.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span><strong>Sensoren:</strong> Gewährleisten Genauigkeit und Korrekturen in Echtzeit.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- CAD/CAM-Integration -->
+        <section id="cad-cam-integration" class="mb-12">
+          <h2>CAD/CAM-Integration: Von der Konstruktion zur Fertigung</h2>
+          <p>
+            CAD (Computer-Aided Design) und CAM (Computer-Aided Manufacturing) sind unverzichtbare Werkzeuge in der CNC-Technologie. 
+            Mit CAD-Software werden Designs erstellt, während CAM-Systeme diese Entwürfe in maschinenlesbare Befehle (G-Code) übersetzen.
+          </p>
+          <CncWorkflowDiagram class="my-8" />
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold mb-4">Der CAD/CAM-Workflow:</h3>
+            <ol class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">1</span>
+                <div>
+                  <strong>Designphase:</strong>
+                  <p class="text-gray-600">Erstellung eines 3D-Modells in der CAD-Software.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">2</span>
+                <div>
+                  <strong>Bearbeitungsstrategie:</strong>
+                  <p class="text-gray-600">Definition von Werkzeugwegen und Parametern in der CAM-Software.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-semibold">3</span>
+                <div>
+                  <strong>Fertigung:</strong>
+                  <p class="text-gray-600">Übertragung der Daten an die CNC-Maschine zur Ausführung.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Automatisierung -->
+        <section id="automatisierung" class="mb-12">
+          <h2>Automatisierung durch CNC: Branchenlösungen</h2>
+          <p>
+            CNC-Technologie optimiert die Produktion durch Automatisierung und Präzision. Hier sind einige Anwendungsbeispiele:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <ul class="space-y-2">
+                <li>Herstellung von Motorblöcken</li>
+                <li>Fertigung von Getriebeteilen</li>
+                <li>Produktion von Karosseriekomponenten</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <ul class="space-y-2">
+                <li>Präzisionsfertigung von Turbinenschaufeln</li>
+                <li>Herstellung von Strukturbauteilen</li>
+                <li>Produktion von Triebwerkskomponenten</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section id="zusammenfassung" class="mb-12">
+          <h2>Zusammenfassung</h2>
+          <p>
+            Die CNC-Technologie revolutioniert die industrielle Fertigung durch präzise Steuerung, Automatisierung und die Integration von CAD/CAM-Systemen. 
+            Von numerischen Codes wie G-Code bis hin zu mehrdimensionalen Achsensystemen bietet CNC eine unverzichtbare Lösung für moderne Fertigungsanforderungen.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Vertiefen Sie Ihr Wissen:</h3>
+            <ul class="space-y-2">
+              {navItems.map(item => (
+                <li>
+                  <a href={item.href} class="text-blue-600 hover:text-blue-800 hover:underline">
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose figure {
+  margin: 2rem 0;
+}
+
+.prose figcaption {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

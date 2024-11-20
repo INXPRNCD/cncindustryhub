@@ -1,0 +1,314 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Technologie & Innovation', href: '/technologie' },
+  { title: 'KI in der CNC-Technologie', href: '/technologie/ki' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#funktionen", title: "Funktionen" },
+  { href: "#integration", title: "Integration" },
+  { href: "#anwendungen", title: "Anwendungen" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Künstliche Intelligenz in der CNC-Technologie: Automatisierung und Zukunft"
+  description="Entdecken Sie, wie KI die CNC-Technologie revolutioniert: Von automatischer Fehlererkennung über Prozessoptimierung bis hin zu nachhaltiger Fertigung."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Künstliche Intelligenz in der CNC-Technologie: Automatisierung und Zukunft
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die Integration von KI in CNC-Systeme eröffnet neue Dimensionen der Effizienz, Präzision und Nachhaltigkeit. 
+            In diesem Artikel erfahren Sie, wie maschinelles Lernen und Echtzeitdaten die CNC-Fertigung revolutionieren.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in KI in der CNC-Technologie</h2>
+          <p>
+            Künstliche Intelligenz (KI) hat sich als Schlüsseltechnologie in der Fertigungsindustrie etabliert. 
+            Durch die Analyse großer Datenmengen, maschinelles Lernen und Echtzeitüberwachung ermöglicht KI eine präzise Steuerung und Optimierung von CNC-Prozessen. 
+            Die Vorteile reichen von geringeren Produktionskosten bis hin zu höherer Produktqualität.
+          </p>
+        </section>
+
+        <!-- Funktionen -->
+        <section id="funktionen" class="mb-12">
+          <h2>Funktionen von KI in der CNC-Technologie</h2>
+          <p>KI bringt eine Vielzahl an Funktionen in die CNC-Bearbeitung ein:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatische Fehlererkennung:</strong>
+                  <p class="text-gray-600">Sensoren überwachen kontinuierlich die Bearbeitungsparameter und erkennen Anomalien wie Werkzeugverschleiß oder Materialabweichungen. KI korrigiert diese Fehler proaktiv, bevor sie zu Produktionsausfällen führen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Optimierung von Produktionsparametern:</strong>
+                  <p class="text-gray-600">Maschinelles Lernen analysiert vergangene Produktionsdaten und passt Schnittgeschwindigkeiten, Vorschübe und Werkzeugbewegungen dynamisch an.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitdatenanalyse:</strong>
+                  <p class="text-gray-600">KI verarbeitet große Datenmengen in Echtzeit, um Prozesse zu überwachen und zu verbessern.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Integration -->
+        <section id="integration" class="mb-12">
+          <h2>Technologische Integration</h2>
+          <p>Die Integration von KI in bestehende CNC-Technologien bietet transformative Möglichkeiten:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Verknüpfung mit CAD/CAM-Systemen:</strong>
+                  <p class="text-gray-600">KI generiert automatisch optimierte G-Codes und simuliert Bearbeitungsprozesse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Sensorbasierte Systeme liefern kontinuierliche Daten für sofortige Anpassungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Maschinelles Lernen:</strong>
+                  <p class="text-gray-600">Dynamische Anpassungen basierend auf Produktionsmustern verbessern die Effizienz.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Anwendungen -->
+        <section id="anwendungen" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          <p>Die Anwendung von KI in CNC-Systemen ist in vielen Branchen unverzichtbar geworden:</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">KI optimiert Produktionslinien für Karosseriekomponenten, wodurch die Fertigungszeit um bis zu 25 % reduziert wird.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Hochpräzise Fertigung komplexer Bauteile wie Turbinenschaufeln profitiert von KI-gestützten Optimierungen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">KI ermöglicht die präzise Bearbeitung von biokompatiblen Materialien wie Titan und Keramik für Implantate.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit durch KI</h2>
+          <p>KI spielt eine Schlüsselrolle bei der nachhaltigen Fertigung:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Materialabfälle werden durch optimierte Werkzeugwege und präzise Vorhersagen minimiert.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Energieverbrauch wird durch KI-gesteuerte Maschinensteuerung um bis zu 15 % gesenkt.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Die Lebensdauer von Werkzeugen wird durch vorausschauende Wartung verlängert.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukünftige Entwicklungen</h2>
+          <p>Die Zukunft der KI in der CNC-Technologie ist geprägt von Innovationen wie neuronalen Netzwerken und Industrie 5.0:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Autonome CNC-Systeme, die ohne menschliches Eingreifen arbeiten können.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Digitale Zwillinge zur Simulation und Optimierung von Produktionsprozessen in Echtzeit.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">KI-gestützte Steuerungen, die selbstständig lernen und sich anpassen.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die Integration von KI in CNC-Systeme eröffnet der Fertigungsindustrie neue Möglichkeiten. 
+            Von der Fehlererkennung über die Optimierung bis hin zu nachhaltigen Prozessen treibt KI die Automatisierung und Präzision voran. 
+            Mit zukünftigen Entwicklungen wie autonomen Steuerungen und Industrie 5.0 wird KI weiterhin eine zentrale Rolle in der Fertigung spielen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/technologie/industrie40" class="text-blue-600 hover:text-blue-800">
+                  Industrie 4.0 und CNC
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/robotik" class="text-blue-600 hover:text-blue-800">
+                  Robotik und CNC
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/blockchain" class="text-blue-600 hover:text-blue-800">
+                  Blockchain in der CNC-Fertigung
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

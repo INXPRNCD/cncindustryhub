@@ -1,0 +1,200 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+import MegaMenu from '../components/Navigation/MegaMenu.astro';
+import MobileMenu from '../components/Navigation/MobileMenu.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <a href="/" class="text-xl font-bold text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            CNCIndustryHub
+          </a>
+
+          <!-- Main Navigation -->
+          <MegaMenu />
+          <MobileMenu />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Main Categories -->
+          <div>
+            <h3 class="text-xl font-bold mb-4 font-roboto">CNCIndustryHub</h3>
+            <ul class="space-y-2 font-lato">
+              <li><a href="/cnc" class="text-gray-300 hover:text-white transition-colors duration-200">CNC-Guide</a></li>
+              <li><a href="/grundlagen" class="text-gray-300 hover:text-white transition-colors duration-200">Grundlagen</a></li>
+              <li><a href="/technologie" class="text-gray-300 hover:text-white transition-colors duration-200">Technologie & Innovation</a></li>
+            </ul>
+          </div>
+
+          <!-- Technical Resources -->
+          <div>
+            <h4 class="font-bold mb-4 font-roboto">Technische Ressourcen</h4>
+            <ul class="space-y-2 font-lato">
+              <li><a href="/programmierung" class="text-gray-300 hover:text-white transition-colors duration-200">CNC-Programmierung</a></li>
+              <li><a href="/maschinen" class="text-gray-300 hover:text-white transition-colors duration-200">Maschinentypen</a></li>
+              <li><a href="/komponenten" class="text-gray-300 hover:text-white transition-colors duration-200">Komponenten & Werkzeuge</a></li>
+              <li><a href="/materialbearbeitung" class="text-gray-300 hover:text-white transition-colors duration-200">Materialbearbeitung</a></li>
+            </ul>
+          </div>
+
+          <!-- Industry Applications -->
+          <div>
+            <h4 class="font-bold mb-4 font-roboto">Industrieanwendungen</h4>
+            <ul class="space-y-2 font-lato">
+              <li><a href="/industrieanwendungen/aerospace" class="text-gray-300 hover:text-white transition-colors duration-200">Luft- und Raumfahrt</a></li>
+              <li><a href="/industrieanwendungen/automotive" class="text-gray-300 hover:text-white transition-colors duration-200">Automobilindustrie</a></li>
+              <li><a href="/industrieanwendungen/medical" class="text-gray-300 hover:text-white transition-colors duration-200">Medizintechnik</a></li>
+              <li><a href="/industrieanwendungen/electronics" class="text-gray-300 hover:text-white transition-colors duration-200">Elektronikfertigung</a></li>
+            </ul>
+          </div>
+
+          <!-- Business & Resources -->
+          <div>
+            <h4 class="font-bold mb-4 font-roboto">Business & Karriere</h4>
+            <ul class="space-y-2 font-lato">
+              <li><a href="/business/roi" class="text-gray-300 hover:text-white transition-colors duration-200">ROI & Investitionen</a></li>
+              <li><a href="/karriere" class="text-gray-300 hover:text-white transition-colors duration-200">Karrierewege</a></li>
+              <li><a href="/sicherheit" class="text-gray-300 hover:text-white transition-colors duration-200">Sicherheit & Wartung</a></li>
+              <li><a href="/technologie/industrie40" class="text-gray-300 hover:text-white transition-colors duration-200">Industrie 4.0</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Secondary Footer -->
+        <div class="mt-12 pt-8 border-t border-gray-700">
+          <!-- Copyright and Legal Links -->
+          <div class="flex justify-between items-center">
+            <p class="text-gray-400 text-sm font-lato">&copy; {new Date().getFullYear()} CNCIndustryHub. Alle Rechte vorbehalten.</p>
+            <div class="flex gap-6">
+              <a href="/datenschutz" class="text-gray-400 hover:text-white transition-colors duration-200 font-lato">Datenschutz</a>
+              <a href="/impressum" class="text-gray-400 hover:text-white transition-colors duration-200 font-lato">Impressum</a>
+              <a href="/author" class="text-gray-400 hover:text-white transition-colors duration-200 font-lato">Author</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <CookieBanner />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #F6F6F6;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  /* Smooth transitions */
+  .transition-colors {
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  /* Hover effects */
+  .hover\:text-blue-600:hover {
+    color: #2563eb;
+  }
+
+  .hover\:text-white:hover {
+    color: #ffffff;
+  }
+
+  /* Font families */
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+
+  /* Container */
+  .container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+</style>

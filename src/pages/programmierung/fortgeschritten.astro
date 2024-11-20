@@ -1,0 +1,345 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Programmierung', href: '/programmierung' },
+  { title: 'Fortgeschrittene G-Code-Programmierung', href: '/programmierung/fortgeschritten' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#parametrische-programmierung", title: "Parametrische Programmierung" },
+  { href: "#makro-befehle", title: "Makro-Befehle" },
+  { href: "#unterprogramme", title: "Unterprogramme" },
+  { href: "#komplexe-strukturen", title: "Komplexe Strukturen" },
+  { href: "#optimierung", title: "Optimierung" },
+  { href: "#anwendungen", title: "Anwendungen" }
+];
+---
+
+<Layout 
+  title="Fortgeschrittene G-Code-Programmierung: Techniken, Beispiele und Integration"
+  description="Erfahren Sie alles über fortgeschrittene G-Code-Programmierung, einschließlich parametrischer Programmierung, Makros und Echtzeit-Optimierung für komplexe CNC-Projekte."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Fortgeschrittene G-Code-Programmierung: Techniken, Beispiele und Integration
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Meistern Sie die Kunst der CNC-Programmierung mit erweiterten G-Code-Techniken, einschließlich Makros, Parametern und Echtzeit-Optimierung. Entdecken Sie Anwendungen in der Luftfahrt, Automobilindustrie und Medizintechnik.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung: Die Bedeutung fortgeschrittener G-Code-Programmierung</h2>
+          <p>
+            Die Grundlagen von G-Code sind der Schlüssel zur Steuerung von CNC-Maschinen. 
+            Fortgeschrittene Techniken wie parametrische Programmierung, Makros und Unterprogramme erweitern diese Grundlagen, um die Flexibilität und Effizienz in der Fertigung zu maximieren.
+          </p>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
+            <p class="m-0"><strong>Wussten Sie?</strong> Fortgeschrittene G-Code-Techniken reduzieren den Programmieraufwand und verbessern die Produktionsqualität durch automatisierte Abläufe.</p>
+          </blockquote>
+        </section>
+
+        <!-- Parametrische Programmierung -->
+        <section id="parametrische-programmierung" class="mb-12">
+          <h2>Parametrische Programmierung: Flexibilität durch Variablen und Bedingungen</h2>
+          <p>
+            Parametrische Programmierung nutzt Variablen und Bedingungen, um Programme dynamisch anzupassen. 
+            Dies ist besonders nützlich bei wiederholten Aufgaben oder sich ändernden Werkstückmaßen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-bold mb-4">Beispiele für G-Code-Parameter:</h3>
+            <ul class="space-y-4">
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">#100 = 50</code>
+                <p class="text-gray-600 mt-2">Setzt eine Variable auf den Wert 50.</p>
+              </li>
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">IF [#100 GT 20] GOTO 20</code>
+                <p class="text-gray-600 mt-2">Führt einen Sprung aus, wenn die Bedingung erfüllt ist.</p>
+              </li>
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">#101 = [#100 * 2]</code>
+                <p class="text-gray-600 mt-2">Berechnet den doppelten Wert der Variable.</p>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            <strong>Vorteile:</strong> Dynamische Anpassungen, weniger Programmieraufwand und höhere Effizienz bei der Serienproduktion.
+          </p>
+        </section>
+
+        <!-- Makro-Befehle -->
+        <section id="makro-befehle" class="mb-12">
+          <h2>Makro-Befehle: Wiederverwendbare Strukturen für komplexe Programme</h2>
+          <p>
+            Makro-Befehle vereinfachen die Erstellung und Wartung komplexer Programme, indem wiederkehrende Abläufe modularisiert werden. 
+            Sie bieten eine flexible Möglichkeit, Prozesse effizient zu steuern.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-bold mb-4">Typische Makro-Befehle:</h3>
+            <ul class="space-y-4">
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">M98 P1001</code>
+                <p class="text-gray-600 mt-2">Ruft das Makro mit der Nummer 1001 auf.</p>
+              </li>
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">M99</code>
+                <p class="text-gray-600 mt-2">Rücksprung nach Abschluss des Makros.</p>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Makros werden häufig für Muster, wiederkehrende Bewegungen und automatisierte Bearbeitungsstrategien verwendet.
+          </p>
+        </section>
+
+        <!-- Unterprogramme -->
+        <section id="unterprogramme" class="mb-12">
+          <h2>Unterprogramme: Modularisierung für große Projekte</h2>
+          <p>
+            Unterprogramme reduzieren den Codeumfang, indem sie wiederkehrende Aufgaben auslagern. 
+            Dies erleichtert das Debuggen und die Wiederverwendung von Code.
+          </p>
+
+          <div class="bg-white p-4 rounded-lg overflow-x-auto mb-6 border border-gray-200">
+            <pre><code>N10 G21  
+N20 G90  
+N30 M98 P1234 L5  (Ruft Unterprogramm 1234 fünfmal auf)  
+N40 M30  (Programmende)</code></pre>
+          </div>
+
+          <p>
+            <strong>Vorteile:</strong> Kürzere Programme, vereinfachte Wartung und erhöhte Fehlerresistenz.
+          </p>
+        </section>
+
+        <!-- Komplexe G-Code-Strukturen -->
+        <section id="komplexe-strukturen" class="mb-12">
+          <h2>Komplexe G-Code-Strukturen: Präzision für anspruchsvolle Anwendungen</h2>
+          <p>
+            Erweiterte Befehle wie G68 und G43 ermöglichen präzise Bewegungen und komplexe Bearbeitungen, die in der Luftfahrt- und Automobilindustrie benötigt werden.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-bold mb-4">Beispiele für fortgeschrittene Befehle:</h3>
+            <ul class="space-y-4">
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">G68</code>
+                <p class="text-gray-600 mt-2">Rotiert das Koordinatensystem, um geneigte Bearbeitungen zu erleichtern.</p>
+              </li>
+              <li>
+                <code class="bg-gray-100 px-2 py-1 rounded">G43 H01</code>
+                <p class="text-gray-600 mt-2">Aktiviert die Werkzeuglängenkorrektur.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Optimierung -->
+        <section id="optimierung" class="mb-12">
+          <h2>Optimierung durch Echtzeitdaten und Integration</h2>
+          <p>
+            Moderne CNC-Steuerungen ermöglichen die Integration von Echtzeitdaten und KI-gestützten Systemen, um G-Code-Programme dynamisch zu optimieren.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Sensoren erkennen Verschleiß und passen Schnittparameter automatisch an.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">CAM-Systeme generieren optimierten G-Code basierend auf Fertigungsdaten.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>Diese Technologien erhöhen die Effizienz und reduzieren den Materialverbrauch.</p>
+        </section>
+
+        <!-- Branchenspezifische Anwendungen -->
+        <section id="anwendungen" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          <p>Fortgeschrittene G-Code-Techniken sind unverzichtbar für:</p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Präzise Bearbeitung von Titanbauteilen und Turbinenschaufeln.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Komplexe Bearbeitung von Motorblöcken und Getrieben.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Herstellung biokompatibler Implantate und mikrochirurgischer Werkzeuge.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Fortgeschrittene G-Code-Programmierung ist die Grundlage für komplexe und präzise CNC-Bearbeitungen. 
+            Durch den Einsatz von Parametern, Makros und Echtzeitdatenintegration wird die Fertigung effizienter und fehlerfreier. 
+            Die Zukunft liegt in der Verknüpfung dieser Techniken mit KI und Automatisierung.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/programmierung/grundlagen" class="text-blue-600 hover:text-blue-800">
+                  Grundlagen der CNC-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/programmierung/cam" class="text-blue-600 hover:text-blue-800">
+                  CAM-Software und Integration
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+code {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+</style>

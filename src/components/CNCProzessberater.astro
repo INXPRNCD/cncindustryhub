@@ -1,0 +1,391 @@
+---
+interface Props {
+  lang?: 'de' | 'en';
+}
+
+const { lang = 'de' } = Astro.props;
+---
+
+<div class="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">CNC Prozessberater</h2>
+  
+  <form id="prozessberater-form" class="space-y-6" novalidate>
+    <!-- Materialauswahl -->
+    <div>
+      <label for="material" class="block text-sm font-medium text-gray-700 mb-2">
+        Material <span class="text-red-500" aria-hidden="true">*</span>
+        <span class="sr-only">Pflichtfeld</span>
+      </label>
+      <select 
+        id="material" 
+        name="material" 
+        class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+        required
+        aria-describedby="material-error material-eigenschaften"
+      >
+        <option value="">Bitte wählen Sie ein Material</option>
+        <option value="aluminium">Aluminium</option>
+        <option value="stahl">Stahl</option>
+        <option value="titan">Titan</option>
+        <option value="kunststoff">Kunststoff</option>
+      </select>
+      <div id="material-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></div>
+      <div id="material-eigenschaften" class="mt-2 text-sm text-gray-600"></div>
+    </div>
+
+    <!-- Toleranzauswahl -->
+    <div>
+      <label for="toleranz" class="block text-sm font-medium text-gray-700 mb-2">
+        Toleranzanforderungen <span class="text-red-500" aria-hidden="true">*</span>
+        <span class="sr-only">Pflichtfeld</span>
+      </label>
+      <select 
+        id="toleranz" 
+        name="toleranz" 
+        class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+        required
+        aria-describedby="toleranz-error toleranz-info"
+      >
+        <option value="">Bitte wählen Sie eine Toleranzstufe</option>
+        <option value="grob">± 0,1 mm (Grob)</option>
+        <option value="mittel">± 0,05 mm (Mittel)</option>
+        <option value="fein">± 0,01 mm (Fein)</option>
+        <option value="hoechst">± 0,005 mm (Höchstpräzision)</option>
+      </select>
+      <div id="toleranz-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></div>
+      <div id="toleranz-info" class="mt-2 text-sm text-gray-600"></div>
+    </div>
+
+    <!-- Oberflächenqualität -->
+    <div>
+      <label for="oberflaeche" class="block text-sm font-medium text-gray-700 mb-2">
+        Oberflächenqualität <span class="text-red-500" aria-hidden="true">*</span>
+        <span class="sr-only">Pflichtfeld</span>
+      </label>
+      <select 
+        id="oberflaeche" 
+        name="oberflaeche" 
+        class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
+        required
+        aria-describedby="oberflaeche-error oberflaeche-info"
+      >
+        <option value="">Bitte wählen Sie eine Oberflächenqualität</option>
+        <option value="n7">N7 (Ra 1,6)</option>
+        <option value="n6">N6 (Ra 0,8)</option>
+        <option value="n5">N5 (Ra 0,4)</option>
+        <option value="n4">N4 (Ra 0,2)</option>
+      </select>
+      <div id="oberflaeche-error" class="mt-1 text-sm text-red-600 hidden" role="alert"></div>
+      <div id="oberflaeche-info" class="mt-2 text-sm text-gray-600"></div>
+    </div>
+
+    <!-- Submit Button -->
+    <button 
+      type="submit" 
+      class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      Empfehlungen anzeigen
+    </button>
+
+    <!-- Form Feedback -->
+    <div id="form-feedback" class="text-sm text-center hidden" role="status"></div>
+  </form>
+
+  <!-- Ergebnisbereich -->
+  <div id="ergebnisse" class="mt-8 hidden">
+    <h3 class="text-xl font-semibold mb-4 text-gray-800">Empfehlungen</h3>
+    <div class="space-y-4">
+      <div id="prozessparameter" class="bg-gray-50 p-4 rounded-md">
+        <h4 class="font-medium mb-2">Prozessparameter</h4>
+        <div id="prozessparameter-content" class="text-sm text-gray-600"></div>
+      </div>
+      <div id="werkzeugempfehlungen" class="bg-gray-50 p-4 rounded-md">
+        <h4 class="font-medium mb-2">Werkzeugempfehlungen</h4>
+        <div id="werkzeugempfehlungen-content" class="text-sm text-gray-600"></div>
+      </div>
+      <div id="zusatzhinweise" class="bg-gray-50 p-4 rounded-md">
+        <h4 class="font-medium mb-2">Zusätzliche Hinweise</h4>
+        <div id="zusatzhinweise-content" class="text-sm text-gray-600"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const materialien = {
+  aluminium: {
+    name: 'Aluminium',
+    eigenschaften: ['Leicht', 'Korrosionsbeständig', 'Gute Wärmeleitfähigkeit'],
+    prozessparameter: {
+      schnittgeschwindigkeit: '500-1000 m/min',
+      vorschub: '0.1-0.3 mm/U',
+      kuehlung: 'Emulsion oder MMS'
+    },
+    werkzeuge: [
+      'HSS-Fräser für einfache Anwendungen',
+      'Hartmetallfräser für höhere Standzeiten',
+      'Diamantbeschichtete Werkzeuge für Hochgeschwindigkeitsbearbeitung'
+    ],
+    hinweise: [
+      'Auf Spanbildung achten',
+      'Regelmäßige Werkzeugkontrolle empfohlen',
+      'Geeignet für Trockenbearbeitung bei einfachen Geometrien'
+    ]
+  },
+  stahl: {
+    name: 'Stahl',
+    eigenschaften: ['Hohe Festigkeit', 'Verschleißfest', 'Vielseitig einsetzbar'],
+    prozessparameter: {
+      schnittgeschwindigkeit: '150-400 m/min',
+      vorschub: '0.05-0.2 mm/U',
+      kuehlung: 'Emulsion erforderlich'
+    },
+    werkzeuge: [
+      'Beschichtete Hartmetallwerkzeuge',
+      'Keramikwerkzeuge für Hochgeschwindigkeitsbearbeitung',
+      'Wendeschneidplatten für große Volumina'
+    ],
+    hinweise: [
+      'Höhere Werkzeugbelastung beachten',
+      'Regelmäßige Kühlmittelkontrolle wichtig',
+      'Vorwärmung bei gehärteten Stählen empfohlen'
+    ]
+  },
+  titan: {
+    name: 'Titan',
+    eigenschaften: ['Sehr leicht', 'Hochfest', 'Biokompatibel'],
+    prozessparameter: {
+      schnittgeschwindigkeit: '30-100 m/min',
+      vorschub: '0.05-0.15 mm/U',
+      kuehlung: 'Intensive Kühlung erforderlich'
+    },
+    werkzeuge: [
+      'Spezielle Titanfräser mit verstärkter Geometrie',
+      'Beschichtete Hartmetallwerkzeuge',
+      'Werkzeuge mit positiver Schneidengeometrie'
+    ],
+    hinweise: [
+      'Geringe Schnittgeschwindigkeiten erforderlich',
+      'Auf Wärmeentwicklung achten',
+      'Regelmäßige Werkzeugwechsel einplanen'
+    ]
+  },
+  kunststoff: {
+    name: 'Kunststoff',
+    eigenschaften: ['Kostengünstig', 'Leicht', 'Chemisch beständig'],
+    prozessparameter: {
+      schnittgeschwindigkeit: '200-500 m/min',
+      vorschub: '0.1-0.4 mm/U',
+      kuehlung: 'Luftkühlung oder Trockenbearbeitung'
+    },
+    werkzeuge: [
+      'Einschneidige Fräser für thermoplastische Kunststoffe',
+      'Polierte Werkzeuge zur Vermeidung von Aufschmelzungen',
+      'Spezialwerkzeuge für faserverstärkte Kunststoffe'
+    ],
+    hinweise: [
+      'Thermische Belastung vermeiden',
+      'Auf Spanabfuhr achten',
+      'Materialspezifische Schnittparameter beachten'
+    ]
+  }
+};
+
+const toleranzInfos = {
+  grob: 'Für einfache Bauteile ohne besondere Anforderungen',
+  mittel: 'Für die meisten industriellen Anwendungen',
+  fein: 'Für Präzisionsbauteile',
+  hoechst: 'Für höchste Anforderungen'
+};
+
+const oberflaechenInfos = {
+  n7: 'Standardoberfläche für die meisten Anwendungen',
+  n6: 'Für bessere Oberflächenqualität',
+  n5: 'Für hohe Oberflächenanforderungen',
+  n4: 'Für Höchstanforderungen an die Oberfläche'
+};
+
+// Form validation helper functions
+function showError(elementId: string, message: string) {
+  const errorElement = document.getElementById(`${elementId}-error`);
+  const inputElement = document.getElementById(elementId);
+  if (errorElement && inputElement) {
+    errorElement.textContent = message;
+    errorElement.classList.remove('hidden');
+    inputElement.classList.add('border-red-500');
+    inputElement.setAttribute('aria-invalid', 'true');
+  }
+}
+
+function hideError(elementId: string) {
+  const errorElement = document.getElementById(`${elementId}-error`);
+  const inputElement = document.getElementById(elementId);
+  if (errorElement && inputElement) {
+    errorElement.classList.add('hidden');
+    inputElement.classList.remove('border-red-500');
+    inputElement.setAttribute('aria-invalid', 'false');
+  }
+}
+
+function validateField(elementId: string): boolean {
+  const element = document.getElementById(elementId) as HTMLSelectElement;
+  if (!element) return false;
+
+  if (!element.value) {
+    showError(elementId, 'Bitte treffen Sie eine Auswahl');
+    return false;
+  }
+  
+  hideError(elementId);
+  return true;
+}
+
+// Event listeners for real-time validation
+document.getElementById('material')?.addEventListener('change', function(e) {
+  const material = (e.target as HTMLSelectElement).value;
+  validateField('material');
+  
+  const materialData = materialien[material as keyof typeof materialien];
+  const eigenschaftenDiv = document.getElementById('material-eigenschaften');
+  
+  if (eigenschaftenDiv && materialData) {
+    eigenschaftenDiv.innerHTML = `
+      <ul class="list-disc pl-4 mt-2">
+        ${materialData.eigenschaften.map(e => `<li>${e}</li>`).join('')}
+      </ul>
+    `;
+  } else if (eigenschaftenDiv) {
+    eigenschaftenDiv.innerHTML = '';
+  }
+});
+
+document.getElementById('toleranz')?.addEventListener('change', function(e) {
+  const toleranz = (e.target as HTMLSelectElement).value;
+  validateField('toleranz');
+  
+  const toleranzInfo = toleranzInfos[toleranz as keyof typeof toleranzInfos];
+  const toleranzDiv = document.getElementById('toleranz-info');
+  
+  if (toleranzDiv && toleranzInfo) {
+    toleranzDiv.textContent = toleranzInfo;
+  } else if (toleranzDiv) {
+    toleranzDiv.textContent = '';
+  }
+});
+
+document.getElementById('oberflaeche')?.addEventListener('change', function(e) {
+  const oberflaeche = (e.target as HTMLSelectElement).value;
+  validateField('oberflaeche');
+  
+  const oberflaecheInfo = oberflaechenInfos[oberflaeche as keyof typeof oberflaechenInfos];
+  const oberflaecheDiv = document.getElementById('oberflaeche-info');
+  
+  if (oberflaecheDiv && oberflaecheInfo) {
+    oberflaecheDiv.textContent = oberflaecheInfo;
+  } else if (oberflaecheDiv) {
+    oberflaecheDiv.textContent = '';
+  }
+});
+
+// Form submission handler
+document.getElementById('prozessberater-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Validate all fields
+  const isValid = [
+    validateField('material'),
+    validateField('toleranz'),
+    validateField('oberflaeche')
+  ].every(Boolean);
+
+  if (!isValid) {
+    const feedbackElement = document.getElementById('form-feedback');
+    if (feedbackElement) {
+      feedbackElement.textContent = 'Bitte füllen Sie alle erforderlichen Felder aus.';
+      feedbackElement.classList.remove('hidden', 'text-green-600');
+      feedbackElement.classList.add('text-red-600');
+    }
+    return;
+  }
+
+  const material = (document.getElementById('material') as HTMLSelectElement).value;
+  const empfehlungen = materialien[material as keyof typeof materialien];
+
+  if (empfehlungen) {
+    // Show success feedback
+    const feedbackElement = document.getElementById('form-feedback');
+    if (feedbackElement) {
+      feedbackElement.textContent = 'Empfehlungen werden generiert...';
+      feedbackElement.classList.remove('hidden', 'text-red-600');
+      feedbackElement.classList.add('text-green-600');
+    }
+
+    // Update results
+    const prozessparameterContent = document.getElementById('prozessparameter-content');
+    if (prozessparameterContent) {
+      prozessparameterContent.innerHTML = `
+        <ul class="list-disc pl-4">
+          <li>Schnittgeschwindigkeit: ${empfehlungen.prozessparameter.schnittgeschwindigkeit}</li>
+          <li>Vorschub: ${empfehlungen.prozessparameter.vorschub}</li>
+          <li>Kühlung: ${empfehlungen.prozessparameter.kuehlung}</li>
+        </ul>
+      `;
+    }
+
+    const werkzeugContent = document.getElementById('werkzeugempfehlungen-content');
+    if (werkzeugContent) {
+      werkzeugContent.innerHTML = `
+        <ul class="list-disc pl-4">
+          ${empfehlungen.werkzeuge.map(werkzeug => `<li>${werkzeug}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    const hinweiseContent = document.getElementById('zusatzhinweise-content');
+    if (hinweiseContent) {
+      hinweiseContent.innerHTML = `
+        <ul class="list-disc pl-4">
+          ${empfehlungen.hinweise.map(hinweis => `<li>${hinweis}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    // Show results
+    const ergebnisse = document.getElementById('ergebnisse');
+    if (ergebnisse) {
+      ergebnisse.classList.remove('hidden');
+    }
+
+    // Clear feedback after showing results
+    setTimeout(() => {
+      if (feedbackElement) {
+        feedbackElement.classList.add('hidden');
+      }
+    }, 2000);
+  }
+});
+</script>
+
+<style>
+/* Focus styles for accessibility */
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Error state styles */
+select[aria-invalid="true"] {
+  border-color: #EF4444;
+}
+
+select[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5);
+}
+
+/* Transition effects */
+.transition-colors {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+</style>

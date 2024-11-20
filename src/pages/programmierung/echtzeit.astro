@@ -1,0 +1,364 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Programmierung', href: '/programmierung' },
+  { title: 'Echtzeitsteuerung und Automatisierung', href: '/programmierung/echtzeit' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#funktionen-vorteile", title: "Funktionen und Vorteile" },
+  { href: "#automatisierung", title: "Automatisierung" },
+  { href: "#technologische-integration", title: "Technologische Integration" },
+  { href: "#anwendungsbereiche", title: "Anwendungsbereiche" },
+  { href: "#zukunft", title: "Zukunft" }
+];
+---
+
+<Layout 
+  title="Echtzeitsteuerung und Automatisierung in der CNC-Fertigung"
+  description="Entdecken Sie die transformative Kraft von Echtzeitsteuerung und Automatisierung in der CNC-Fertigung. Nutzen Sie IoT, KI und moderne Technologien für Präzision und Effizienz."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Echtzeitsteuerung und Automatisierung in der CNC-Fertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Präzision und Effizienz neu definiert durch Echtzeitdaten, Automatisierung und intelligente Technologien.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung</h2>
+          <p>
+            In der CNC-Fertigung hat die Kombination von Echtzeitsteuerung und Automatisierung revolutionäre Veränderungen herbeigeführt. 
+            Durch die Nutzung von Echtzeitdaten, IoT und KI können Prozesse in der Fertigung nicht nur optimiert, sondern auch in Echtzeit an dynamische Anforderungen angepasst werden.
+          </p>
+          <p>
+            Echtzeitsteuerung ermöglicht die proaktive Anpassung von Maschinenparametern, wodurch Fehler minimiert und die Produktionsqualität maximiert werden.
+            Automatisierung reduziert manuelle Eingriffe und gewährleistet einen reibungslosen Ablauf, selbst bei komplexen Fertigungsaufgaben.
+          </p>
+        </section>
+
+        <!-- Funktionen und Vorteile -->
+        <section id="funktionen-vorteile" class="mb-12">
+          <h2>Funktionen und Vorteile der Echtzeitsteuerung</h2>
+          <p>
+            Echtzeitsteuerung ist die Fähigkeit, während des Fertigungsprozesses sofortige Anpassungen vorzunehmen. Dies bietet zahlreiche Vorteile:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Verbesserte Präzision:</strong>
+                  <p class="text-gray-600">Anpassung von Werkzeugwegen und Parametern an Echtzeitdaten wie Temperatur und Vibrationen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fehlervermeidung:</strong>
+                  <p class="text-gray-600">Sensoren erkennen Abweichungen sofort und korrigieren diese vorzeitig.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Optimierung von Produktionszeiten:</strong>
+                  <p class="text-gray-600">Effiziente Steuerung reduziert Rüstzeiten und minimiert Ausfälle.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Ein typisches Beispiel ist die Luftfahrtindustrie, wo Echtzeitsteuerung bei der Herstellung von Titanbauteilen sicherstellt, 
+            dass enge Toleranzen eingehalten werden.
+          </p>
+        </section>
+
+        <!-- Automatisierung -->
+        <section id="automatisierung" class="mb-12">
+          <h2>Automatisierung in der CNC-Fertigung</h2>
+          <p>
+            Automatisierung ergänzt die Echtzeitsteuerung, indem sie Routineprozesse vereinfacht und Effizienzsteigerungen ermöglicht.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Werkzeugwechsel:</strong>
+                  <p class="text-gray-600">Automatische Systeme minimieren Stillstandzeiten durch schnellen Wechsel.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Robotik:</strong>
+                  <p class="text-gray-600">Roboter integrieren sich nahtlos in CNC-Prozesse, indem sie Werkstücke laden und entladen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Skalierbarkeit:</strong>
+                  <p class="text-gray-600">Automatisierungssysteme sind flexibel und für kleine wie große Produktionsvolumen geeignet.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Ein herausragendes Beispiel ist die Automobilindustrie, wo Roboter in Verbindung mit CNC-Maschinen für eine hochvolumige Serienfertigung eingesetzt werden.
+          </p>
+        </section>
+
+        <!-- Technologische Integration -->
+        <section id="technologische-integration" class="mb-12">
+          <h2>Technologische Integration</h2>
+          <p>
+            Moderne CNC-Systeme integrieren Echtzeitsteuerung mit Technologien wie IoT und KI, um die Fertigung effizienter und intelligenter zu gestalten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>IoT:</strong>
+                  <p class="text-gray-600">Sensoren erfassen Echtzeitdaten zu Temperatur, Vibrationen und Materialspannung und ermöglichen präzise Anpassungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>KI:</strong>
+                  <p class="text-gray-600">Algorithmen analysieren Daten und optimieren Werkzeugwege sowie Bearbeitungsstrategien.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Cloud-basierte Lösungen:</strong>
+                  <p class="text-gray-600">Daten werden zentral gespeichert und für die kollaborative Fertigung genutzt.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            In der Medizintechnik ermöglichen diese Technologien die Herstellung komplexer, biokompatibler Implantate mit höchster Präzision.
+          </p>
+        </section>
+
+        <!-- Anwendungsbereiche -->
+        <section id="anwendungsbereiche" class="mb-12">
+          <h2>Branchenspezifische Anwendungen</h2>
+          <p>
+            Echtzeitsteuerung und Automatisierung finden breite Anwendung in verschiedenen Industrien:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Serienproduktion von Motorblöcken und Getriebeteilen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Herstellung von Turbinenschaufeln und Rumpfkomponenten.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Präzisionsbearbeitung biokompatibler Materialien für Implantate.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Ein Beispiel ist die Prototypenfertigung in der Luftfahrt, wo Echtzeitsteuerung sicherstellt, dass erste Bauteile ohne Nacharbeit passen.
+          </p>
+        </section>
+
+        <!-- Zukunft -->
+        <section id="zukunft" class="mb-12">
+          <h2>Zukunft der Echtzeitsteuerung und Automatisierung</h2>
+          <p>
+            Die Zukunft der CNC-Fertigung wird durch Technologien wie digitale Zwillinge, Industrie 4.0 und adaptive Steuerungssysteme bestimmt.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Digitale Zwillinge:</strong>
+                  <p class="text-gray-600">Simulieren Fertigungsprozesse, um Fehler zu vermeiden und Kosten zu reduzieren.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Industrie 4.0:</strong>
+                  <p class="text-gray-600">Vernetzte Fertigungssysteme für maximale Effizienz und Ressourcenschonung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Adaptive Systeme:</strong>
+                  <p class="text-gray-600">Passen sich in Echtzeit an dynamische Produktionsanforderungen an.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Diese Entwicklungen versprechen eine umweltfreundlichere und wirtschaftlichere Fertigung, die auf Echtzeitdaten basiert.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Echtzeitsteuerung und Automatisierung sind unverzichtbar für die moderne CNC-Fertigung. Sie erhöhen die Präzision, reduzieren Fehler 
+            und ermöglichen skalierbare, effiziente Prozesse. Die Zukunft dieser Technologien liegt in der weiteren Integration von IoT, KI und 
+            digitalen Zwillingen, um die Fertigungsindustrie noch nachhaltiger und leistungsfähiger zu machen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/programmierung/grundlagen" class="text-blue-600 hover:text-blue-800">
+                  Grundlagen der CNC-Programmierung
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/programmierung/fortgeschritten" class="text-blue-600 hover:text-blue-800">
+                  Fortgeschrittene G-Code-Programmierung
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

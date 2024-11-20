@@ -1,0 +1,354 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import Picture from '../../components/Picture.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Grundlagen', href: '/grundlagen' },
+  { title: 'CNC-Steuerungssysteme', href: '/grundlagen/steuerungssysteme' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#bestandteile", title: "Bestandteile" },
+  { href: "#g-code-m-code", title: "G-Code und M-Code" },
+  { href: "#technologische-fortschritte", title: "Technologische Fortschritte" },
+  { href: "#praxisbeispiele", title: "Praxisanwendungen" },
+  { href: "#zukunftsperspektive", title: "Zukunftsperspektiven" }
+];
+---
+
+<Layout 
+  title="CNC-Steuerungssysteme: Zusammenspiel von Software und Hardware"
+  description="Ein umfassender Leitfaden zu CNC-Steuerungssystemen: Zusammenspiel von Software und Hardware, Fortschritte und Praxisanwendungen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Steuerungssysteme: Zusammenspiel von Software und Hardware
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Entdecken Sie, wie CNC-Steuerungssysteme durch die perfekte Abstimmung von Software und Hardware eine präzise, automatisierte Fertigung ermöglichen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einleitung</h2>
+          <p>
+            <strong>CNC-Steuerungssysteme</strong> sind das zentrale Element moderner Fertigung. Sie ermöglichen die Umsetzung komplexer Designs aus der Software in präzise Bewegungen und Funktionen der Hardware. Durch diese Verbindung wird eine hochautomatisierte Fertigung Realität, die Effizienz, Präzision und Flexibilität kombiniert.
+          </p>
+          <p>
+            In diesem Artikel erfahren Sie, wie CNC-Steuerungssysteme funktionieren, welche Komponenten sie beinhalten und welche Fortschritte sie in der Fertigung ermöglicht haben.
+          </p>
+        </section>
+
+        <!-- Bestandteile -->
+        <section id="bestandteile" class="mb-12">
+          <h2>Bestandteile eines CNC-Steuerungssystems</h2>
+          <p>Ein CNC-Steuerungssystem besteht aus zwei Hauptkomponenten: <strong>Software</strong> und <strong>Hardware</strong>. Beide arbeiten zusammen, um Werkzeuge präzise zu steuern.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">1. Software</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>CAD (Computer-Aided Design):</strong>
+                    <p class="text-gray-600">Erstellung und Optimierung von Designentwürfen.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>CAM (Computer-Aided Manufacturing):</strong>
+                    <p class="text-gray-600">Übersetzung von CAD-Designs in maschinenlesbare Anweisungen.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Steuerungssoftware:</strong>
+                    <p class="text-gray-600">Programme wie FANUC, Siemens oder Heidenhain.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">2. Hardware</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Steuerungsmodul:</strong>
+                    <p class="text-gray-600">Zentrale Einheit für die Befehlsumsetzung.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Servomotoren:</strong>
+                    <p class="text-gray-600">Hochpräzise Motoren für Bewegungen.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <strong>Sensoren:</strong>
+                    <p class="text-gray-600">Echtzeit-Feedback zur Optimierung.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <figure class="my-8">
+            <Picture
+              src="/images/cnc-bestandteile.webp"
+              alt="Bestandteile eines CNC-Steuerungssystems"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Die perfekte Symbiose aus Software und Hardware in CNC-Systemen.
+            </figcaption>
+          </figure>
+        </section>
+
+        <!-- G-Code und M-Code -->
+        <section id="g-code-m-code" class="mb-12">
+          <h2>G-Code und M-Code: Die Sprache der CNC</h2>
+          <p>
+            Die Kommunikation zwischen Software und Hardware erfolgt über standardisierte Programmiersprachen, die als <strong>G-Code</strong> und <strong>M-Code</strong> bekannt sind.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">G-Code</h3>
+              <p class="mb-4">Der G-Code definiert Bewegungsbefehle wie Positionierung, Geschwindigkeit und Vorschub.</p>
+              <div class="bg-gray-800 text-white p-4 rounded-lg">
+                <code>G01 X100 Y100 Z0 F300</code>
+                <p class="text-sm text-gray-400 mt-2">
+                  Bewegt das Werkzeug zu den Koordinaten X100, Y100, Z0 mit 300 mm/min.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">M-Code</h3>
+              <p class="mb-4">Der M-Code aktiviert Maschinenfunktionen wie Kühlung oder Werkzeugwechsel.</p>
+              <div class="bg-gray-800 text-white p-4 rounded-lg">
+                <code>M06</code>
+                <p class="text-sm text-gray-400 mt-2">
+                  Führt einen Werkzeugwechsel durch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technologische Fortschritte -->
+        <section id="technologische-fortschritte" class="mb-12">
+          <h2>Technologische Fortschritte in CNC-Steuerungssystemen</h2>
+          <p>Durch innovative Technologien haben CNC-Steuerungssysteme erhebliche Fortschritte gemacht:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Digitale Innovation</h3>
+              <ul class="space-y-2">
+                <li><strong>IoT (Internet of Things):</strong> Vernetzte Maschinen</li>
+                <li><strong>Künstliche Intelligenz:</strong> Dynamische Prozessoptimierung</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Prozessoptimierung</h3>
+              <ul class="space-y-2">
+                <li><strong>Echtzeitüberwachung:</strong> Kontinuierliches Feedback</li>
+                <li><strong>Digitale Zwillinge:</strong> Virtuelle Prozesssimulation</li>
+              </ul>
+            </div>
+          </div>
+
+          <figure class="my-8">
+            <Picture
+              src="/images/cnc-fortschritte.webp"
+              alt="Technologische Fortschritte in CNC-Steuerungssystemen"
+              class="rounded-lg shadow-lg"
+            />
+            <figcaption class="text-center text-gray-600 mt-2">
+              Fortschritte wie IoT und KI revolutionieren die CNC-Fertigung.
+            </figcaption>
+          </figure>
+        </section>
+
+        <!-- Praxisbeispiele -->
+        <section id="praxisbeispiele" class="mb-12">
+          <h2>Praxisanwendungen von CNC-Steuerungssystemen</h2>
+          <p>Moderne CNC-Steuerungssysteme finden in zahlreichen Branchen Anwendung:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Automobilindustrie</h3>
+              <p class="text-gray-600">Präzise Fertigung von Motorblöcken und Getriebekomponenten.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Luftfahrt</h3>
+              <p class="text-gray-600">Herstellung komplexer Turbinenschaufeln und Flugzeugstrukturen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Medizintechnik</h3>
+              <p class="text-gray-600">Produktion chirurgischer Instrumente und Implantate.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Zukunftsperspektiven -->
+        <section id="zukunftsperspektive" class="mb-12">
+          <h2>Zukunftsperspektiven der CNC-Steuerungssysteme</h2>
+          <p>
+            Die Zukunft der CNC-Steuerungssysteme liegt in der vollständigen Automatisierung und Integration neuer Technologien:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Edge Computing:</strong>
+                  <p class="text-gray-600">Lokale Datenverarbeitung für Echtzeitentscheidungen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Blockchain:</strong>
+                  <p class="text-gray-600">Sicherstellung der Datenintegrität in vernetzten Produktionssystemen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Erweiterte KI:</strong>
+                  <p class="text-gray-600">Autonome Maschinen, die auf Erfahrungsdaten basieren.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zusammenfassung -->
+        <section id="zusammenfassung" class="mb-12">
+          <h2>Zusammenfassung</h2>
+          <p>
+            CNC-Steuerungssysteme sind die treibende Kraft hinter der Automatisierung und Effizienzsteigerung in der Fertigung. Durch die Integration von Software und Hardware sowie den Einsatz fortschrittlicher Technologien wie IoT und KI bleiben sie zukunftsweisend.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/grundlagen/technologische-fortschritte" class="text-blue-600 hover:text-blue-800">
+                  Nächste Schritte in der CNC-Technologie
+                </a>
+              </li>
+              <li>
+                <a href="/grundlagen/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose figure {
+  margin: 2rem 0;
+}
+
+.prose figcaption {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

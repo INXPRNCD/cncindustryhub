@@ -1,0 +1,323 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' },
+  { title: 'CNC in der Automobilindustrie', href: '/industrieanwendungen/automotive' }
+];
+
+const navItems = [
+  { href: "#bedeutung", title: "Bedeutung" },
+  { href: "#sicherheitskritische-teile", title: "Sicherheitskritische Teile" },
+  { href: "#materialbearbeitung", title: "Materialbearbeitung" },
+  { href: "#technologische-fortschritte", title: "Technologische Fortschritte" },
+  { href: "#anwendungsbereiche", title: "Anwendungsbereiche" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" }
+];
+---
+
+<Layout 
+  title="CNC in der Automobilindustrie: Wie Präzision und Automatisierung die Fahrzeugproduktion transformieren"
+  description="Erfahren Sie, wie CNC-Technologie die Automobilindustrie revolutioniert: Von der Herstellung sicherheitskritischer Komponenten bis zur nachhaltigen Produktion."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC in der Automobilindustrie: Wie Präzision und Automatisierung die Fahrzeugproduktion transformieren
+          </h1>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Bedeutung -->
+        <section id="bedeutung" class="mb-12">
+          <h2>Die Bedeutung von CNC in der Automobilindustrie</h2>
+          <p>
+            Die Automobilindustrie steht vor kontinuierlichen Herausforderungen: steigende Anforderungen an Präzision, Effizienz und Nachhaltigkeit. 
+            CNC-Technologie (Computerized Numerical Control) hat diese Branche revolutioniert, indem sie die Herstellung von Fahrzeugteilen automatisiert, Kosten reduziert und die Qualität verbessert hat. 
+            Von sicherheitskritischen Komponenten wie Bremsen bis hin zu innovativen Antriebssystemen für Elektrofahrzeuge – CNC ist unverzichtbar.
+          </p>
+        </section>
+
+        <!-- Sicherheitskritische Teile -->
+        <section id="sicherheitskritische-teile" class="mb-12">
+          <h2>Herstellung sicherheitskritischer Fahrzeugteile</h2>
+          <p>
+            Sicherheitskritische Bauteile erfordern höchste Präzision und Zuverlässigkeit. 
+            CNC-Maschinen ermöglichen die Herstellung komplexer Geometrien mit minimalen Toleranzen, was für die Funktion und Sicherheit von Fahrzeugen entscheidend ist.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Wichtige Komponenten:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Motorblöcke:</strong>
+                  <p class="text-gray-600">Exakte Bearbeitung für eine effiziente Verbrennung und reduzierte Emissionen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Getriebe:</strong>
+                  <p class="text-gray-600">Präzise gefertigte Zahnradteile für reibungslose Schaltvorgänge.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Bremssysteme:</strong>
+                  <p class="text-gray-600">Fertigung von Bremsscheiben und -trommeln für höchste Sicherheit.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Materialbearbeitung -->
+        <section id="materialbearbeitung" class="mb-12">
+          <h2>Materialbearbeitung in der Automobilproduktion</h2>
+          <p>
+            Die Auswahl geeigneter Materialien ist entscheidend für die Fahrzeugproduktion. 
+            CNC-Technologien bieten eine unübertroffene Vielseitigkeit in der Bearbeitung verschiedener Materialien:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Aluminium:</strong>
+                  <p class="text-gray-600">Leichtbau-Komponenten wie Karosserieteile und Motorengehäuse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Hochleistungsstahl:</strong>
+                  <p class="text-gray-600">Strukturelle Bauteile für erhöhte Festigkeit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Kunststoffe:</strong>
+                  <p class="text-gray-600">Präzisionsfertigung für Verkleidungen und Innenraumelemente.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Die Fähigkeit von CNC-Maschinen, verschiedene Materialien effizient zu bearbeiten, ermöglicht innovative Designs und reduziert das Fahrzeuggewicht.
+          </p>
+        </section>
+
+        <!-- Technologische Fortschritte -->
+        <section id="technologische-fortschritte" class="mb-12">
+          <h2>Technologische Fortschritte in der Automobilfertigung</h2>
+          <p>
+            Fortschrittliche CNC-Technologien wie simultane 5-Achsen-Bearbeitung und die Integration von CAD/CAM-Software haben die Automobilproduktion revolutioniert. 
+            Diese Technologien ermöglichen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Komplexe Geometrien:</strong>
+                  <p class="text-gray-600">Bearbeitung von Freiformflächen für aerodynamische Fahrzeugdesigns.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automatisierung:</strong>
+                  <p class="text-gray-600">Steigerung der Effizienz und Reduktion menschlicher Fehler.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Echtzeitüberwachung:</strong>
+                  <p class="text-gray-600">Nutzung von IoT zur Optimierung von Produktionsprozessen.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Anwendungsbereiche -->
+        <section id="anwendungsbereiche" class="mb-12">
+          <h2>Anwendungsbereiche: Prototypenbau bis Serienproduktion</h2>
+          <p>
+            CNC-Maschinen werden in der Automobilindustrie vielseitig eingesetzt, von der Prototypenentwicklung bis zur Serienproduktion.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Batteriegehäuse</h3>
+              <p class="text-gray-600">Präzisionsfertigung für Elektrofahrzeuge.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Antriebskomponenten</h3>
+              <p class="text-gray-600">Optimierte Fertigung von Motor- und Getriebeteilen.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Karosserieteile</h3>
+              <p class="text-gray-600">Hochwertige Verarbeitung für ästhetische und funktionale Anforderungen.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Effizienz durch CNC-Technologie</h2>
+          <p>
+            Die Automobilindustrie nutzt CNC-Technologie zur Optimierung von Ressourcen und Reduzierung von Abfällen. 
+            Energieeffiziente Maschinen und nachhaltige Fertigungsprozesse tragen dazu bei, die Umweltbelastung zu minimieren.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Wichtige Vorteile:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Reduktion von Ausschuss:</strong>
+                  <p class="text-gray-600">Präzise Fertigung minimiert Materialverschwendung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Energieeffizienz:</strong>
+                  <p class="text-gray-600">Niedrigerer Energieverbrauch durch optimierte Prozesse.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Recycling:</strong>
+                  <p class="text-gray-600">CNC-Systeme erleichtern die Wiederverwendung von Materialresten.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CNC-Technologie hat die Automobilindustrie revolutioniert, indem sie Präzision, Effizienz und Nachhaltigkeit vereint. 
+            Mit der fortschreitenden Entwicklung von IoT und Automatisierung wird CNC auch in Zukunft eine Schlüsselrolle bei der Fahrzeugproduktion spielen, insbesondere in Bereichen wie Elektrofahrzeugen und innovativen Leichtbau-Konzepten.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

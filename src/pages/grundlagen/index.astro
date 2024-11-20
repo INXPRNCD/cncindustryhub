@@ -1,0 +1,185 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+import Card from '../../components/Card.astro';
+import Picture from '../../components/Picture.astro';
+import CncWorkflowDiagram from '../../components/CncWorkflowDiagram.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Grundlagen', href: '/grundlagen' }
+];
+
+const navItems = [
+  { href: "#was-ist-cnc", title: "Was ist CNC?" },
+  { href: "#funktionsweise", title: "Wie funktioniert CNC?" },
+  { href: "#entwicklung", title: "Die Entwicklung der CNC-Technologie" },
+  { href: "#steuerungssysteme", title: "CNC-Steuerungssysteme" },
+  { href: "#schluesselbegriffe", title: "Glossar: Wichtige Begriffe" },
+  { href: "#industrie-4-0", title: "CNC in der Industrie 4.0" }
+];
+---
+
+<Layout 
+  title="CNC-Grundlagen – Einführung, Technologien und Industrie 4.0"
+  description="Erfahren Sie alles über CNC-Grundlagen: Geschichte, Funktionsweise, Schlüsselbegriffe und die Rolle der CNC-Technologie in der Industrie 4.0."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">
+          CNC-Grundlagen: Einführung in die Welt der numerischen Steuerung
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 text-center">
+          Von den Ursprüngen der CNC-Technologie bis zur Integration in Industrie 4.0 – eine umfassende Übersicht über alle wichtigen Aspekte der numerischen Steuerung.
+        </p>
+        <nav class="bg-white rounded-lg shadow-sm p-4">
+          <ul class="flex flex-wrap gap-4 justify-center">
+            {navItems.map(item => (
+              <li>
+                <a 
+                  href={item.href}
+                  class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+
+      <article class="prose prose-lg max-w-none">
+        <section id="was-ist-cnc" class="mb-12">
+          <h2>Was ist CNC? Einführung in die Grundlagen</h2>
+          <p>
+            CNC, kurz für "Computerized Numerical Control", ist eine Technologie, die präzise Steuerung von Maschinen durch computergenerierte Anweisungen ermöglicht. 
+            Im Gegensatz zu manuellen Steuerungen automatisiert CNC komplexe Fertigungsprozesse und erhöht Effizienz sowie Präzision.
+          </p>
+          <blockquote class="bg-blue-50 border-l-4 border-blue-600 p-4 my-4">
+            <p class="m-0"><strong>Interessant:</strong> Die ersten CNC-Maschinen nutzten Lochkarten als Steuerungsmedium – eine Technologie, die in den 1940er Jahren für die Luftfahrtindustrie entwickelt wurde.</p>
+          </blockquote>
+          <p>
+            <a href="/grundlagen/einfuehrung">Mehr über die Grundlagen der CNC-Technologie</a>.
+          </p>
+        </section>
+
+        <section id="funktionsweise" class="mb-12">
+          <h2>Wie funktioniert CNC? Prinzipien und Technologien</h2>
+          <p>
+            Die CNC-Funktionsweise basiert auf der numerischen Steuerung von Maschinenachsen (X, Y, Z) durch G-Code, der Befehle für Bewegungen und Operationen definiert. 
+            CAD-Software (Computer-Aided Design) erstellt die Werkstückdesigns, während CAM-Software (Computer-Aided Manufacturing) diese in maschinenlesbare Befehle übersetzt.
+          </p>
+          <figure class="my-8">
+            <CncWorkflowDiagram />
+            <figcaption class="text-center text-gray-600 mt-4">
+              Übersicht der CNC-Funktionsweise: Von CAD-Entwürfen zu maschinellen Operationen
+            </figcaption>
+          </figure>
+          <p>
+            <a href="/grundlagen/wie-funktioniert-cnc">Mehr über die CNC-Funktionsweise und Technologien</a>.
+          </p>
+        </section>
+
+        <section id="entwicklung" class="mb-12">
+          <h2>Die Entwicklung der CNC-Technologie</h2>
+          <p>
+            Die Geschichte der CNC-Technologie begann mit einfachen numerischen Steuerungen und entwickelte sich zu hochmodernen, automatisierten Systemen. 
+            Zu den Meilensteinen gehören die Integration von CAD/CAM-Systemen in den 1970er Jahren und die Einführung vernetzter Maschinen in der Industrie 4.0.
+          </p>
+          <ul>
+            <li>1940er Jahre: Erste numerische Steuerungssysteme</li>
+            <li>1970er Jahre: Einführung von CAD/CAM-Software</li>
+            <li>Heute: CNC als Teil von Industrie 4.0</li>
+          </ul>
+          <p>
+            <a href="/grundlagen/entwicklung">Mehr über die Entwicklung der CNC-Technologie</a>.
+          </p>
+        </section>
+
+        <section id="steuerungssysteme" class="mb-12">
+          <h2>CNC-Steuerungssysteme: Zusammenspiel von Software und Hardware</h2>
+          <p>
+            CNC-Steuerungssysteme bestehen aus zwei zentralen Komponenten: Hardware (z. B. Achsen, Spindeln) und Software (z. B. CAD/CAM). 
+            Führende Plattformen wie FANUC oder Siemens ermöglichen präzise Steuerung und Echtzeitüberwachung.
+          </p>
+          <p>
+            <a href="/grundlagen/steuerungssysteme">Mehr über CNC-Steuerungssysteme</a>.
+          </p>
+        </section>
+
+        <section id="schluesselbegriffe" class="mb-12">
+          <h2>Glossar: Wichtige Begriffe aus der CNC-Welt</h2>
+          <p>
+            Verstehen Sie die Schlüsselbegriffe der CNC-Technologie, darunter:
+          </p>
+          <ul>
+            <li><strong>G-Code:</strong> Sprache zur Steuerung von Maschinenbewegungen.</li>
+            <li><strong>Achsenbewegung:</strong> Bewegungen entlang der X-, Y- und Z-Achsen.</li>
+            <li><strong>CAD/CAM:</strong> Software zur Konstruktion und Steuerung von Fertigungsprozessen.</li>
+          </ul>
+          <p>
+            <a href="/grundlagen/wichtige-begriffe">Zum vollständigen Glossar</a>.
+          </p>
+        </section>
+
+        <section id="industrie-4-0" class="mb-12">
+          <h2>CNC in der Industrie 4.0: Die vernetzte Fertigung</h2>
+          <p>
+            CNC-Systeme spielen eine Schlüsselrolle in der Industrie 4.0, indem sie mit Technologien wie dem Internet of Things (IoT) und Big Data verbunden werden. 
+            Diese Integration ermöglicht Echtzeitüberwachung, smarte Produktion und optimierte Effizienz.
+          </p>
+          <p>
+            <a href="/grundlagen/industrie-4-0">Mehr über CNC und Industrie 4.0</a>.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

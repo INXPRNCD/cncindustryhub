@@ -1,0 +1,280 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Ausbildung & Karriere', href: '/karriere' },
+  { title: 'Karrierewege und Spezialisierungen', href: '/karriere/wege' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einführung" },
+  { href: "#berufliche-spezialisierungen", title: "Spezialisierungen" },
+  { href: "#branchenspezifische-wege", title: "Branchenwege" },
+  { href: "#soft-skills-weiterbildung", title: "Soft Skills" },
+  { href: "#zukunftsperspektiven", title: "Zukunftsperspektiven" }
+];
+---
+
+<Layout 
+  title="Karrierewege und Spezialisierungen in CNC | Ausbildung & Karriere"
+  description="Entdecken Sie Karrierewege, Spezialisierungen und Zukunftsperspektiven in der CNC-Industrie. Erfahren Sie mehr über CNC-Berufsbilder und Entwicklungsmöglichkeiten."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Karrierewege und Spezialisierungen in der CNC-Industrie
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie, wie die CNC-Industrie vielseitige Karrieremöglichkeiten und Spezialisierungen bietet, von der Maschinenbedienung bis hin zu führenden Technologien wie KI und Automatisierung.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einführung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung in CNC-Karrierewege</h2>
+          <p>
+            CNC-Technologie (Computerized Numerical Control) ist ein Eckpfeiler der modernen Fertigung. 
+            Sie eröffnet zahlreiche Karrieremöglichkeiten in Branchen wie der Luftfahrt, Automobilindustrie und Medizintechnik. 
+            Fachkräfte sind gefragt, da die Industrie 4.0 zunehmend Automatisierung und Präzision erfordert.
+          </p>
+        </section>
+
+        <!-- Berufliche Spezialisierungen -->
+        <section id="berufliche-spezialisierungen" class="mb-12">
+          <h2>Berufliche Spezialisierungen in der CNC-Industrie</h2>
+          
+          <div class="space-y-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC-Maschinenbediener</h3>
+              <p class="text-gray-600">
+                Maschinenbediener richten CNC-Maschinen ein, überwachen deren Betrieb und führen Qualitätskontrollen durch. 
+                Diese Rolle erfordert technisches Geschick und die Fähigkeit, mechanische Probleme schnell zu lösen.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">CNC-Programmierer</h3>
+              <p class="text-gray-600">
+                Programmierer erstellen präzise Programme mit CAD/CAM-Software, die den Fertigungsprozess automatisieren. 
+                Sie kombinieren analytische Fähigkeiten mit einem Verständnis komplexer Werkstückdesigns.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Qualitätssicherungsspezialisten</h3>
+              <p class="text-gray-600">
+                Qualitätssicherungsexperten sind für die Einhaltung hoher Standards verantwortlich. 
+                Sie überwachen Kalibrierungen, prüfen Werkstücke und stellen sicher, dass die Maschinen optimal eingestellt sind.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-xl font-semibold mb-4">Automatisierungstechniker</h3>
+              <p class="text-gray-600">
+                Automatisierungstechniker integrieren Robotik und IoT in CNC-Prozesse, um Effizienz und Präzision zu maximieren. 
+                Diese zukunftsorientierte Rolle kombiniert mechanische und digitale Kompetenzen.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Branchenspezifische Wege -->
+        <section id="branchenspezifische-wege" class="mb-12">
+          <h2>Branchenspezifische Karrierewege</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Luftfahrt:</strong>
+                  <p class="text-gray-600">Entwicklung und Fertigung von hochpräzisen Turbinenschaufeln und Strukturbauteilen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Automobilindustrie:</strong>
+                  <p class="text-gray-600">Produktion von Karosserieteilen, Motorenkomponenten und Hochgeschwindigkeitsbauteilen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Medizintechnik:</strong>
+                  <p class="text-gray-600">Herstellung biokompatibler Implantate und präziser chirurgischer Instrumente.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Soft Skills und Weiterbildung -->
+        <section id="soft-skills-weiterbildung" class="mb-12">
+          <h2>Soft Skills und Weiterbildung</h2>
+          <p>
+            Neben technischen Kompetenzen sind Soft Skills wie Problemlösung, Kommunikation und Teamfähigkeit entscheidend. 
+            Bildungseinrichtungen bieten Weiterbildungen in Bereichen wie CAD/CAM, Robotik und KI, um Fachkräfte auf die Anforderungen der CNC-Industrie vorzubereiten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Wichtige Soft Skills:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Analytisches Denken und Problemlösungskompetenz</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Kommunikationsfähigkeit und Teamwork</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Flexibilität und Anpassungsfähigkeit</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Zukunftsperspektiven -->
+        <section id="zukunftsperspektiven" class="mb-12">
+          <h2>Zukunftsperspektiven in der CNC-Industrie</h2>
+          <p>
+            Die CNC-Technologie entwickelt sich rasant weiter. Trends wie Industrie 4.0 und die Integration von KI und Big Data eröffnen neue Möglichkeiten. 
+            Lebenslanges Lernen und Spezialisierungen werden zu höheren Gehältern und Führungspositionen führen.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Zukunftstrends:</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Integration von KI und maschinellem Lernen in CNC-Systeme</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Vernetzte Produktionssysteme durch IoT</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="text-gray-600">Nachhaltige und energieeffiziente Fertigungsprozesse</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            Die CNC-Industrie bietet vielseitige Karrieremöglichkeiten und hervorragende Zukunftsaussichten. 
+            Spezialisierungen und kontinuierliche Weiterbildung sind der Schlüssel, um in diesem dynamischen Feld erfolgreich zu sein.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/karriere/zertifikate" class="text-blue-600 hover:text-blue-800">
+                  Wichtige Zertifizierungen
+                </a>
+              </li>
+              <li>
+                <a href="/karriere/weiterbildung" class="text-blue-600 hover:text-blue-800">
+                  Weiterbildungsmöglichkeiten
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+</style>

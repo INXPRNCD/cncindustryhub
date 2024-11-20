@@ -1,0 +1,373 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'Industrieanwendungen', href: '/industrieanwendungen' },
+  { title: 'CNC in der Schifffahrt', href: '/industrieanwendungen/maritime' }
+];
+
+const navItems = [
+  { href: "#einleitung", title: "Einleitung" },
+  { href: "#materialbearbeitung", title: "Materialbearbeitung" },
+  { href: "#technologische-vorteile", title: "Technologische Vorteile" },
+  { href: "#anwendungsbereiche", title: "Anwendungsbereiche" },
+  { href: "#nachhaltigkeit", title: "Nachhaltigkeit" },
+  { href: "#innovationen", title: "Innovationen" }
+];
+---
+
+<Layout 
+  title="CNC in der Schifffahrt: Präzision, Effizienz und Innovation"
+  description="Erfahren Sie, wie CNC-Technologien die maritime Fertigung transformieren – von Schiffsschrauben bis hin zu nachhaltigen, innovativen Lösungen."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC in der Schifffahrt: Präzision, Effizienz und Innovation
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Die maritime Industrie profitiert erheblich von der CNC-Technologie. Erfahren Sie, wie präzise Fertigungsprozesse, nachhaltige Materialien und innovative Technologien die Schifffahrt revolutionieren.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Einleitung -->
+        <section id="einleitung" class="mb-12">
+          <h2>Einführung: Bedeutung der CNC-Technologie für die Schifffahrt</h2>
+          <p>
+            Die maritime Industrie steht vor komplexen Herausforderungen – von der Fertigung großer Komponenten bis hin zur Optimierung von Energieverbrauch und Nachhaltigkeit. 
+            CNC-Technologien bieten präzise Lösungen für diese Anforderungen, indem sie Fertigung, Wartung und Effizienz erheblich verbessern.
+          </p>
+        </section>
+
+        <!-- Materialbearbeitung -->
+        <section id="materialbearbeitung" class="mb-12">
+          <h2>Materialbearbeitung: Robustheit und Korrosionsschutz</h2>
+          <p>
+            CNC-Systeme sind ideal für die Bearbeitung robuster Materialien, die extremen maritimen Bedingungen standhalten müssen. 
+            Korrosionsschutz und Langlebigkeit sind zentrale Anforderungen.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Material</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eigenschaften</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typische Anwendungen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4">Edelstahl</td>
+                  <td class="px-6 py-4">Korrosionsbeständig, langlebig</td>
+                  <td class="px-6 py-4">Propeller, Wellen, Ventile</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Aluminium</td>
+                  <td class="px-6 py-4">Leichtbau, hohe Festigkeit</td>
+                  <td class="px-6 py-4">Rumpfstrukturen, Deckelemente</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Bronze</td>
+                  <td class="px-6 py-4">Hervorragende Salzwasserbeständigkeit</td>
+                  <td class="px-6 py-4">Schiffsschrauben, Lager</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4">Verbundwerkstoffe</td>
+                  <td class="px-6 py-4">Leicht, anpassbar, belastbar</td>
+                  <td class="px-6 py-4">Innovative Konstruktionen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Technologische Vorteile -->
+        <section id="technologische-vorteile" class="mb-12">
+          <h2>Technologische Vorteile: Präzision und Effizienz</h2>
+          <p>
+            Die CNC-Technologie ermöglicht präzise und effiziente Fertigungsprozesse, insbesondere bei großen und komplexen maritimen Komponenten.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Präzisionsfertigung:</strong>
+                  <p class="text-gray-600">Perfekte Herstellung von Schiffsschrauben und Propellerwellen für optimale Hydrodynamik.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>5-Achsen-Bearbeitung:</strong>
+                  <p class="text-gray-600">Ideal für die simultane Bearbeitung komplexer Bauteile.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>CAD/CAM-Integration:</strong>
+                  <p class="text-gray-600">Ermöglicht die Fertigung hochpräziser, maßgeschneiderter Designs.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Die Echtzeitüberwachung erhöht die Effizienz und minimiert Abweichungen, was zu einer höheren Produktqualität führt.
+          </p>
+        </section>
+
+        <!-- Anwendungsbereiche -->
+        <section id="anwendungsbereiche" class="mb-12">
+          <h2>Anwendungsbereiche: Vielfältige maritime Einsatzmöglichkeiten</h2>
+          <p>
+            Von der Herstellung bis zur Wartung: CNC-Systeme bieten unverzichtbare Lösungen für die Schifffahrt.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Schiffsschrauben:</strong>
+                  <p class="text-gray-600">Perfekte Geometrien zur Optimierung des Treibstoffverbrauchs.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Propellerwellen:</strong>
+                  <p class="text-gray-600">Präzision für vibrationsfreie Antriebe und hohe Zuverlässigkeit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Rumpfstrukturen:</strong>
+                  <p class="text-gray-600">Bearbeitung von Aluminium und Verbundwerkstoffen für leichte und stabile Konstruktionen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Wartung und Reparatur:</strong>
+                  <p class="text-gray-600">Schnelle Fertigung maßgeschneiderter Ersatzteile vor Ort.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Nachhaltigkeit -->
+        <section id="nachhaltigkeit" class="mb-12">
+          <h2>Nachhaltigkeit und Effizienz: Die grüne Schifffahrt</h2>
+          <p>
+            Die CNC-Technologie spielt eine zentrale Rolle bei der Entwicklung nachhaltiger Produktionsmethoden in der Schifffahrt:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Präzise Bearbeitung reduziert Materialverschwendung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Recycling von Materialien senkt die Umweltbelastung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Optimierte Fertigungsprozesse minimieren den Energieverbrauch.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Diese Maßnahmen fördern die Entwicklung einer grüneren Schifffahrt und tragen zur Reduktion der ökologischen Fußabdrucks der Industrie bei.
+          </p>
+        </section>
+
+        <!-- Innovationen -->
+        <section id="innovationen" class="mb-12">
+          <h2>Innovationen und Zukunftsperspektiven</h2>
+          <p>
+            Die Zukunft der CNC-Technologie in der Schifffahrt liegt in der Integration von KI und IoT. Diese ermöglichen:
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Automatisierung und Optimierung von Produktionsprozessen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Fehlererkennung in Echtzeit und vorausschauende Wartung.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p class="text-gray-600">Hybride Fertigungsmethoden durch Kombination von CNC und 3D-Druck.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            Solche Innovationen werden die maritime Industrie revolutionieren und die Entwicklung autonomer Schiffe sowie treibstoffeffizienter Komponenten vorantreiben.
+          </p>
+        </section>
+
+        <!-- Fazit -->
+        <footer class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CNC-Technologien sind ein unverzichtbarer Bestandteil der Schifffahrt. Sie bieten Präzision, Effizienz und Nachhaltigkeit und fördern Innovationen, die die maritime Industrie in eine grünere und technologisch fortschrittlichere Zukunft führen.
+          </p>
+
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  5-Achsen-CNC-Systeme im Detail
+                </a>
+              </li>
+              <li>
+                <a href="/technologie/industrie-4-0" class="text-blue-600 hover:text-blue-800">
+                  CNC in der Industrie 4.0
+                </a>
+              </li>
+              <li>
+                <a href="/materialien/metalle" class="text-blue-600 hover:text-blue-800">
+                  CNC-Bearbeitung von Metallen
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>

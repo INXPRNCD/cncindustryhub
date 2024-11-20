@@ -1,0 +1,382 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Navigation/Breadcrumbs.astro';
+
+const breadcrumbItems = [
+  { title: 'CNC-Maschinentypen', href: '/maschinen' }
+];
+
+const navItems = [
+  { href: "#arten", title: "Arten von CNC-Maschinen" },
+  { href: "#5-achsen-hybrid", title: "5-Achsen- und Hybrid-CNC" },
+  { href: "#router-graviermaschinen", title: "Router und Graviermaschinen" },
+  { href: "#laser-cnc", title: "Laser-CNC-Systeme" },
+  { href: "#wasserstrahl-plasma", title: "Wasserstrahl und Plasma" },
+  { href: "#auswahl", title: "Maschinenauswahl" }
+];
+---
+
+<Layout 
+  title="CNC-Maschinentypen: Ein umfassender Leitfaden zu den Technologien der Präzisionsfertigung"
+  description="Entdecken Sie die wichtigsten CNC-Maschinenarten: Fräs-, Dreh-, Bohrmaschinen, 5-Achsen- und Hybrid-CNC-Systeme, Laser- und Wasserstrahltechnologien."
+>
+  <main class="container mx-auto px-4 py-8">
+    <Breadcrumbs items={breadcrumbItems} />
+    
+    <div class="max-w-4xl mx-auto">
+      <article class="prose prose-lg max-w-none">
+        <header class="mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            CNC-Maschinentypen: Ein umfassender Leitfaden zu den Technologien der Präzisionsfertigung
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Erfahren Sie alles über die verschiedenen CNC-Maschinenarten und wie Sie die richtige Wahl für Ihre spezifischen Fertigungsanforderungen treffen.
+          </p>
+          <nav class="bg-white rounded-lg shadow-sm p-4">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {navItems.map(item => (
+                <li>
+                  <a 
+                    href={item.href}
+                    class="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Arten von CNC-Maschinen -->
+        <section id="arten" class="mb-12">
+          <h2>Arten von CNC-Maschinen</h2>
+          <p>
+            CNC-Maschinen spielen eine zentrale Rolle in der modernen Fertigung und bieten Lösungen für eine Vielzahl von Anwendungen. 
+            Hier sind die wichtigsten Arten im Überblick:
+          </p>
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Fräsmaschinen:</strong>
+                  <p class="text-gray-600">Diese Maschinen bearbeiten komplexe 3D-Formen mit rotierenden Schneidwerkzeugen. Sie sind ideal für die Luftfahrt, Automobilindustrie und Prototypenbau.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Drehmaschinen:</strong>
+                  <p class="text-gray-600">Perfekt für die Herstellung rotationssymmetrischer Teile wie Achsen und Bolzen. Sie bieten hohe Genauigkeit und Geschwindigkeit.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Bohrmaschinen:</strong>
+                  <p class="text-gray-600">Spezialisiert auf präzises Bohren von Löchern, häufig in Metall- und Kunststofffertigungen eingesetzt.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Maschinentyp</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hauptanwendungen</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typische Materialien</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Fräsmaschinen</td>
+                  <td class="px-6 py-4">Automobil-, Luftfahrtindustrie</td>
+                  <td class="px-6 py-4">Metall, Kunststoff, Verbundwerkstoffe</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Drehmaschinen</td>
+                  <td class="px-6 py-4">Wellen, Bolzen, Zylinder</td>
+                  <td class="px-6 py-4">Metall, Holz</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Bohrmaschinen</td>
+                  <td class="px-6 py-4">Präzise Lochbearbeitung</td>
+                  <td class="px-6 py-4">Metall, Kunststoff</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5-Achsen- und Hybrid-CNC-Systeme -->
+        <section id="5-achsen-hybrid" class="mb-12">
+          <h2>5-Achsen- und Hybrid-CNC-Systeme</h2>
+          <p>
+            5-Achsen-CNC-Maschinen bieten maximale Präzision und Flexibilität, indem sie zwei zusätzliche Rotationsachsen (A, B) integrieren. 
+            Sie ermöglichen die Bearbeitung komplexer Formen, ohne das Werkstück neu positionieren zu müssen.
+          </p>
+          <p>
+            <strong>Hybrid-CNC-Maschinen</strong> kombinieren additive und subtraktive Fertigungstechnologien, was sie besonders vielseitig macht.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Vorteile</h3>
+              <ul class="space-y-2">
+                <li>Bearbeitung komplexer Geometrien in einem Schritt</li>
+                <li>Kombinierte Produktionsmethoden für Prototypen und Serienfertigung</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Anwendungsbereiche</h3>
+              <ul class="space-y-2">
+                <li>Luftfahrt: Turbinenschaufeln und Flugzeugteile</li>
+                <li>Medizintechnik: Implantate und chirurgische Instrumente</li>
+                <li>Automobilindustrie: Präzisionsteile für Motoren und Getriebe</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- CNC-Router und Graviermaschinen -->
+        <section id="router-graviermaschinen" class="mb-12">
+          <h2>CNC-Router und Graviermaschinen</h2>
+          <p>
+            <strong>CNC-Router</strong> sind ideal für großflächige Anwendungen wie Holz-, Kunststoff- und Acrylbearbeitung. 
+            Sie werden häufig in der Möbel- und Werbemittelherstellung eingesetzt.
+          </p>
+          <p>
+            <strong>Graviermaschinen</strong> bieten Präzision für feine Arbeiten wie Gravuren auf Metall, Glas oder Holz, perfekt für personalisierte Produkte oder industrielle Beschriftungen.
+          </p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <h3 class="text-xl font-semibold mb-4">Typische Anwendungen:</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Schilder- und Werbematerialien</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Präzisionsgravuren für Maschinenkomponenten</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Design- und Kunstprojekte</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Laser-CNC-Systeme -->
+        <section id="laser-cnc" class="mb-12">
+          <h2>Laser-CNC-Systeme vs. konventionelle CNC-Maschinen</h2>
+          <p>
+            <strong>Laser-CNC-Systeme</strong> verwenden hochenergetische Laserstrahlen, um Materialien präzise zu schneiden oder zu gravieren. 
+            Sie eignen sich hervorragend für dünne Materialien und detaillierte Designs.
+          </p>
+
+          <div class="overflow-x-auto my-8">
+            <table class="min-w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Eigenschaft</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Laser-CNC</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Konventionelle Maschinen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Präzision</td>
+                  <td class="px-6 py-4">Sehr hoch</td>
+                  <td class="px-6 py-4">Hoch</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Materialvielfalt</td>
+                  <td class="px-6 py-4">Begrenzt</td>
+                  <td class="px-6 py-4">Sehr vielseitig</td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Geschwindigkeit</td>
+                  <td class="px-6 py-4">Mittel</td>
+                  <td class="px-6 py-4">Variabel</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Wasserstrahl- und Plasmaschneiden -->
+        <section id="wasserstrahl-plasma" class="mb-12">
+          <h2>Wasserstrahl- und Plasmaschneiden mit CNC</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Wasserstrahlschneiden</h3>
+              <p class="text-gray-600">
+                Mit einem Hochdruckwasserstrahl (oft mit Abrasivstoffen) können Materialien wie Metall, Stein oder Glas präzise geschnitten werden.
+              </p>
+              <ul class="mt-4 space-y-2">
+                <li>Höhere Präzision</li>
+                <li>Geeignet für hitzeempfindliche Materialien</li>
+                <li>Vielseitige Materialbearbeitung</li>
+              </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <h3 class="text-lg font-semibold mb-4">Plasmaschneiden</h3>
+              <p class="text-gray-600">
+                Diese Methode verwendet ionisiertes Gas, um leitfähige Materialien schnell und effizient zu schneiden.
+              </p>
+              <ul class="mt-4 space-y-2">
+                <li>Schnellere Bearbeitung</li>
+                <li>Kostengünstigere Option</li>
+                <li>Ideal für dickere Metallbleche</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Auswahl -->
+        <section id="auswahl" class="mb-12">
+          <h2>Die richtige CNC-Maschine auswählen</h2>
+          <p>Die Wahl der passenden CNC-Maschine hängt von verschiedenen Faktoren ab:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm my-6">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Material:</strong>
+                  <p class="text-gray-600">Verschiedene Maschinen sind für spezifische Materialien optimiert.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Komplexität:</strong>
+                  <p class="text-gray-600">Für komplexe Geometrien eignen sich 5-Achsen-Systeme oder Hybrid-CNC-Maschinen.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <strong>Budget:</strong>
+                  <p class="text-gray-600">Laser- und Plasmasysteme bieten unterschiedliche Kosten-Nutzen-Verhältnisse.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <p>Ein fundierter Vergleich spart Kosten und maximiert die Effizienz Ihrer Fertigung.</p>
+        </section>
+
+        <!-- Fazit -->
+        <section id="fazit" class="mb-12">
+          <h2>Fazit</h2>
+          <p>
+            CNC-Maschinen bieten eine breite Palette von Technologien, die für jede Fertigungsanforderung optimiert sind. 
+            Die richtige Wahl hängt von Ihren spezifischen Anforderungen und Ihrem Budget ab.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg mt-6">
+            <h3 class="text-lg font-semibold mb-4">Weiterführende Links:</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/maschinen/5-achsen" class="text-blue-600 hover:text-blue-800">
+                  Detaillierte Informationen zu 5-Achsen-CNC-Systemen
+                </a>
+              </li>
+              <li>
+                <a href="/maschinen/laser" class="text-blue-600 hover:text-blue-800">
+                  Mehr über Laser-CNC-Technologie
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.prose {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.prose strong {
+  color: #1a202c;
+}
+
+.prose h2 {
+  color: #1a202c;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: normal;
+  border-radius: 0.5rem;
+}
+
+.prose ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose table {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.prose th {
+  font-weight: 500;
+  text-align: left;
+}
+
+.prose td {
+  padding: 0.75rem 1rem;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: rgb(249, 250, 251);
+}
+</style>
